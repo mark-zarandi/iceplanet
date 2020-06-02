@@ -1,0 +1,12 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+excel_data = pd.read_excel('ratio.xlsx',sheet_name='Sheet1')
+
+plt.scatter(excel_data['Temp'],excel_data['Adj_temp'],color='red')
+plt.title('Stock Index Price Vs Interest Rate', fontsize=14)
+plt.xlabel('Interest Rate', fontsize=14)
+plt.ylabel('Stock Index Price', fontsize=14)
+plt.grid(True)
+plt.show()
+

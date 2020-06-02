@@ -48,7 +48,7 @@ def randomNumberGenerator():
     while not thread_stop_event.isSet():
         number = round(random()*10, 3)
         print(number)
-        socketio.emit('newnumber', {'number': number}, namespace='/test')
+        socketio.emit('newnumber', {'number': number}, namespace='/thermostat')
         socketio.sleep(5)
 
 
@@ -57,21 +57,25 @@ def index():
     #only by sending this page first will the client be connected to the socketio instance
     return render_template('index.html')
 
-@socketio.on('connect', namespace='/test')
-def test_connect():
+@socketio.on('connect', namespace='/thermostat')
+def temperature_connect():
     # need visibility of the global thread object
     global thread
     print('Client connected')
-
+    thread_stop_event.clear()
     #Start the random number generator thread only if the thread has not been started before.
     if not thread.isAlive():
         print("Starting Thread")
         thread = socketio.start_background_task(randomNumberGenerator)
 
-@socketio.on('disconnect', namespace='/test')
-def test_disconnect():
-    print('Client disconnected')
+@socketio.on('disconnect', namespace='/thermostat')
+def temperature_disconnect():
 
+    print('Client disconnected')
+    if thread.isAlive():
+        global thread_stop_event
+        thread_stop_event.set()
+        print('Disconected & thread stopped')
 
 if __name__ == '__main__':
     socketio.run(app)
