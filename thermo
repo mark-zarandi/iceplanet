@@ -188,3 +188,16 @@
 2020-06-03 02:05:26,392 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
 2020-06-03 02:05:26,426 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
 2020-06-03 02:05:26,433 INFO     read Actual Temp 64.56, Adj Temp 65.0, Current Set 68
+2020-06-03 02:08:57,848 INFO     Server initialized for eventlet.
+2020-06-03 02:08:57,854 INFO     Monitor started
+2020-06-03 02:08:57,854 INFO     monitoring temp
+2020-06-03 02:08:57,854 INFO     taking measurements.
+2020-06-03 02:08:57,874 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-03 02:08:57,912 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-03 02:08:57,928 INFO     read Actual Temp 64.59, Adj Temp 65.0, Current Set 68
+2020-06-03 02:09:27,946 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-03 02:09:27,984 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-03 02:09:27,990 INFO     read Actual Temp 64.6, Adj Temp 65.0, Current Set 68
+2020-06-03 02:09:58,007 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-03 02:09:58,040 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-03 02:09:58,047 INFO     read Actual Temp 64.23, Adj Temp 65.0, Current Set 68

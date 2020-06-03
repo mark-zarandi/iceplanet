@@ -17,7 +17,7 @@ class ThermoMonitor():
         
         print(temp_info.adj_temp)
         if len(self.sleeve) == 5:
-            print(Average(self.column(self.sleeve)))
+
             self.sleeve = []
             
 
@@ -25,6 +25,7 @@ class ThermoMonitor():
         print("Cooling")
 
     def turn_off():
+        #shut off as SOON as you hit the lower offset
         print('Turned Off')
 
     def column(self, matrix):
