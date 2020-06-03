@@ -83,7 +83,7 @@ class measure(db.Model):
         self.curr_hum = round(curr_hum,2)
         self.curr_temp = round(curr_temp,2)
         self.adj_temp = temp_cond(self.curr_temp + settings['temp_offset'])
-        self.adj_hum = round(self.curr_hum+((.43785694*self.curr_hum)-22.253659085944268),2)
+        self.adj_hum = round(self.curr_hum-((.43785694*self.curr_hum)-22.253659085944268),2)
         self.TC_temp = round(-8.96584011843079 + (self.adj_temp * 1.09058722) + ((self.adj_hum/100)*9.73214286),2)
         self.avg_temp = (self.adj_temp + self.TC_temp)/2
 
