@@ -98,7 +98,7 @@ def reading_logger():
         db.session.commit()
         logging.info("read " + str(measure_new))
         therm.set_current_temp(measure_new)
-        time.sleep(30)
+        time.sleep(60)
 
 @app.route('/')
 def index():
