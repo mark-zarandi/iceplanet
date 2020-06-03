@@ -15,10 +15,8 @@ from resources import settings
 import math
 import os
 import time
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn import linear_model
-import numpy as np
+#import matplotlib.pyplot as plt
+#import numpy as np
 import sys
 
 level    = logging.NOTSET
@@ -127,4 +125,4 @@ if __name__ == "__main__":
     #db.create_all()
     
     bootstrap = Bootstrap(app)
-    socketio.run(app,'0.0.0.0')
+    socketio.run(app,host='0.0.0.0',port=1949)
