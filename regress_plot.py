@@ -2,27 +2,30 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import linear_model
 import numpy as np
+from numpy import array
 import sys
-df = pd.read_excel('ratio.xlsx',sheet_name='Sheet1')
+from sklearn.preprocessing import PolynomialFeatures
+df = pd.read_excel('observations.xlsx',sheet_name='Sheet1')
 
-#plt.scatter(excel_data['Temp'],excel_data['Adj_Temp'],color='red')
-#plt.title('Stock Index Price Vs Interest Rate', fontsize=14)
-#plt.xlabel('Interest Rate', fontsize=14)
-#plt.ylabel('Stock Index Price', fontsize=14)
-#plt.grid(True)
-#plt.show()
 
-x = df[['Temp','RH']]
-y = df['Adj_Temp']
 
-user_input = (sys.argv[1]).split(",")
-print(user_input)
-abs_temp = float(user_input[0])
-humidity = float(user_input[1])
-print(humidity)
+x = df[['abs_hum']]
+y = df['variance']
+
 regr = linear_model.LinearRegression()
 regr.fit(x,y)
-print(regr.predict([[abs_temp,humidity]]))
+print(regr.predict([[52.42]]))
+print('Intercept: \n', regr.intercept_)
+print('Coefficients: \n', regr.coef_)
+plt.scatter(df['abs_hum'],df[['variance']],color='red')
+plt.plot(x, regr.predict(x), color='blue')
+plt.title('Stock Index Price Vs Interest Rate', fontsize=14)
+plt.xlabel('Interest Rate', fontsize=14)
+plt.ylabel('Stock Index Price', fontsize=14)
+plt.grid(True)
+plt.show()
+
+#predict is an independent variable for which we'd like to predict the value
 
 
 

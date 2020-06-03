@@ -14,7 +14,7 @@ class ThermoMonitor():
             return sum(lst) / len(lst) 
 
         self.sleeve.append(temp_info)
-        print("sleeve is" + str(len(self.sleeve)))
+        
         print(temp_info.adj_temp)
         if len(self.sleeve) == 5:
             print(Average(self.column(self.sleeve)))

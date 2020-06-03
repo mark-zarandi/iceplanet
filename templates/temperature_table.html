@@ -1,52 +1,61 @@
   <!DOCTYPE html>
 <html>
 <head>
-  <title>Table V04</title>
+  <title>Thermostat</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
   <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
   {% block styles %}
-  <link rel="stylesheet" href="{{url_for('.static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('.static', filename='css/bootstrap.min.css')}}"> 
 <!--===============================================================================================-->
 <link rel="stylesheet" href="{{url_for('.static', filename='css/font-awesome.min.css')}}">
-
+<style>
+.table-nonfluid {
+   width: auto !important;
+}
+</style>
 
 <!--===============================================================================================-->
 {% endblock %}
 </head>
 <body>
-<div class="container">
-<table  style="width: auto;" class="table table-bordered table-condensed">
-    <thead>
-                <tr>
-                  <th class="col"><center>Date</center></th>
-                  <th>Temp</th>
-                  <th>Hum</th>
-                  <th>Adj. Temp</th>
-                  <th>Adj. Hum</th>
-                  <th><center>TC_Temp</center></th>
-                  <th><center>AVG</center></th>
-                </tr>
-    </thead>
-    <tbody>
-              {% for measure in measure_list %}
-                <tr class="row100 body">
-                  <td>{{measure.read_date|string}}</td>
-                  <td>{{measure.curr_temp}}</td>
+<!--Table-->
+<table id="tablePreview" class="table table-nonfluid table-bordered table-striped">
+<!--Table head-->
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Current Temp</th>
+      <th>Current Hum</th>
+      <th>Adj. Temp</th>
+      <th>Adj. Hum</th>
+      <th>TC Temp</th>
+      <th>Avg. Temp</th>
+
+    </tr>
+  </thead>
+  <!--Table head-->
+  <!--Table body-->
+  <tbody>
+    {% for measure in measure_list %}
+    <tr>
+      <th scope="row">{{measure.read_date}}</th>
+  <td>{{measure.curr_temp}}</td>
                   <td>{{measure.curr_hum}}</td>
                   <td>{{measure.adj_temp}}</td>
                   <td>{{measure.adj_hum}}</td>
                   <td>{{measure.TC_temp}}</td>
                   <td>{{measure.avg_temp}}</td>
-                </tr>
-                {% endfor %}        
-    </tbody>
+
+    </tr>
+         {% endfor %} 
+  </tbody>
+  <!--Table body-->
 </table>
+<!--Table-->
 
-
-</div>
 
 
 
@@ -65,19 +74,6 @@
 <script src="{{url_for('.static', filename='js/perfect-scrollbar.min.js')}}"></script>
 
 
-  <script>
-    $('.js-pscroll').each(function(){
-      var ps = new PerfectScrollbar(this);
-
-      $(window).on('resize', function(){
-        ps.update();
-      })
-    });
-      
-    
-  </script>
-<!--===============================================================================================-->
-<script src="{{url_for('.static', filename='js/main.js')}}"></script>
 
 {% endblock %}
 </body>
