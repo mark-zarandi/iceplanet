@@ -1,216 +1,832 @@
-2020-06-03 00:16:09,851 INFO     Server initialized for threading.
-2020-06-03 00:16:09,997 INFO     Monitor started
-2020-06-03 00:16:09,998 WARNING  WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
-2020-06-03 00:16:09,998 INFO     monitoring temp
-2020-06-03 00:16:10,000 INFO     taking measurements.
-2020-06-03 00:16:10,006 INFO      * Running on http://0.0.0.0:1949/ (Press CTRL+C to quit)
-2020-06-03 00:16:10,017 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:16:10,052 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:16:10,199 INFO     read Actual Temp 64.99, Adj Temp 66, Current Set 68
-2020-06-03 00:16:34,548 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET / HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,668 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,672 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/jquery-3.2.1.min.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,674 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,676 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,681 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/popper.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,683 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/select2.min.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,720 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/perfect-scrollbar.min.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,727 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-06-03 00:16:34,875 INFO     192.168.1.132 - - [03/Jun/2020 00:16:34] "[33mGET /images/icons/favicon.ico HTTP/1.1[0m" 404 -
-2020-06-03 00:16:40,230 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:16:45,014 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:16:45,052 INFO     read Actual Temp 65.11, Adj Temp 66, Current Set 68
-2020-06-03 00:24:53,594 INFO     Server initialized for eventlet.
-2020-06-03 00:24:53,601 INFO     Monitor started
-2020-06-03 00:24:53,602 INFO     monitoring temp
-2020-06-03 00:24:53,602 INFO     taking measurements.
-2020-06-03 00:24:53,639 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:24:53,670 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:24:53,689 INFO     read Actual Temp 64.31, Adj Temp 65, Current Set 68
-2020-06-03 00:25:23,726 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:25:23,768 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:25:23,775 INFO     read Actual Temp 64.41, Adj Temp 65, Current Set 68
-2020-06-03 00:25:53,799 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:25:53,834 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:25:53,840 INFO     read Actual Temp 64.54, Adj Temp 65, Current Set 68
-2020-06-03 00:26:23,861 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:26:23,899 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:26:23,903 INFO     read Actual Temp 64.6, Adj Temp 65, Current Set 68
-2020-06-03 00:26:53,932 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:26:53,964 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:26:53,971 INFO     read Actual Temp 64.65, Adj Temp 65, Current Set 68
-2020-06-03 00:27:24,003 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:27:24,037 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:27:24,044 INFO     read Actual Temp 64.75, Adj Temp 65, Current Set 68
-2020-06-03 00:27:54,068 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:27:54,100 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:27:54,107 INFO     read Actual Temp 64.8, Adj Temp 65, Current Set 68
-2020-06-03 00:28:24,146 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:28:24,177 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:28:24,183 INFO     read Actual Temp 64.88, Adj Temp 66, Current Set 68
-2020-06-03 00:28:54,265 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:28:54,295 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:28:54,300 INFO     read Actual Temp 64.97, Adj Temp 66, Current Set 68
-2020-06-03 00:29:25,322 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:29:25,358 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:29:25,364 INFO     read Actual Temp 64.99, Adj Temp 66, Current Set 68
-2020-06-03 00:29:55,396 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:29:55,436 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:29:55,442 INFO     read Actual Temp 65.07, Adj Temp 66, Current Set 68
-2020-06-03 00:30:25,463 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:30:25,495 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:30:25,502 INFO     read Actual Temp 65.12, Adj Temp 66, Current Set 68
-2020-06-03 00:30:55,521 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:30:55,552 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:30:55,558 INFO     read Actual Temp 65.18, Adj Temp 66, Current Set 68
-2020-06-03 00:31:25,573 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:31:25,605 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:31:25,609 INFO     read Actual Temp 65.21, Adj Temp 66, Current Set 68
-2020-06-03 00:31:55,636 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:31:55,667 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:31:55,672 INFO     read Actual Temp 65.25, Adj Temp 66, Current Set 68
-2020-06-03 00:32:25,702 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:32:25,733 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:32:25,737 INFO     read Actual Temp 65.29, Adj Temp 66, Current Set 68
-2020-06-03 00:32:55,753 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:32:55,787 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:32:55,790 INFO     read Actual Temp 65.34, Adj Temp 66, Current Set 68
-2020-06-03 00:33:25,809 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:33:25,841 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:33:25,846 INFO     read Actual Temp 65.35, Adj Temp 66, Current Set 68
-2020-06-03 00:33:55,863 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:33:55,896 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:33:55,901 INFO     read Actual Temp 65.38, Adj Temp 66, Current Set 68
-2020-06-03 00:34:25,930 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:34:25,968 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:34:25,973 INFO     read Actual Temp 65.42, Adj Temp 66, Current Set 68
-2020-06-03 00:34:56,005 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:34:56,035 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:34:56,042 INFO     read Actual Temp 65.45, Adj Temp 66, Current Set 68
-2020-06-03 00:35:26,075 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:35:26,107 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:35:26,114 INFO     read Actual Temp 65.52, Adj Temp 66, Current Set 68
-2020-06-03 00:35:56,140 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:35:56,179 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:35:56,184 INFO     read Actual Temp 65.57, Adj Temp 66, Current Set 68
-2020-06-03 00:36:26,200 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:36:26,238 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:36:26,243 INFO     read Actual Temp 65.62, Adj Temp 66, Current Set 68
-2020-06-03 00:36:56,274 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:36:56,305 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:36:56,311 INFO     read Actual Temp 65.63, Adj Temp 66, Current Set 68
-2020-06-03 00:37:26,348 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:37:26,380 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:37:26,386 INFO     read Actual Temp 65.66, Adj Temp 66, Current Set 68
-2020-06-03 00:37:56,420 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:37:56,458 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:37:56,464 INFO     read Actual Temp 65.7, Adj Temp 66, Current Set 68
-2020-06-03 00:38:26,480 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:38:26,511 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:38:26,517 INFO     read Actual Temp 65.74, Adj Temp 66, Current Set 68
-2020-06-03 00:38:56,531 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:38:56,562 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:38:56,569 INFO     read Actual Temp 65.72, Adj Temp 66, Current Set 68
-2020-06-03 00:39:26,597 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:39:26,627 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:39:26,634 INFO     read Actual Temp 65.76, Adj Temp 66, Current Set 68
-2020-06-03 00:39:56,673 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:39:56,704 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:39:56,711 INFO     read Actual Temp 65.81, Adj Temp 66, Current Set 68
-2020-06-03 00:40:26,747 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:40:26,777 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:40:26,783 INFO     read Actual Temp 65.83, Adj Temp 66, Current Set 68
-2020-06-03 00:40:56,799 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:40:56,832 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:40:56,837 INFO     read Actual Temp 65.88, Adj Temp 67, Current Set 68
-2020-06-03 00:41:27,070 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:41:27,252 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 00:41:27,257 INFO     read Actual Temp 65.86, Adj Temp 67, Current Set 68
-2020-06-03 00:41:57,277 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:41:57,314 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:41:57,321 INFO     read Actual Temp 65.95, Adj Temp 67, Current Set 68
-2020-06-03 00:42:27,357 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:42:27,388 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:42:27,392 INFO     read Actual Temp 65.95, Adj Temp 67, Current Set 68
-2020-06-03 00:42:57,439 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:42:57,477 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:42:57,483 INFO     read Actual Temp 66.0, Adj Temp 67, Current Set 68
-2020-06-03 00:43:27,513 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:43:27,550 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:43:27,554 INFO     read Actual Temp 66.02, Adj Temp 67, Current Set 68
-2020-06-03 00:43:57,575 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:43:57,606 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:43:57,612 INFO     read Actual Temp 66.01, Adj Temp 67, Current Set 68
-2020-06-03 00:44:27,647 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:44:27,684 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:44:27,690 INFO     read Actual Temp 66.02, Adj Temp 67, Current Set 68
-2020-06-03 00:44:57,711 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:44:57,753 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:44:57,758 INFO     read Actual Temp 66.01, Adj Temp 67, Current Set 68
-2020-06-03 00:45:27,792 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:45:27,821 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 00:45:27,825 INFO     read Actual Temp 66.03, Adj Temp 67, Current Set 68
-2020-06-03 00:45:57,846 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:45:57,884 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:45:57,891 INFO     read Actual Temp 66.06, Adj Temp 67, Current Set 68
-2020-06-03 00:46:27,973 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 00:46:28,124 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 00:46:28,129 INFO     read Actual Temp 66.06, Adj Temp 67, Current Set 68
-2020-06-03 02:02:10,167 INFO     Server initialized for eventlet.
-2020-06-03 02:02:10,174 INFO     Monitor started
-2020-06-03 02:02:10,174 INFO     monitoring temp
-2020-06-03 02:02:10,174 INFO     taking measurements.
-2020-06-03 02:02:10,192 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:02:10,224 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:02:10,245 INFO     read Actual Temp 64.28, Adj Temp 65, Current Set 68
-2020-06-03 02:02:40,270 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:02:40,308 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 02:02:40,314 INFO     read Actual Temp 64.5, Adj Temp 65, Current Set 68
-2020-06-03 02:03:10,339 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:03:10,370 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:03:10,377 INFO     read Actual Temp 64.55, Adj Temp 65, Current Set 68
-2020-06-03 02:03:26,099 INFO     Server initialized for eventlet.
-2020-06-03 02:03:26,117 INFO     Monitor started
-2020-06-03 02:03:26,118 INFO     monitoring temp
-2020-06-03 02:03:26,118 INFO     taking measurements.
-2020-06-03 02:03:26,154 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:03:26,185 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 02:03:26,194 INFO     read Actual Temp 64.44, Adj Temp 65.0, Current Set 68
-2020-06-03 02:03:56,212 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:03:56,243 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 02:03:56,250 INFO     read Actual Temp 64.2, Adj Temp 65.0, Current Set 68
-2020-06-03 02:04:26,266 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:04:26,303 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 02:04:26,309 INFO     read Actual Temp 64.28, Adj Temp 65.0, Current Set 68
-2020-06-03 02:04:56,335 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:04:56,371 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 02:04:56,377 INFO     read Actual Temp 64.54, Adj Temp 65.0, Current Set 68
-2020-06-03 02:05:26,392 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:05:26,426 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 02:05:26,433 INFO     read Actual Temp 64.56, Adj Temp 65.0, Current Set 68
-2020-06-03 02:08:57,848 INFO     Server initialized for eventlet.
-2020-06-03 02:08:57,854 INFO     Monitor started
-2020-06-03 02:08:57,854 INFO     monitoring temp
-2020-06-03 02:08:57,854 INFO     taking measurements.
-2020-06-03 02:08:57,874 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:08:57,912 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
-2020-06-03 02:08:57,928 INFO     read Actual Temp 64.59, Adj Temp 65.0, Current Set 68
-2020-06-03 02:09:27,946 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:09:27,984 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
-2020-06-03 02:09:27,990 INFO     read Actual Temp 64.6, Adj Temp 65.0, Current Set 68
-2020-06-03 02:09:58,007 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:09:58,040 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:09:58,047 INFO     read Actual Temp 64.23, Adj Temp 65.0, Current Set 68
-2020-06-03 02:11:06,705 INFO     Server initialized for eventlet.
-2020-06-03 02:11:06,710 INFO     Monitor started
-2020-06-03 02:11:06,711 INFO     monitoring temp
-2020-06-03 02:11:06,711 INFO     taking measurements.
-2020-06-03 02:11:06,730 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:11:06,761 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:11:06,775 INFO     read Actual Temp 64.01, Adj Temp 65.0, Current Set 68
-2020-06-03 02:11:36,804 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:11:36,835 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:11:36,842 INFO     read Actual Temp 64.08, Adj Temp 65.0, Current Set 68
-2020-06-03 02:12:06,900 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
-2020-06-03 02:12:06,944 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
-2020-06-03 02:12:06,950 INFO     read Actual Temp 64.08, Adj Temp 65.0, Current Set 68
+2020-06-05 23:46:07,357 INFO     Server initialized for eventlet.
+2020-06-05 23:46:07,364 INFO     Monitor started
+2020-06-05 23:47:06,844 INFO     Server initialized for eventlet.
+2020-06-05 23:47:06,849 INFO     Monitor started
+2020-06-05 23:47:06,849 INFO     Turning Off
+2020-06-05 23:47:06,849 INFO     monitoring temp
+2020-06-05 23:47:06,850 INFO     taking measurements.
+2020-06-05 23:47:06,880 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:47:06,914 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:47:29,807 INFO     Server initialized for eventlet.
+2020-06-05 23:47:29,813 INFO     Monitor started
+2020-06-05 23:47:29,813 INFO     Turning Off
+2020-06-05 23:47:29,813 INFO     monitoring temp
+2020-06-05 23:47:29,813 INFO     taking measurements.
+2020-06-05 23:47:29,833 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:47:29,874 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:49:30,526 INFO     Server initialized for eventlet.
+2020-06-05 23:49:30,544 INFO     Monitor started
+2020-06-05 23:49:30,545 INFO     Turning Off
+2020-06-05 23:49:30,545 INFO     monitoring temp
+2020-06-05 23:49:30,545 INFO     taking measurements.
+2020-06-05 23:49:30,581 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:49:30,613 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:49:30,622 INFO     read Actual Temp 65.04, Adj Temp 66.0, Current Set 68
+2020-06-05 23:49:42,787 INFO     Server initialized for eventlet.
+2020-06-05 23:49:42,806 INFO     Monitor started
+2020-06-05 23:49:42,806 INFO     Turning Off
+2020-06-05 23:49:42,806 INFO     monitoring temp
+2020-06-05 23:49:42,807 INFO     taking measurements.
+2020-06-05 23:49:42,814 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:49:42,845 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:49:42,854 INFO     read Actual Temp 65.1, Adj Temp 66.0, Current Set 68
+2020-06-05 23:56:45,109 INFO     Server initialized for eventlet.
+2020-06-05 23:56:45,130 INFO     Monitor started
+2020-06-05 23:56:45,130 INFO     Turning Off
+2020-06-05 23:56:45,130 INFO     monitoring temp
+2020-06-05 23:56:45,131 INFO     taking measurements.
+2020-06-05 23:56:45,148 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:56:45,179 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:56:45,185 INFO     read Actual Temp 66.22, Adj Temp 67.0, Current Set 68
+2020-06-05 23:57:45,203 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:57:45,240 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-05 23:57:45,247 INFO     read Actual Temp 66.28, Adj Temp 67.0, Current Set 68
+2020-06-05 23:58:45,266 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:58:45,297 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-05 23:58:45,304 INFO     read Actual Temp 66.34, Adj Temp 67.0, Current Set 68
+2020-06-05 23:59:45,324 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-05 23:59:45,361 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-05 23:59:45,367 INFO     read Actual Temp 66.4, Adj Temp 67.0, Current Set 68
+2020-06-06 00:00:45,399 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:00:45,430 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:00:45,436 INFO     read Actual Temp 66.47, Adj Temp 67.0, Current Set 68
+2020-06-06 00:01:45,452 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:01:45,483 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:01:45,489 INFO     read Actual Temp 66.51, Adj Temp 67.0, Current Set 68
+2020-06-06 00:02:45,506 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:02:45,538 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:02:45,543 INFO     read Actual Temp 66.53, Adj Temp 67.0, Current Set 68
+2020-06-06 00:03:45,566 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:03:45,604 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:03:45,609 INFO     read Actual Temp 66.58, Adj Temp 67.0, Current Set 68
+2020-06-06 00:04:45,625 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:04:45,667 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:04:45,672 INFO     read Actual Temp 66.62, Adj Temp 67.0, Current Set 68
+2020-06-06 00:05:45,690 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:05:45,732 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:05:45,737 INFO     read Actual Temp 66.66, Adj Temp 67.0, Current Set 68
+2020-06-06 00:06:45,774 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:06:45,812 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:06:45,817 INFO     read Actual Temp 66.7, Adj Temp 67.0, Current Set 68
+2020-06-06 00:07:45,836 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:07:45,867 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:07:45,873 INFO     read Actual Temp 66.71, Adj Temp 67.0, Current Set 68
+2020-06-06 00:08:45,927 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:08:45,959 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:08:45,964 INFO     read Actual Temp 66.74, Adj Temp 67.0, Current Set 68
+2020-06-06 00:09:45,982 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:09:46,013 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:09:46,019 INFO     read Actual Temp 66.77, Adj Temp 67.0, Current Set 68
+2020-06-06 00:10:46,045 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:10:46,076 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:10:46,082 INFO     read Actual Temp 66.77, Adj Temp 67.0, Current Set 68
+2020-06-06 00:11:46,124 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:11:46,155 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:11:46,160 INFO     read Actual Temp 66.82, Adj Temp 67.0, Current Set 68
+2020-06-06 00:12:46,179 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:12:46,210 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:12:46,216 INFO     read Actual Temp 66.82, Adj Temp 67.0, Current Set 68
+2020-06-06 00:13:46,247 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:13:46,278 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:13:46,283 INFO     read Actual Temp 66.83, Adj Temp 67.0, Current Set 68
+2020-06-06 00:14:46,301 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:14:46,331 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:14:46,337 INFO     read Actual Temp 66.83, Adj Temp 67.0, Current Set 68
+2020-06-06 00:15:46,372 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:15:46,408 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:15:46,414 INFO     read Actual Temp 66.89, Adj Temp 68.0, Current Set 68
+2020-06-06 00:16:46,483 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:16:46,525 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:16:46,530 INFO     read Actual Temp 66.92, Adj Temp 68.0, Current Set 68
+2020-06-06 00:17:46,547 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:17:46,577 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:17:46,582 INFO     read Actual Temp 66.94, Adj Temp 68.0, Current Set 68
+2020-06-06 00:18:46,600 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:18:46,632 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:18:46,637 INFO     read Actual Temp 66.96, Adj Temp 68.0, Current Set 68
+2020-06-06 00:19:46,673 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:19:46,711 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 59
+2020-06-06 00:19:46,715 INFO     read Actual Temp 66.95, Adj Temp 68.0, Current Set 68
+2020-06-06 00:20:46,734 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:20:46,767 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 59
+2020-06-06 00:20:46,773 INFO     read Actual Temp 66.95, Adj Temp 68.0, Current Set 68
+2020-06-06 00:21:46,794 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:21:46,825 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:21:46,829 INFO     read Actual Temp 67.0, Adj Temp 68.0, Current Set 68
+2020-06-06 00:22:46,861 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:22:46,892 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:22:46,898 INFO     read Actual Temp 67.03, Adj Temp 68.0, Current Set 68
+2020-06-06 00:23:46,926 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:23:46,974 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:23:46,979 INFO     read Actual Temp 67.05, Adj Temp 68.0, Current Set 68
+2020-06-06 00:24:46,995 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:24:47,028 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:24:47,033 INFO     read Actual Temp 67.0, Adj Temp 68.0, Current Set 68
+2020-06-06 00:25:47,047 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:25:47,078 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:25:47,083 INFO     read Actual Temp 67.06, Adj Temp 68.0, Current Set 68
+2020-06-06 00:26:47,114 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:26:47,149 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:26:47,155 INFO     read Actual Temp 67.08, Adj Temp 68.0, Current Set 68
+2020-06-06 00:27:47,172 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:27:47,209 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:27:47,214 INFO     read Actual Temp 66.97, Adj Temp 68.0, Current Set 68
+2020-06-06 00:28:47,230 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:28:47,268 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:28:47,273 INFO     read Actual Temp 66.9, Adj Temp 68.0, Current Set 68
+2020-06-06 00:29:47,289 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:29:47,326 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:29:47,332 INFO     read Actual Temp 66.94, Adj Temp 68.0, Current Set 68
+2020-06-06 00:30:47,350 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:30:47,381 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:30:47,387 INFO     read Actual Temp 66.97, Adj Temp 68.0, Current Set 68
+2020-06-06 00:31:47,421 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:31:47,454 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:31:47,459 INFO     read Actual Temp 66.96, Adj Temp 68.0, Current Set 68
+2020-06-06 00:32:47,477 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:32:47,508 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:32:47,515 INFO     read Actual Temp 66.98, Adj Temp 68.0, Current Set 68
+2020-06-06 00:33:47,536 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:33:47,574 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:33:47,580 INFO     read Actual Temp 67.04, Adj Temp 68.0, Current Set 68
+2020-06-06 00:34:47,596 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:34:47,628 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:34:47,634 INFO     read Actual Temp 67.08, Adj Temp 68.0, Current Set 68
+2020-06-06 00:35:47,650 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:35:47,682 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:35:47,687 INFO     read Actual Temp 67.11, Adj Temp 68.0, Current Set 68
+2020-06-06 00:36:47,710 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:36:47,741 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:36:47,747 INFO     read Actual Temp 67.15, Adj Temp 68.0, Current Set 68
+2020-06-06 00:37:47,766 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:37:47,801 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:37:47,806 INFO     read Actual Temp 67.16, Adj Temp 68.0, Current Set 68
+2020-06-06 00:38:47,895 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:38:47,929 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:38:47,935 INFO     read Actual Temp 67.19, Adj Temp 68.0, Current Set 68
+2020-06-06 00:39:47,955 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:39:47,986 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:39:47,992 INFO     read Actual Temp 67.21, Adj Temp 68.0, Current Set 68
+2020-06-06 00:40:48,008 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:40:48,041 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:40:48,046 INFO     read Actual Temp 67.28, Adj Temp 68.0, Current Set 68
+2020-06-06 00:41:48,064 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:41:48,098 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 62
+2020-06-06 00:41:48,104 INFO     read Actual Temp 67.29, Adj Temp 68.0, Current Set 68
+2020-06-06 00:42:48,126 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:42:48,163 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:42:48,168 INFO     read Actual Temp 67.32, Adj Temp 68.0, Current Set 68
+2020-06-06 00:43:48,187 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:43:48,219 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:43:48,225 INFO     read Actual Temp 67.37, Adj Temp 68.0, Current Set 68
+2020-06-06 00:44:48,243 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:44:48,276 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:44:48,281 INFO     read Actual Temp 67.35, Adj Temp 68.0, Current Set 68
+2020-06-06 00:45:48,298 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:45:48,331 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:45:48,336 INFO     read Actual Temp 67.38, Adj Temp 68.0, Current Set 68
+2020-06-06 00:46:48,464 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:46:48,495 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:46:48,500 INFO     read Actual Temp 67.36, Adj Temp 68.0, Current Set 68
+2020-06-06 00:47:48,525 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:47:48,563 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:47:48,568 INFO     read Actual Temp 67.38, Adj Temp 68.0, Current Set 68
+2020-06-06 00:48:48,586 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:48:48,633 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 00:48:48,638 INFO     read Actual Temp 67.42, Adj Temp 68.0, Current Set 68
+2020-06-06 00:49:48,655 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:49:48,693 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:49:48,699 INFO     read Actual Temp 67.43, Adj Temp 68.0, Current Set 68
+2020-06-06 00:50:48,716 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:50:48,748 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:50:48,754 INFO     read Actual Temp 67.47, Adj Temp 68.0, Current Set 68
+2020-06-06 00:51:48,771 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:51:48,808 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 59
+2020-06-06 00:51:48,814 INFO     read Actual Temp 67.51, Adj Temp 68.0, Current Set 68
+2020-06-06 00:52:48,828 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:52:48,866 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:52:48,871 INFO     read Actual Temp 67.53, Adj Temp 68.0, Current Set 68
+2020-06-06 00:56:04,895 INFO     Server initialized for eventlet.
+2020-06-06 00:56:04,913 INFO     Monitor started
+2020-06-06 00:56:04,913 INFO     Turning Off
+2020-06-06 00:56:04,913 INFO     monitoring temp
+2020-06-06 00:56:04,913 INFO     taking measurements.
+2020-06-06 00:56:04,933 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:56:04,966 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 00:56:04,976 INFO     read Actual Temp 67.55, Adj Temp 68.0, Current Set 68
+2020-06-06 00:57:05,009 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 00:57:05,047 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 01:01:42,268 INFO     Server initialized for eventlet.
+2020-06-06 01:01:42,286 INFO     Monitor started
+2020-06-06 01:01:42,287 INFO     Turning Off
+2020-06-06 01:01:42,287 INFO     monitoring temp
+2020-06-06 01:01:42,287 INFO     taking measurements.
+2020-06-06 01:01:42,310 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:01:42,342 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 01:01:42,351 INFO     read Actual Temp 67.62, Adj Temp 68.0, Current Set 68
+2020-06-06 01:02:42,368 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:02:42,400 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 01:04:31,660 INFO     Server initialized for eventlet.
+2020-06-06 01:04:31,678 INFO     Monitor started
+2020-06-06 01:04:31,679 INFO     Turning Off
+2020-06-06 01:04:31,679 INFO     monitoring temp
+2020-06-06 01:04:31,679 INFO     taking measurements.
+2020-06-06 01:04:31,702 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:04:31,737 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 01:04:31,746 INFO     read Actual Temp 67.68, Adj Temp 68.0, Current Set 68
+2020-06-06 01:05:31,765 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:05:31,796 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 01:05:31,797 INFO     COOLING-MAINT-TEMP: Set point exceeded( Temp - 70.32333333333332, Set - 68, Hum:52.74)
+2020-06-06 01:05:31,797 INFO     COOLING-MAINT-HUM: Hum Max Exceeded( Temp - 70.32333333333332, Set - 68, Hum:52.74)
+2020-06-06 01:05:31,803 INFO     read Actual Temp 67.73, Adj Temp 68.0, Current Set 68
+2020-06-06 01:06:31,822 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:06:31,860 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 60
+2020-06-06 01:06:31,866 INFO     read Actual Temp 67.78, Adj Temp 68.0, Current Set 68
+2020-06-06 01:07:31,883 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:07:31,913 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 01:07:31,917 INFO     read Actual Temp 67.82, Adj Temp 68.0, Current Set 68
+2020-06-06 01:08:31,942 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:08:31,973 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 01:08:31,980 INFO     read Actual Temp 67.82, Adj Temp 68.0, Current Set 68
+2020-06-06 01:08:46,995 INFO     Server initialized for eventlet.
+2020-06-06 01:08:47,012 INFO     Monitor started
+2020-06-06 01:08:47,013 INFO     Turning Off
+2020-06-06 01:08:47,013 INFO     Starting Up
+2020-06-06 01:08:47,013 INFO     Taking measurements.
+2020-06-06 01:08:47,037 DEBUG    Starting new HTTP connection (1): raspberrypi:2121
+2020-06-06 01:08:47,077 DEBUG    http://raspberrypi:2121 "GET /get_temp HTTP/1.1" 200 61
+2020-06-06 01:08:47,086 INFO     Logger Read: Actual Temp 67.84, Adj Temp 68.0, Current Set 68
+2020-06-06 01:09:23,012 INFO     Server initialized for eventlet.
+2020-06-06 01:09:23,031 INFO     Monitor started
+2020-06-06 01:09:23,031 INFO     Turning Off
+2020-06-06 01:09:23,031 INFO     Starting Up
+2020-06-06 01:09:23,032 INFO     Taking measurements.
+2020-06-06 01:09:23,092 INFO     Logger Read: Actual Temp 67.84, Adj Temp 68.0, Current Set 68
+2020-06-06 01:10:23,145 INFO     COOLING-MAINT-TEMP: Set point exceeded( Temp - 70.68333333333332, Set - 68, Hum:52.7)
+2020-06-06 01:10:23,150 INFO     Logger Read: Actual Temp 67.85, Adj Temp 69.0, Current Set 68
+2020-06-06 01:11:23,209 INFO     Logger Read: Actual Temp 67.87, Adj Temp 69.0, Current Set 68
+2020-06-06 01:12:23,279 INFO     Logger Read: Actual Temp 67.89, Adj Temp 69.0, Current Set 68
+2020-06-06 01:13:23,338 INFO     Logger Read: Actual Temp 67.88, Adj Temp 69.0, Current Set 68
+2020-06-06 01:14:23,398 INFO     Logger Read: Actual Temp 67.86, Adj Temp 69.0, Current Set 68
+2020-06-06 01:15:23,463 INFO     Logger Read: Actual Temp 67.86, Adj Temp 69.0, Current Set 68
+2020-06-06 01:16:23,516 INFO     Logger Read: Actual Temp 67.9, Adj Temp 69.0, Current Set 68
+2020-06-06 01:16:49,853 INFO     Server initialized for eventlet.
+2020-06-06 01:16:49,874 INFO     Monitor started
+2020-06-06 01:16:49,874 INFO     Turning Off
+2020-06-06 01:16:49,875 INFO     Starting Up
+2020-06-06 01:16:49,875 INFO     Taking measurements.
+2020-06-06 01:16:49,943 INFO     Logger Read: Actual Temp 67.92, Adj Temp 69.0, Current Set 68
+2020-06-06 01:17:49,994 INFO     COOLING-MAINT-TEMP: Set point exceeded( Temp - 71.42666666666668, Set - 68, Hum:52.81)
+2020-06-06 01:17:50,000 INFO     Logger Read: Actual Temp 67.87, Adj Temp 69.0, Current Set 68
+2020-06-06 01:18:50,059 INFO     Logger Read: Actual Temp 67.88, Adj Temp 69.0, Current Set 68
+2020-06-06 01:19:50,115 INFO     Logger Read: Actual Temp 67.9, Adj Temp 69.0, Current Set 68
+2020-06-06 01:20:08,765 INFO     Server initialized for eventlet.
+2020-06-06 01:20:08,783 INFO     MONITOR started
+2020-06-06 01:20:08,783 INFO     MONITOR: Turning Off
+2020-06-06 01:20:08,783 INFO     Starting Up
+2020-06-06 01:20:08,784 INFO     Taking measurements.
+2020-06-06 01:20:08,844 INFO     Logger Read: Actual Temp 67.9, Adj Temp 69.0, Current Set 68
+2020-06-06 01:21:08,892 INFO     MONITOR: COOLING-MAINT-TEMP: Set point exceeded( Temp - 71.43, Set - 68, Hum:52.91)
+2020-06-06 01:21:08,897 INFO     Logger Read: Actual Temp 67.9, Adj Temp 69.0, Current Set 68
+2020-06-06 01:22:08,955 INFO     Logger Read: Actual Temp 67.92, Adj Temp 69.0, Current Set 68
+2020-06-06 01:23:09,006 INFO     Logger Read: Actual Temp 67.91, Adj Temp 69.0, Current Set 68
+2020-06-06 01:24:09,070 INFO     Logger Read: Actual Temp 67.94, Adj Temp 69.0, Current Set 68
+2020-06-06 01:25:09,145 INFO     Logger Read: Actual Temp 67.97, Adj Temp 69.0, Current Set 68
+2020-06-06 01:26:09,199 INFO     Logger Read: Actual Temp 67.98, Adj Temp 69.0, Current Set 68
+2020-06-06 01:27:09,259 INFO     Logger Read: Actual Temp 67.97, Adj Temp 69.0, Current Set 68
+2020-06-06 01:28:09,313 INFO     Logger Read: Actual Temp 67.96, Adj Temp 69.0, Current Set 68
+2020-06-06 01:29:09,376 INFO     Logger Read: Actual Temp 68.01, Adj Temp 69.0, Current Set 68
+2020-06-06 01:29:22,458 INFO     Server initialized for eventlet.
+2020-06-06 01:29:22,476 INFO     MONITOR started
+2020-06-06 01:29:22,477 INFO     MONITOR: Turning Off
+2020-06-06 01:29:22,477 INFO     MAIN: Starting Up
+2020-06-06 01:29:22,477 INFO     LOGGER: Taking measurements.
+2020-06-06 01:29:22,527 INFO     LOGGER Read: Actual Temp 67.99, Adj Temp 69.0, Current Set 68
+2020-06-06 01:30:14,300 INFO     Server initialized for eventlet.
+2020-06-06 01:30:14,319 INFO     MONITOR started
+2020-06-06 01:30:14,320 INFO     MONITOR: Turning Off
+2020-06-06 01:30:14,320 INFO     MAIN: Starting Up
+2020-06-06 01:30:14,320 INFO     LOGGER: Taking measurements.
+2020-06-06 01:30:14,390 INFO     LOGGER Read: Actual Temp 67.99, Adj Temp 68.0, Current Set 68
+2020-06-06 01:31:14,440 INFO     MONITOR: COOLING-MAINT-TEMP: Set point exceeded( Temp - 70.52333333333333, Set - 68, Hum:0.5478000000000001)
+2020-06-06 01:31:14,446 INFO     LOGGER Read: Actual Temp 67.97, Adj Temp 68.0, Current Set 68
+2020-06-06 01:31:54,417 INFO     Server initialized for eventlet.
+2020-06-06 01:31:54,437 INFO     MONITOR started
+2020-06-06 01:31:54,437 INFO     MONITOR: Turning Off
+2020-06-06 01:31:54,437 INFO     MAIN: Starting Up
+2020-06-06 01:31:54,437 INFO     LOGGER: Taking measurements.
+2020-06-06 01:31:54,509 INFO     LOGGER Read: Actual Temp 67.99, Adj Temp 68.0, Current Set 68
+2020-06-06 01:32:54,565 INFO     MONITOR: COOLING-MAINT-HUM: Hum Max Exceeded( Temp - 70.54333333333334, Set - 70, Hum:0.55)
+2020-06-06 01:32:54,570 INFO     LOGGER Read: Actual Temp 67.99, Adj Temp 68.0, Current Set 68
+2020-06-06 01:33:54,628 INFO     LOGGER Read: Actual Temp 68.06, Adj Temp 68.0, Current Set 68
+2020-06-06 01:34:54,688 INFO     LOGGER Read: Actual Temp 68.08, Adj Temp 68.0, Current Set 68
+2020-06-06 01:35:50,531 INFO     Server initialized for eventlet.
+2020-06-06 01:35:50,549 INFO     MONITOR started
+2020-06-06 01:35:50,550 INFO     MONITOR: Turning Off
+2020-06-06 01:35:50,550 INFO     MAIN: Starting Up
+2020-06-06 01:35:50,550 INFO     LOGGER: Taking measurements.
+2020-06-06 01:35:50,621 INFO     LOGGER Read: Actual Temp 68.12, Adj Temp 68.0, Current Set 68
+2020-06-06 01:36:50,692 INFO     LOGGER Read: Actual Temp 68.15, Adj Temp 68.0, Current Set 68
+2020-06-06 01:37:50,764 INFO     LOGGER Read: Actual Temp 68.16, Adj Temp 68.0, Current Set 68
+2020-06-06 01:38:50,817 INFO     LOGGER Read: Actual Temp 68.16, Adj Temp 68.0, Current Set 68
+2020-06-06 01:39:50,882 INFO     LOGGER Read: Actual Temp 68.2, Adj Temp 68.0, Current Set 68
+2020-06-06 01:40:50,942 INFO     LOGGER Read: Actual Temp 68.23, Adj Temp 68.0, Current Set 68
+2020-06-06 01:41:51,011 INFO     LOGGER Read: Actual Temp 68.25, Adj Temp 68.0, Current Set 68
+2020-06-06 01:42:51,063 INFO     LOGGER Read: Actual Temp 68.28, Adj Temp 68.0, Current Set 68
+2020-06-06 01:43:06,793 INFO     Server initialized for eventlet.
+2020-06-06 01:43:06,812 INFO     MONITOR started
+2020-06-06 01:43:06,812 INFO     MONITOR: Turning Off
+2020-06-06 01:43:06,812 INFO     MAIN: Starting Up
+2020-06-06 01:43:06,812 INFO     LOGGER: Taking measurements.
+2020-06-06 01:43:06,871 INFO     LOGGER Read: Actual Temp 68.29, Adj Temp 68.0, Current Set 68
+2020-06-06 01:44:06,927 INFO     LOGGER Read: Actual Temp 68.31, Adj Temp 68.0, Current Set 68
+2020-06-06 01:45:06,984 INFO     LOGGER Read: Actual Temp 68.33, Adj Temp 68.0, Current Set 68
+2020-06-06 01:46:07,041 INFO     LOGGER Read: Actual Temp 68.33, Adj Temp 68.0, Current Set 68
+2020-06-06 02:05:39,607 INFO     LOGGER Read: Actual Temp 69.1, Adj Temp 69.0, Current Set 68
+2020-06-06 02:06:39,672 INFO     LOGGER Read: Actual Temp 69.15, Adj Temp 69.0, Current Set 68
+2020-06-06 02:07:39,722 INFO     LOGGER Read: Actual Temp 69.22, Adj Temp 69.0, Current Set 68
+2020-06-06 02:08:39,795 INFO     LOGGER Read: Actual Temp 69.23, Adj Temp 69.0, Current Set 68
+2020-06-06 02:09:39,854 INFO     LOGGER Read: Actual Temp 69.3, Adj Temp 69.0, Current Set 68
+2020-06-06 02:10:39,908 INFO     LOGGER Read: Actual Temp 69.36, Adj Temp 69.0, Current Set 68
+2020-06-06 02:11:39,981 INFO     LOGGER Read: Actual Temp 69.41, Adj Temp 69.0, Current Set 68
+2020-06-06 02:12:40,044 INFO     LOGGER Read: Actual Temp 69.45, Adj Temp 69.0, Current Set 68
+2020-06-06 02:13:40,102 INFO     LOGGER Read: Actual Temp 69.49, Adj Temp 69.0, Current Set 68
+2020-06-06 02:14:40,153 INFO     LOGGER Read: Actual Temp 69.52, Adj Temp 69.0, Current Set 68
+2020-06-06 02:15:40,208 INFO     LOGGER Read: Actual Temp 69.53, Adj Temp 69.0, Current Set 68
+2020-06-06 02:16:40,278 INFO     LOGGER Read: Actual Temp 69.57, Adj Temp 69.0, Current Set 68
+2020-06-06 02:17:40,340 INFO     LOGGER Read: Actual Temp 69.6, Adj Temp 69.0, Current Set 68
+2020-06-06 02:18:40,415 INFO     LOGGER Read: Actual Temp 69.62, Adj Temp 69.0, Current Set 68
+2020-06-06 02:19:40,472 INFO     LOGGER Read: Actual Temp 69.66, Adj Temp 69.0, Current Set 68
+2020-06-06 02:20:40,536 INFO     LOGGER Read: Actual Temp 69.69, Adj Temp 69.0, Current Set 68
+2020-06-06 02:21:40,606 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:22:40,674 INFO     LOGGER Read: Actual Temp 69.73, Adj Temp 69.0, Current Set 68
+2020-06-06 02:23:40,746 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:24:40,893 INFO     LOGGER Read: Actual Temp 69.73, Adj Temp 69.0, Current Set 68
+2020-06-06 02:25:40,952 INFO     LOGGER Read: Actual Temp 69.75, Adj Temp 70.0, Current Set 68
+2020-06-06 02:26:41,007 INFO     MONITOR: COOLING-MAINT-TEMP: Set point exceeded( Temp - 72.86333333333333, Set - 70, Hum:0.5644)
+2020-06-06 02:26:41,011 INFO     LOGGER Read: Actual Temp 69.76, Adj Temp 70.0, Current Set 68
+2020-06-06 02:27:41,067 INFO     LOGGER Read: Actual Temp 69.78, Adj Temp 70.0, Current Set 68
+2020-06-06 02:28:41,133 INFO     LOGGER Read: Actual Temp 69.75, Adj Temp 70.0, Current Set 68
+2020-06-06 02:29:41,191 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:30:41,250 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:31:41,339 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:32:41,393 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:33:41,471 INFO     LOGGER Read: Actual Temp 69.72, Adj Temp 69.0, Current Set 68
+2020-06-06 02:34:41,522 INFO     LOGGER Read: Actual Temp 69.71, Adj Temp 69.0, Current Set 68
+2020-06-06 02:35:41,588 INFO     LOGGER Read: Actual Temp 69.74, Adj Temp 69.0, Current Set 68
+2020-06-06 02:36:41,646 INFO     LOGGER Read: Actual Temp 69.76, Adj Temp 70.0, Current Set 68
+2020-06-06 02:37:41,716 INFO     LOGGER Read: Actual Temp 69.78, Adj Temp 70.0, Current Set 68
+2020-06-06 02:38:41,771 INFO     LOGGER Read: Actual Temp 69.82, Adj Temp 70.0, Current Set 68
+2020-06-06 02:39:41,833 INFO     LOGGER Read: Actual Temp 69.82, Adj Temp 70.0, Current Set 68
+2020-06-06 02:40:41,895 INFO     LOGGER Read: Actual Temp 69.83, Adj Temp 70.0, Current Set 68
+2020-06-06 02:41:41,970 INFO     LOGGER Read: Actual Temp 69.85, Adj Temp 70.0, Current Set 68
+2020-06-06 02:42:42,042 INFO     LOGGER Read: Actual Temp 69.84, Adj Temp 70.0, Current Set 68
+2020-06-06 02:43:42,099 INFO     LOGGER Read: Actual Temp 69.84, Adj Temp 70.0, Current Set 68
+2020-06-06 02:44:42,152 INFO     LOGGER Read: Actual Temp 69.83, Adj Temp 70.0, Current Set 68
+2020-06-06 02:45:42,209 INFO     LOGGER Read: Actual Temp 69.84, Adj Temp 70.0, Current Set 68
+2020-06-06 02:46:42,277 INFO     LOGGER Read: Actual Temp 69.9, Adj Temp 70.0, Current Set 68
+2020-06-06 02:47:42,337 INFO     LOGGER Read: Actual Temp 69.92, Adj Temp 70.0, Current Set 68
+2020-06-06 02:48:42,427 INFO     LOGGER Read: Actual Temp 69.97, Adj Temp 70.0, Current Set 68
+2020-06-06 02:49:42,482 INFO     LOGGER Read: Actual Temp 70.0, Adj Temp 70.0, Current Set 68
+2020-06-06 02:50:42,549 INFO     LOGGER Read: Actual Temp 70.04, Adj Temp 70.0, Current Set 68
+2020-06-06 02:51:42,611 INFO     LOGGER Read: Actual Temp 70.02, Adj Temp 70.0, Current Set 68
+2020-06-06 02:52:42,736 INFO     LOGGER Read: Actual Temp 69.68, Adj Temp 69.0, Current Set 68
+2020-06-06 02:53:42,794 INFO     LOGGER Read: Actual Temp 69.26, Adj Temp 69.0, Current Set 68
+2020-06-06 02:54:42,851 INFO     LOGGER Read: Actual Temp 69.04, Adj Temp 69.0, Current Set 68
+2020-06-06 02:55:42,911 INFO     LOGGER Read: Actual Temp 68.82, Adj Temp 69.0, Current Set 68
+2020-06-06 02:56:42,977 INFO     LOGGER Read: Actual Temp 68.77, Adj Temp 69.0, Current Set 68
+2020-06-06 02:57:43,042 INFO     LOGGER Read: Actual Temp 68.6, Adj Temp 68.0, Current Set 68
+2020-06-06 02:58:43,118 INFO     LOGGER Read: Actual Temp 68.53, Adj Temp 68.0, Current Set 68
+2020-06-06 02:59:43,176 INFO     LOGGER Read: Actual Temp 68.58, Adj Temp 68.0, Current Set 68
+2020-06-06 03:00:43,242 INFO     LOGGER Read: Actual Temp 68.32, Adj Temp 68.0, Current Set 68
+2020-06-06 03:01:43,307 INFO     LOGGER Read: Actual Temp 68.31, Adj Temp 68.0, Current Set 68
+2020-06-06 03:02:43,373 INFO     LOGGER Read: Actual Temp 68.26, Adj Temp 68.0, Current Set 68
+2020-06-06 03:13:11,235 INFO     Server initialized for eventlet.
+2020-06-06 03:13:11,253 INFO     MONITOR started
+2020-06-06 03:13:11,253 INFO     MONITOR: Turning Off
+2020-06-06 03:13:11,253 INFO     MAIN: Starting Up
+2020-06-06 03:13:11,253 INFO     LOGGER: Taking measurements.
+2020-06-06 03:13:11,328 INFO     LOGGER Read: Actual Temp 67.47, Adj Temp 67.0, Current Set 68
+2020-06-06 03:14:11,393 INFO     LOGGER Read: Actual Temp 67.31, Adj Temp 67.0, Current Set 68
+2020-06-06 03:15:11,453 INFO     LOGGER Read: Actual Temp 67.24, Adj Temp 67.0, Current Set 68
+2020-06-06 03:15:25,166 INFO     Server initialized for eventlet.
+2020-06-06 03:15:25,185 INFO     MONITOR started
+2020-06-06 03:15:25,185 INFO     MONITOR: Turning Off
+2020-06-06 03:15:25,185 INFO     MAIN: Starting Up
+2020-06-06 03:15:25,185 INFO     LOGGER: Taking measurements.
+2020-06-06 03:15:25,244 INFO     LOGGER Read: Actual Temp 67.28, Adj Temp 67.0, Current Set 68
+2020-06-06 03:16:25,309 INFO     LOGGER Read: Actual Temp 67.21, Adj Temp 67.0, Current Set 68
+2020-06-06 03:17:25,371 INFO     LOGGER Read: Actual Temp 67.04, Adj Temp 67.0, Current Set 68
+2020-06-06 03:18:25,434 INFO     LOGGER Read: Actual Temp 67.07, Adj Temp 67.0, Current Set 68
+2020-06-06 03:19:25,491 INFO     LOGGER Read: Actual Temp 67.21, Adj Temp 67.0, Current Set 68
+2020-06-06 03:20:25,556 INFO     LOGGER Read: Actual Temp 67.2, Adj Temp 67.0, Current Set 68
+2020-06-06 03:21:25,605 INFO     LOGGER Read: Actual Temp 66.95, Adj Temp 67.0, Current Set 68
+2020-06-06 03:22:25,652 INFO     LOGGER Read: Actual Temp 66.81, Adj Temp 67.0, Current Set 68
+2020-06-06 03:23:25,709 INFO     LOGGER Read: Actual Temp 66.59, Adj Temp 66.0, Current Set 68
+2020-06-06 03:24:25,763 INFO     LOGGER Read: Actual Temp 66.57, Adj Temp 66.0, Current Set 68
+2020-06-06 03:25:25,813 INFO     LOGGER Read: Actual Temp 66.36, Adj Temp 66.0, Current Set 68
+2020-06-06 03:26:25,874 INFO     LOGGER Read: Actual Temp 66.58, Adj Temp 66.0, Current Set 68
+2020-06-06 03:27:25,939 INFO     LOGGER Read: Actual Temp 66.8, Adj Temp 67.0, Current Set 68
+2020-06-06 03:28:25,998 INFO     LOGGER Read: Actual Temp 67.07, Adj Temp 67.0, Current Set 68
+2020-06-06 03:29:26,063 INFO     LOGGER Read: Actual Temp 67.38, Adj Temp 67.0, Current Set 68
+2020-06-06 03:30:26,184 INFO     LOGGER Read: Actual Temp 67.59, Adj Temp 67.0, Current Set 68
+2020-06-06 03:31:26,239 INFO     LOGGER Read: Actual Temp 67.82, Adj Temp 68.0, Current Set 68
+2020-06-06 03:32:26,411 INFO     LOGGER Read: Actual Temp 67.97, Adj Temp 68.0, Current Set 68
+2020-06-06 03:33:26,473 INFO     LOGGER Read: Actual Temp 68.13, Adj Temp 68.0, Current Set 68
+2020-06-06 03:34:26,532 INFO     LOGGER Read: Actual Temp 68.21, Adj Temp 68.0, Current Set 68
+2020-06-06 03:35:26,602 INFO     LOGGER Read: Actual Temp 68.31, Adj Temp 68.0, Current Set 68
+2020-06-06 03:36:26,664 INFO     LOGGER Read: Actual Temp 68.38, Adj Temp 68.0, Current Set 68
+2020-06-06 03:37:26,728 INFO     LOGGER Read: Actual Temp 68.45, Adj Temp 68.0, Current Set 68
+2020-06-06 03:38:26,800 INFO     LOGGER Read: Actual Temp 68.5, Adj Temp 68.0, Current Set 68
+2020-06-06 03:39:26,864 INFO     LOGGER Read: Actual Temp 68.52, Adj Temp 68.0, Current Set 68
+2020-06-06 03:40:26,927 INFO     LOGGER Read: Actual Temp 68.57, Adj Temp 68.0, Current Set 68
+2020-06-06 03:41:27,001 INFO     LOGGER Read: Actual Temp 68.58, Adj Temp 68.0, Current Set 68
+2020-06-06 03:42:27,067 INFO     LOGGER Read: Actual Temp 68.62, Adj Temp 68.0, Current Set 68
+2020-06-06 03:43:27,125 INFO     LOGGER Read: Actual Temp 68.59, Adj Temp 68.0, Current Set 68
+2020-06-06 03:44:27,181 INFO     LOGGER Read: Actual Temp 68.57, Adj Temp 68.0, Current Set 68
+2020-06-06 03:45:27,244 INFO     LOGGER Read: Actual Temp 68.53, Adj Temp 68.0, Current Set 68
+2020-06-06 03:46:27,308 INFO     LOGGER Read: Actual Temp 68.56, Adj Temp 68.0, Current Set 68
+2020-06-06 03:47:27,377 INFO     LOGGER Read: Actual Temp 68.62, Adj Temp 68.0, Current Set 68
+2020-06-06 03:48:27,437 INFO     LOGGER Read: Actual Temp 68.62, Adj Temp 68.0, Current Set 68
+2020-06-06 03:49:27,494 INFO     LOGGER Read: Actual Temp 68.64, Adj Temp 68.0, Current Set 68
+2020-06-06 03:50:27,547 INFO     LOGGER Read: Actual Temp 68.62, Adj Temp 68.0, Current Set 68
+2020-06-06 03:51:27,602 INFO     LOGGER Read: Actual Temp 68.66, Adj Temp 68.0, Current Set 68
+2020-06-06 03:52:27,663 INFO     LOGGER Read: Actual Temp 68.65, Adj Temp 68.0, Current Set 68
+2020-06-06 03:53:27,716 INFO     LOGGER Read: Actual Temp 68.69, Adj Temp 68.0, Current Set 68
+2020-06-06 03:54:27,782 INFO     LOGGER Read: Actual Temp 68.65, Adj Temp 68.0, Current Set 68
+2020-06-06 03:55:27,838 INFO     LOGGER Read: Actual Temp 68.67, Adj Temp 68.0, Current Set 68
+2020-06-06 03:56:27,893 INFO     LOGGER Read: Actual Temp 68.7, Adj Temp 68.0, Current Set 68
+2020-06-06 03:57:27,956 INFO     LOGGER Read: Actual Temp 68.75, Adj Temp 69.0, Current Set 68
+2020-06-06 03:58:28,013 INFO     LOGGER Read: Actual Temp 68.7, Adj Temp 68.0, Current Set 68
+2020-06-06 03:59:28,068 INFO     LOGGER Read: Actual Temp 68.69, Adj Temp 68.0, Current Set 68
+2020-06-06 04:00:28,123 INFO     LOGGER Read: Actual Temp 68.66, Adj Temp 68.0, Current Set 68
+2020-06-06 04:01:28,209 INFO     LOGGER Read: Actual Temp 68.73, Adj Temp 68.0, Current Set 68
+2020-06-06 04:02:28,266 INFO     LOGGER Read: Actual Temp 68.74, Adj Temp 68.0, Current Set 68
+2020-06-06 04:03:28,332 INFO     LOGGER Read: Actual Temp 68.55, Adj Temp 68.0, Current Set 68
+2020-06-06 04:04:28,389 INFO     LOGGER Read: Actual Temp 68.16, Adj Temp 68.0, Current Set 68
+2020-06-06 04:05:28,449 INFO     LOGGER Read: Actual Temp 67.85, Adj Temp 68.0, Current Set 68
+2020-06-06 04:06:28,514 INFO     LOGGER Read: Actual Temp 67.62, Adj Temp 67.0, Current Set 68
+2020-06-06 04:07:28,570 INFO     LOGGER Read: Actual Temp 67.38, Adj Temp 67.0, Current Set 68
+2020-06-06 04:08:28,629 INFO     LOGGER Read: Actual Temp 67.18, Adj Temp 67.0, Current Set 68
+2020-06-06 04:09:28,691 INFO     LOGGER Read: Actual Temp 67.0, Adj Temp 67.0, Current Set 68
+2020-06-06 04:10:28,763 INFO     LOGGER Read: Actual Temp 66.86, Adj Temp 67.0, Current Set 68
+2020-06-06 04:11:28,826 INFO     LOGGER Read: Actual Temp 66.92, Adj Temp 67.0, Current Set 68
+2020-06-06 04:12:28,880 INFO     LOGGER Read: Actual Temp 66.84, Adj Temp 67.0, Current Set 68
+2020-06-06 04:13:28,944 INFO     LOGGER Read: Actual Temp 66.82, Adj Temp 67.0, Current Set 68
+2020-06-06 04:14:29,005 INFO     LOGGER Read: Actual Temp 66.69, Adj Temp 66.0, Current Set 68
+2020-06-06 04:15:29,067 INFO     LOGGER Read: Actual Temp 66.65, Adj Temp 66.0, Current Set 68
+2020-06-06 04:16:29,137 INFO     LOGGER Read: Actual Temp 66.75, Adj Temp 67.0, Current Set 68
+2020-06-06 04:17:29,196 INFO     LOGGER Read: Actual Temp 66.81, Adj Temp 67.0, Current Set 68
+2020-06-06 04:18:29,264 INFO     LOGGER Read: Actual Temp 66.65, Adj Temp 66.0, Current Set 68
+2020-06-06 04:19:29,350 INFO     LOGGER Read: Actual Temp 66.56, Adj Temp 66.0, Current Set 68
+2020-06-06 04:20:29,427 INFO     LOGGER Read: Actual Temp 66.58, Adj Temp 66.0, Current Set 68
+2020-06-06 04:21:29,485 INFO     LOGGER Read: Actual Temp 66.38, Adj Temp 66.0, Current Set 68
+2020-06-06 04:22:29,558 INFO     LOGGER Read: Actual Temp 66.21, Adj Temp 66.0, Current Set 68
+2020-06-06 04:23:29,628 INFO     LOGGER Read: Actual Temp 66.12, Adj Temp 66.0, Current Set 68
+2020-06-06 04:24:29,695 INFO     LOGGER Read: Actual Temp 66.01, Adj Temp 66.0, Current Set 68
+2020-06-06 04:25:29,771 INFO     LOGGER Read: Actual Temp 66.01, Adj Temp 66.0, Current Set 68
+2020-06-06 04:26:29,837 INFO     LOGGER Read: Actual Temp 65.92, Adj Temp 66.0, Current Set 68
+2020-06-06 04:27:29,914 INFO     LOGGER Read: Actual Temp 65.87, Adj Temp 66.0, Current Set 68
+2020-06-06 04:28:29,974 INFO     LOGGER Read: Actual Temp 65.85, Adj Temp 66.0, Current Set 68
+2020-06-06 04:29:30,043 INFO     LOGGER Read: Actual Temp 65.77, Adj Temp 66.0, Current Set 68
+2020-06-06 04:30:30,109 INFO     LOGGER Read: Actual Temp 65.78, Adj Temp 66.0, Current Set 68
+2020-06-06 04:31:30,186 INFO     LOGGER Read: Actual Temp 65.7, Adj Temp 65.0, Current Set 68
+2020-06-06 04:32:30,255 INFO     LOGGER Read: Actual Temp 65.73, Adj Temp 65.0, Current Set 68
+2020-06-06 04:33:30,317 INFO     LOGGER Read: Actual Temp 65.63, Adj Temp 65.0, Current Set 68
+2020-06-06 04:34:30,398 INFO     LOGGER Read: Actual Temp 65.57, Adj Temp 65.0, Current Set 68
+2020-06-06 04:35:30,456 INFO     LOGGER Read: Actual Temp 65.48, Adj Temp 65.0, Current Set 68
+2020-06-06 04:36:30,531 INFO     LOGGER Read: Actual Temp 65.45, Adj Temp 65.0, Current Set 68
+2020-06-06 04:37:30,595 INFO     LOGGER Read: Actual Temp 65.4, Adj Temp 65.0, Current Set 68
+2020-06-06 04:38:30,656 INFO     LOGGER Read: Actual Temp 65.24, Adj Temp 65.0, Current Set 68
+2020-06-06 04:39:30,716 INFO     LOGGER Read: Actual Temp 65.19, Adj Temp 65.0, Current Set 68
+2020-06-06 04:40:30,777 INFO     LOGGER Read: Actual Temp 65.2, Adj Temp 65.0, Current Set 68
+2020-06-06 04:41:30,842 INFO     LOGGER Read: Actual Temp 65.17, Adj Temp 65.0, Current Set 68
+2020-06-06 04:42:30,908 INFO     LOGGER Read: Actual Temp 65.07, Adj Temp 65.0, Current Set 68
+2020-06-06 04:43:30,979 INFO     LOGGER Read: Actual Temp 65.1, Adj Temp 65.0, Current Set 68
+2020-06-06 04:44:31,039 INFO     LOGGER Read: Actual Temp 65.0, Adj Temp 65.0, Current Set 68
+2020-06-06 04:45:31,101 INFO     LOGGER Read: Actual Temp 64.92, Adj Temp 65.0, Current Set 68
+2020-06-06 04:46:31,159 INFO     LOGGER Read: Actual Temp 64.89, Adj Temp 65.0, Current Set 68
+2020-06-06 04:47:31,217 INFO     LOGGER Read: Actual Temp 64.91, Adj Temp 65.0, Current Set 68
+2020-06-06 04:48:31,287 INFO     LOGGER Read: Actual Temp 64.97, Adj Temp 65.0, Current Set 68
+2020-06-06 04:49:31,342 INFO     LOGGER Read: Actual Temp 64.98, Adj Temp 65.0, Current Set 68
+2020-06-06 04:50:31,425 INFO     LOGGER Read: Actual Temp 64.86, Adj Temp 65.0, Current Set 68
+2020-06-06 04:51:31,505 INFO     LOGGER Read: Actual Temp 64.78, Adj Temp 65.0, Current Set 68
+2020-06-06 04:52:31,574 INFO     LOGGER Read: Actual Temp 64.73, Adj Temp 64.0, Current Set 68
+2020-06-06 04:53:31,634 INFO     LOGGER Read: Actual Temp 64.68, Adj Temp 64.0, Current Set 68
+2020-06-06 04:54:31,771 INFO     LOGGER Read: Actual Temp 64.59, Adj Temp 64.0, Current Set 68
+2020-06-06 04:55:31,832 INFO     LOGGER Read: Actual Temp 64.64, Adj Temp 64.0, Current Set 68
+2020-06-06 04:56:31,897 INFO     LOGGER Read: Actual Temp 64.57, Adj Temp 64.0, Current Set 68
+2020-06-06 04:57:31,961 INFO     LOGGER Read: Actual Temp 64.57, Adj Temp 64.0, Current Set 68
+2020-06-06 04:58:32,029 INFO     LOGGER Read: Actual Temp 64.5, Adj Temp 64.0, Current Set 68
+2020-06-06 04:59:32,102 INFO     LOGGER Read: Actual Temp 64.51, Adj Temp 64.0, Current Set 68
+2020-06-06 05:00:32,163 INFO     LOGGER Read: Actual Temp 64.46, Adj Temp 64.0, Current Set 68
+2020-06-06 05:01:32,218 INFO     LOGGER Read: Actual Temp 64.46, Adj Temp 64.0, Current Set 68
+2020-06-06 05:02:32,276 INFO     LOGGER Read: Actual Temp 64.37, Adj Temp 64.0, Current Set 68
+2020-06-06 05:03:32,345 INFO     LOGGER Read: Actual Temp 64.43, Adj Temp 64.0, Current Set 68
+2020-06-06 05:04:32,410 INFO     LOGGER Read: Actual Temp 64.43, Adj Temp 64.0, Current Set 68
+2020-06-06 05:05:32,472 INFO     LOGGER Read: Actual Temp 64.32, Adj Temp 64.0, Current Set 68
+2020-06-06 08:45:17,636 INFO     LOGGER Read: Actual Temp 67.87, Adj Temp 68.0, Current Set 68
+2020-06-06 15:16:37,501 INFO     Server initialized for eventlet.
+2020-06-06 15:16:37,509 INFO     MONITOR started
+2020-06-06 15:16:37,509 INFO     MONITOR: Turning Off
+2020-06-06 15:16:37,509 INFO     MAIN: Starting Up
+2020-06-06 15:16:37,510 INFO     LOGGER: Taking measurements.
+2020-06-06 15:16:37,583 INFO     LOGGER Read: Actual Temp 68.19, Adj Temp 68.0, Current Set 70
+2020-06-06 15:32:48,053 INFO     Server initialized for eventlet.
+2020-06-06 15:32:48,059 INFO     MONITOR started
+2020-06-06 15:32:48,059 INFO     MONITOR: Turning Off
+2020-06-06 15:32:48,059 INFO     MAIN: Starting Up
+2020-06-06 15:32:48,060 INFO     LOGGER: Taking measurements.
+2020-06-06 15:32:48,136 INFO     LOGGER Read: Actual Temp 69.21, Adj Temp 69.0, Current Set 70
+2020-06-06 23:12:50,186 INFO     Server initialized for eventlet.
+2020-06-06 23:12:50,194 INFO     MONITOR started
+2020-06-06 23:12:50,194 INFO     MONITOR: Turning Off
+2020-06-06 23:12:50,194 INFO     MAIN: Starting Up
+2020-06-06 23:12:50,195 INFO     LOGGER: Taking measurements.
+2020-06-06 23:12:50,269 INFO     LOGGER Read: Actual Temp 67.11, Adj Temp 67.0, Current Set 70
+2020-06-06 23:15:24,679 INFO     Server initialized for eventlet.
+2020-06-06 23:15:24,685 INFO     MONITOR started
+2020-06-06 23:15:24,686 INFO     MONITOR: Turning Off
+2020-06-06 23:15:24,686 INFO     MAIN: Starting Up
+2020-06-06 23:15:24,686 INFO     LOGGER: Taking measurements.
+2020-06-06 23:15:24,754 INFO     LOGGER Read: Actual Temp 67.18, Adj Temp 67.0, Current Set 70
+2020-06-06 23:15:59,345 INFO     Server initialized for eventlet.
+2020-06-06 23:15:59,350 INFO     MONITOR started
+2020-06-06 23:15:59,351 INFO     MONITOR: Turning Off
+2020-06-06 23:15:59,351 INFO     MAIN: Starting Up
+2020-06-06 23:15:59,351 INFO     LOGGER: Taking measurements.
+2020-06-06 23:15:59,420 INFO     LOGGER Read: Actual Temp 67.2, Adj Temp 67.0, Current Set 70
+2020-06-06 23:16:02,153 DEBUG    load me now:book-read
+2020-06-06 23:16:02,154 DEBUG    import pyexcel.plugins.sources.sqlalchemy.BookSQLSource
+2020-06-06 23:16:02,156 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:16:02,157 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:16:02,163 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:16:02,165 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:16:02,171 DEBUG    load me now:book-write
+2020-06-06 23:16:02,171 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteBookToMemory
+2020-06-06 23:16:02,172 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:16:02,172 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:16:02,173 DEBUG    load me now:sheet-write
+2020-06-06 23:16:02,173 DEBUG    import pyexcel.plugins.sources.pydata.arraysource.ArraySource
+2020-06-06 23:17:36,877 INFO     Server initialized for eventlet.
+2020-06-06 23:17:36,882 INFO     MONITOR started
+2020-06-06 23:17:36,882 INFO     MONITOR: Turning Off
+2020-06-06 23:17:36,882 INFO     MAIN: Starting Up
+2020-06-06 23:17:36,883 INFO     LOGGER: Taking measurements.
+2020-06-06 23:17:36,951 INFO     LOGGER Read: Actual Temp 67.29, Adj Temp 67.0, Current Set 70
+2020-06-06 23:18:28,620 INFO     Server initialized for eventlet.
+2020-06-06 23:18:28,626 INFO     MONITOR started
+2020-06-06 23:18:28,626 INFO     MONITOR: Turning Off
+2020-06-06 23:18:28,626 INFO     MAIN: Starting Up
+2020-06-06 23:18:28,626 INFO     LOGGER: Taking measurements.
+2020-06-06 23:18:28,702 INFO     LOGGER Read: Actual Temp 67.31, Adj Temp 67.0, Current Set 70
+2020-06-06 23:18:38,949 DEBUG    load me now:book-read
+2020-06-06 23:18:38,950 DEBUG    import pyexcel.plugins.sources.sqlalchemy.BookSQLSource
+2020-06-06 23:18:38,952 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:18:38,954 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:18:38,954 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:18:38,957 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:18:38,964 DEBUG    load me now:book-write
+2020-06-06 23:18:38,964 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteBookToMemory
+2020-06-06 23:18:38,964 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:18:38,965 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:18:38,965 DEBUG    load me now:sheet-write
+2020-06-06 23:18:38,965 DEBUG    import pyexcel.plugins.sources.pydata.arraysource.ArraySource
+2020-06-06 23:19:16,839 INFO     Server initialized for eventlet.
+2020-06-06 23:19:16,844 INFO     MONITOR started
+2020-06-06 23:19:16,845 INFO     MONITOR: Turning Off
+2020-06-06 23:19:16,845 INFO     MAIN: Starting Up
+2020-06-06 23:19:16,845 INFO     LOGGER: Taking measurements.
+2020-06-06 23:19:16,912 INFO     LOGGER Read: Actual Temp 67.31, Adj Temp 67.0, Current Set 70
+2020-06-06 23:19:19,767 DEBUG    load me now:book-read
+2020-06-06 23:19:19,767 DEBUG    import pyexcel.plugins.sources.sqlalchemy.BookSQLSource
+2020-06-06 23:19:19,769 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:19:19,770 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:19:19,771 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:19:19,773 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:19:19,779 DEBUG    load me now:book-write
+2020-06-06 23:19:19,779 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteBookToMemory
+2020-06-06 23:19:19,780 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:19:19,780 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:19:19,780 DEBUG    load me now:sheet-write
+2020-06-06 23:19:19,781 DEBUG    import pyexcel.plugins.sources.pydata.arraysource.ArraySource
+2020-06-06 23:20:30,962 INFO     Server initialized for eventlet.
+2020-06-06 23:20:30,968 INFO     MONITOR started
+2020-06-06 23:20:30,969 INFO     MONITOR: Turning Off
+2020-06-06 23:20:30,969 INFO     MAIN: Starting Up
+2020-06-06 23:20:30,969 INFO     LOGGER: Taking measurements.
+2020-06-06 23:20:31,032 INFO     LOGGER Read: Actual Temp 67.3, Adj Temp 67.0, Current Set 70
+2020-06-06 23:21:19,354 INFO     Server initialized for eventlet.
+2020-06-06 23:21:19,359 INFO     MONITOR started
+2020-06-06 23:21:19,360 INFO     MONITOR: Turning Off
+2020-06-06 23:21:19,360 INFO     MAIN: Starting Up
+2020-06-06 23:21:19,360 INFO     LOGGER: Taking measurements.
+2020-06-06 23:21:19,425 INFO     LOGGER Read: Actual Temp 67.27, Adj Temp 67.0, Current Set 70
+2020-06-06 23:21:22,750 DEBUG    load me now:sheet-read
+2020-06-06 23:21:22,750 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:21:22,751 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:21:22,753 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:21:22,754 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:21:22,756 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:21:22,763 DEBUG    load me now:sheet-write
+2020-06-06 23:21:22,763 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:21:22,764 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:21:22,765 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:22:14,088 INFO     Server initialized for eventlet.
+2020-06-06 23:22:14,093 INFO     MONITOR started
+2020-06-06 23:22:14,093 INFO     MONITOR: Turning Off
+2020-06-06 23:22:14,093 INFO     MAIN: Starting Up
+2020-06-06 23:22:14,094 INFO     LOGGER: Taking measurements.
+2020-06-06 23:22:14,162 INFO     LOGGER Read: Actual Temp 67.32, Adj Temp 67.0, Current Set 70
+2020-06-06 23:22:18,341 DEBUG    load me now:sheet-read
+2020-06-06 23:22:18,342 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:22:18,343 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:22:18,345 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:22:18,346 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:22:18,348 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:22:18,356 DEBUG    load me now:sheet-write
+2020-06-06 23:22:18,356 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:22:18,356 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:22:18,357 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:23:20,256 INFO     Server initialized for eventlet.
+2020-06-06 23:23:20,262 INFO     MONITOR started
+2020-06-06 23:23:20,262 INFO     MONITOR: Turning Off
+2020-06-06 23:23:20,262 INFO     MAIN: Starting Up
+2020-06-06 23:23:20,262 INFO     LOGGER: Taking measurements.
+2020-06-06 23:23:20,335 INFO     LOGGER Read: Actual Temp 67.31, Adj Temp 67.0, Current Set 70
+2020-06-06 23:23:24,519 DEBUG    load me now:sheet-read
+2020-06-06 23:23:24,520 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:23:24,522 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:23:24,524 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:23:24,525 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:23:24,527 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:23:24,534 DEBUG    load me now:sheet-write
+2020-06-06 23:23:24,534 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:23:24,535 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:23:24,535 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:23:24,536 DEBUG    import pyexcel_xlsx.xlsxw.XLSXWriter
+2020-06-06 23:23:24,944 DEBUG    $HOME=/Users/heydaraliyev
+2020-06-06 23:23:24,945 DEBUG    CONFIGDIR=/Users/heydaraliyev/.matplotlib
+2020-06-06 23:23:24,945 DEBUG    matplotlib data path: /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/mpl-data
+2020-06-06 23:23:24,949 DEBUG    loaded rc file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2020-06-06 23:23:24,951 DEBUG    matplotlib version 3.1.2
+2020-06-06 23:23:24,952 DEBUG    interactive is False
+2020-06-06 23:23:24,952 DEBUG    platform is darwin
+2020-06-06 23:23:24,952 DEBUG    loaded modules: ['sys', 'builtins', '_frozen_importlib', '_imp', '_warnings', '_weakref', 'zipimport', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_abc', 'site', 'os', 'stat', '_stat', 'posixpath', 'genericpath', 'os.path', '_collections_abc', '_sitebuiltins', '_bootlocale', '_locale', 'types', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'functools', '_functools', 'mpl_toolkits', 'google', 'PyObjCTools', 'zc', 'zope', 'logging', 'traceback', 'linecache', 'tokenize', 're', 'enum', 'sre_compile', '_sre', 'sre_parse', 'sre_constants', 'copyreg', 'token', 'weakref', '_weakrefset', 'collections.abc', 'string', '_string', 'atexit', 'logging.handlers', '_socket', 'selectors', 'math', 'errno', 'pickle', 'struct', '_struct', '_compat_pickle', '_pickle', 'queue', '_queue', 'flask', 'jinja2', 'jinja2.environment', 'jinja2.nodes', 'jinja2.utils', 'json', 'json.decoder', 'json.scanner', '_json', 'json.encoder', 'jinja2._compat', 'urllib', 'urllib.parse', 'markupsafe', 'markupsafe._compat', 'markupsafe._speedups', 'jinja2.defaults', 'jinja2.filters', 'random', 'hashlib', '_hashlib', '_blake2', '_sha3', 'bisect', '_bisect', '_random', 'jinja2.runtime', 'jinja2.exceptions', 'jinja2.tests', 'decimal', 'numbers', '_decimal', 'jinja2.lexer', 'unicodedata', 'jinja2.parser', 'jinja2.compiler', 'copy', 'jinja2.visitor', 'jinja2.optimizer', 'jinja2.idtracking', '__future__', 'jinja2.loaders', 'jinja2.bccache', 'tempfile', 'shutil', 'fnmatch', 'zlib', 'bz2', '_compression', '_bz2', 'lzma', '_lzma', 'pwd', 'grp', 'jinja2.asyncsupport', 'asyncio', 'asyncio.base_events', 'concurrent', 'concurrent.futures', 'concurrent.futures._base', 'subprocess', 'signal', '_posixsubprocess', 'ssl', '_ssl', 'base64', 'binascii', 'asyncio.constants', 'asyncio.coroutines', 'inspect', 'dis', 'opcode', '_opcode', 'asyncio.base_futures', 'asyncio.format_helpers', 'asyncio.log', 'asyncio.events', 'contextvars', '_contextvars', 'asyncio.base_tasks', '_asyncio', 'asyncio.futures', 'asyncio.protocols', 'asyncio.sslproto', 'asyncio.transports', 'asyncio.tasks', 'asyncio.locks', 'asyncio.runners', 'asyncio.queues', 'asyncio.streams', 'asyncio.subprocess', 'asyncio.unix_events', 'asyncio.base_subprocess', 'asyncio.selector_events', 'jinja2.asyncfilters', 'werkzeug', 'werkzeug.exceptions', 'werkzeug._compat', 'werkzeug._internal', 'datetime', '_datetime', 'werkzeug.wrappers', 'werkzeug.wrappers.accept', 'werkzeug.datastructures', 'mimetypes', 'werkzeug.filesystem', 'werkzeug.http', 'email', 'email.utils', 'email._parseaddr', 'calendar', 'locale', 'email.charset', 'email.base64mime', 'email.quoprimime', 'email.errors', 'email.encoders', 'quopri', 'urllib.request', 'http', 'http.client', 'email.parser', 'email.feedparser', 'email._policybase', 'email.header', 'email.message', 'uu', 'email._encoded_words', 'email.iterators', 'urllib.error', 'urllib.response', '_scproxy', 'werkzeug.urls', 'werkzeug.utils', 'pkgutil', 'html', 'html.entities', 'werkzeug.wrappers.auth', 'werkzeug.wrappers.base_request', 'werkzeug.formparser', 'werkzeug.wsgi', 'werkzeug.middleware', 'werkzeug.middleware.dispatcher', 'werkzeug.middleware.http_proxy', 'werkzeug.middleware.shared_data', 'werkzeug.security', 'hmac', 'werkzeug.wrappers.base_response', 'werkzeug.wrappers.common_descriptors', 'werkzeug.wrappers.etag', 'werkzeug.wrappers.request', 'werkzeug.wrappers.user_agent', 'werkzeug.wrappers.response', 'flask.json', 'uuid', '_uuid', 'itsdangerous', 'itsdangerous._json', 'itsdangerous.encoding', 'itsdangerous._compat', 'itsdangerous.exc', 'itsdangerous.jws', 'itsdangerous.serializer', 'itsdangerous.signer', 'itsdangerous.timed', 'itsdangerous.url_safe', 'flask._compat', 'flask.globals', 'werkzeug.local', 'greenlet', 'dataclasses', 'flask.app', 'werkzeug.routing', 'ast', '_ast', 'difflib', 'pprint', 'flask.cli', 'platform', 'click', 'click.core', 'click.types', 'click._compat', 'click.exceptions', 'click.utils', 'click.globals', 'click.termui', 'click.formatting', 'click.parser', 'click._unicodefun', 'click.decorators', 'flask.helpers', 'flask.signals', 'flask.config', 'flask.ctx', 'flask.logging', 'flask.sessions', 'flask.json.tag', 'flask.templating', 'flask.wrappers', 'werkzeug.wrappers.json', 'flask.blueprints', 'flask_sqlalchemy', 'sqlalchemy', 'sqlalchemy.util', 'sqlalchemy.util._collections', 'sqlalchemy.util.compat', 'configparser', 'sqlalchemy.util.deprecations', 'sqlalchemy.util.langhelpers', 'textwrap', 'sqlalchemy.exc', 'sqlalchemy.inspection', 'sqlalchemy.schema', 'sqlalchemy.sql', 'sqlalchemy.sql.expression', 'sqlalchemy.sql.base', 'sqlalchemy.sql.visitors', 'sqlalchemy.sql.dml', 'sqlalchemy.sql.elements', 'sqlalchemy.sql.operators', 'sqlalchemy.sql.type_api', 'sqlalchemy.sql.annotation', 'sqlalchemy.sql.selectable', 'sqlalchemy.sql.functions', 'sqlalchemy.sql.schema', 'sqlalchemy.sql.ddl', 'sqlalchemy.event', 'sqlalchemy.event.api', 'sqlalchemy.event.base', 'sqlalchemy.event.attr', 'sqlalchemy.event.legacy', 'sqlalchemy.event.registry', 'sqlalchemy.util.topological', 'sqlalchemy.sql.sqltypes', 'sqlalchemy.processors', 'sqlalchemy.cprocessors', 'sqlalchemy.sql.util', 'sqlalchemy.sql.default_comparator', 'sqlalchemy.sql.naming', 'sqlalchemy.events', 'sqlalchemy.engine', 'sqlalchemy.engine.strategies', 'sqlalchemy.engine.base', 'sqlalchemy.engine.interfaces', 'sqlalchemy.sql.compiler', 'sqlalchemy.sql.crud', 'sqlalchemy.engine.util', 'sqlalchemy.cutils', 'sqlalchemy.interfaces', 'sqlalchemy.log', 'sqlalchemy.engine.threadlocal', 'sqlalchemy.engine.url', 'sqlalchemy.dialects', 'sqlalchemy.pool', 'sqlalchemy.pool.base', 'sqlalchemy.pool.dbapi_proxy', 'sqlalchemy.pool.impl', 'sqlalchemy.util.queue', 'sqlalchemy.engine.result', 'sqlalchemy.cresultproxy', 'sqlalchemy.types', 'sqlalchemy.engine.default', 'sqlalchemy.engine.reflection', 'sqlalchemy.orm', 'sqlalchemy.orm.exc', 'sqlalchemy.orm.mapper', 'sqlalchemy.orm.attributes', 'sqlalchemy.orm.collections', 'sqlalchemy.orm.base', 'sqlalchemy.orm.interfaces', 'sqlalchemy.orm.path_registry', 'sqlalchemy.orm.instrumentation', 'sqlalchemy.orm.state', 'sqlalchemy.orm.loading', 'sqlalchemy.orm.strategy_options', 'sqlalchemy.orm.util', 'sqlalchemy.orm.properties', 'sqlalchemy.orm.deprecated_interfaces', 'sqlalchemy.orm.descriptor_props', 'sqlalchemy.orm.query', 'sqlalchemy.orm.persistence', 'sqlalchemy.orm.evaluator', 'sqlalchemy.orm.sync', 'sqlalchemy.orm.relationships', 'sqlalchemy.orm.dependency', 'sqlalchemy.orm.unitofwork', 'sqlalchemy.orm.scoping', 'sqlalchemy.orm.session', 'sqlalchemy.orm.identity', 'sqlalchemy.orm.dynamic', 'sqlalchemy.orm.strategies', 'sqlalchemy.orm.events', 'sqlalchemy.ext', 'sqlalchemy.ext.baked', 'sqlalchemy.ext.declarative', 'sqlalchemy.ext.declarative.api', 'sqlalchemy.ext.declarative.base', 'sqlalchemy.ext.declarative.clsregistry', 'flask_sqlalchemy.model', 'flask_sqlalchemy._compat', 'flask_sqlalchemy.utils', 'flask_socketio', 'socketio', 'socketio.client', 'engineio', 'engineio.client', 'six', 'six.moves', 'six.moves.urllib', 'requests', 'urllib3', 'urllib3.connectionpool', 'urllib3.exceptions', 'urllib3.packages', 'urllib3.packages.ssl_match_hostname', 'urllib3.packages.six', 'urllib3.packages.six.moves', 'urllib3.packages.six.moves.http_client', 'urllib3.packages.rfc3986', 'urllib3.packages.rfc3986.api', 'urllib3.packages.rfc3986.iri', 'urllib3.packages.rfc3986.compat', 'urllib3.packages.rfc3986.exceptions', 'urllib3.packages.rfc3986.misc', 'urllib3.packages.rfc3986.abnf_regexp', 'urllib3.packages.rfc3986.normalizers', 'urllib3.packages.rfc3986.uri', 'urllib3.packages.rfc3986._mixin', 'urllib3.packages.rfc3986.validators', 'idna', 'idna.package_data', 'idna.core', 'idna.idnadata', 'idna.intranges', 'urllib3.packages.rfc3986.parseresult', 'urllib3.connection', 'urllib3.util', 'urllib3.util.connection', 'urllib3.util.wait', 'urllib3.contrib', 'urllib3.contrib._appengine_environ', 'urllib3.util.request', 'urllib3.util.response', 'urllib3.util.ssl_', 'urllib3.util.timeout', 'urllib3.util.retry', 'urllib3.util.url', 'urllib3._collections', 'urllib3.request', 'urllib3.filepost', 'urllib3.fields', 'urllib3.packages.six.moves.urllib', 'urllib3.packages.six.moves.urllib.parse', 'urllib3.response', 'urllib3.util.queue', 'urllib3.poolmanager', 'chardet', 'chardet.compat', 'chardet.universaldetector', 'chardet.charsetgroupprober', 'chardet.enums', 'chardet.charsetprober', 'chardet.escprober', 'chardet.codingstatemachine', 'chardet.escsm', 'chardet.latin1prober', 'chardet.mbcsgroupprober', 'chardet.utf8prober', 'chardet.mbcssm', 'chardet.sjisprober', 'chardet.mbcharsetprober', 'chardet.chardistribution', 'chardet.euctwfreq', 'chardet.euckrfreq', 'chardet.gb2312freq', 'chardet.big5freq', 'chardet.jisfreq', 'chardet.jpcntx', 'chardet.eucjpprober', 'chardet.gb2312prober', 'chardet.euckrprober', 'chardet.cp949prober', 'chardet.big5prober', 'chardet.euctwprober', 'chardet.sbcsgroupprober', 'chardet.sbcharsetprober', 'chardet.langcyrillicmodel', 'chardet.langgreekmodel', 'chardet.langbulgarianmodel', 'chardet.langthaimodel', 'chardet.langhebrewmodel', 'chardet.hebrewprober', 'chardet.langturkishmodel', 'chardet.version', 'requests.exceptions', 'requests.__version__', 'requests.utils', 'zipfile', 'requests.certs', 'certifi', 'certifi.core', 'requests._internal_utils', 'requests.compat', 'http.cookiejar', 'http.cookies', 'requests.cookies', 'requests.structures', 'requests.packages', 'requests.packages.urllib3', 'requests.packages.urllib3.connectionpool', 'requests.packages.urllib3.exceptions', 'requests.packages.urllib3.packages', 'requests.packages.urllib3.packages.ssl_match_hostname', 'requests.packages.urllib3.packages.six', 'requests.packages.urllib3.packages.six.moves', 'requests.packages.urllib3.packages.six.moves.http_client', 'requests.packages.urllib3.packages.rfc3986', 'requests.packages.urllib3.packages.rfc3986.api', 'requests.packages.urllib3.packages.rfc3986.iri', 'requests.packages.urllib3.packages.rfc3986.compat', 'requests.packages.urllib3.packages.rfc3986.exceptions', 'requests.packages.urllib3.packages.rfc3986.misc', 'requests.packages.urllib3.packages.rfc3986.abnf_regexp', 'requests.packages.urllib3.packages.rfc3986.normalizers', 'requests.packages.urllib3.packages.rfc3986.uri', 'requests.packages.urllib3.packages.rfc3986._mixin', 'requests.packages.urllib3.packages.rfc3986.validators', 'requests.packages.urllib3.packages.rfc3986.parseresult', 'requests.packages.urllib3.connection', 'requests.packages.urllib3.util', 'requests.packages.urllib3.util.connection', 'requests.packages.urllib3.util.wait', 'requests.packages.urllib3.contrib', 'requests.packages.urllib3.contrib._appengine_environ', 'requests.packages.urllib3.util.request', 'requests.packages.urllib3.util.response', 'requests.packages.urllib3.util.ssl_', 'requests.packages.urllib3.util.timeout', 'requests.packages.urllib3.util.retry', 'requests.packages.urllib3.util.url', 'requests.packages.urllib3._collections', 'requests.packages.urllib3.request', 'requests.packages.urllib3.filepost', 'requests.packages.urllib3.fields', 'requests.packages.urllib3.packages.six.moves.urllib', 'requests.packages.urllib3.packages.six.moves.urllib.parse', 'requests.packages.urllib3.response', 'requests.packages.urllib3.util.queue', 'requests.packages.urllib3.poolmanager', 'requests.packages.idna', 'requests.packages.idna.package_data', 'requests.packages.idna.core', 'requests.packages.idna.idnadata', 'requests.packages.idna.intranges', 'requests.packages.chardet', 'requests.packages.chardet.compat', 'requests.packages.chardet.universaldetector', 'requests.packages.chardet.charsetgroupprober', 'requests.packages.chardet.enums', 'requests.packages.chardet.charsetprober', 'requests.packages.chardet.escprober', 'requests.packages.chardet.codingstatemachine', 'requests.packages.chardet.escsm', 'requests.packages.chardet.latin1prober', 'requests.packages.chardet.mbcsgroupprober', 'requests.packages.chardet.utf8prober', 'requests.packages.chardet.mbcssm', 'requests.packages.chardet.sjisprober', 'requests.packages.chardet.mbcharsetprober', 'requests.packages.chardet.chardistribution', 'requests.packages.chardet.euctwfreq', 'requests.packages.chardet.euckrfreq', 'requests.packages.chardet.gb2312freq', 'requests.packages.chardet.big5freq', 'requests.packages.chardet.jisfreq', 'requests.packages.chardet.jpcntx', 'requests.packages.chardet.eucjpprober', 'requests.packages.chardet.gb2312prober', 'requests.packages.chardet.euckrprober', 'requests.packages.chardet.cp949prober', 'requests.packages.chardet.big5prober', 'requests.packages.chardet.euctwprober', 'requests.packages.chardet.sbcsgroupprober', 'requests.packages.chardet.sbcharsetprober', 'requests.packages.chardet.langcyrillicmodel', 'requests.packages.chardet.langgreekmodel', 'requests.packages.chardet.langbulgarianmodel', 'requests.packages.chardet.langthaimodel', 'requests.packages.chardet.langhebrewmodel', 'requests.packages.chardet.hebrewprober', 'requests.packages.chardet.langturkishmodel', 'requests.packages.chardet.version', 'requests.models', 'encodings.idna', 'stringprep', 'requests.hooks', 'requests.auth', 'requests.status_codes', 'requests.api', 'requests.sessions', 'requests.adapters', 'websocket', 'websocket._abnf', 'array', 'websocket._exceptions', 'websocket._utils', 'numpy', 'numpy._globals', 'numpy.__config__', 'numpy.version', 'numpy._distributor_init', 'numpy.core', 'numpy.core.info', 'numpy.core.multiarray', 'numpy.core.overrides', 'numpy.core._multiarray_umath', 'numpy.compat', 'numpy.compat._inspect', 'numpy.compat.py3k', 'pathlib', 'ntpath', 'numpy.core.umath', 'numpy.core.numerictypes', 'numpy.core._string_helpers', 'numpy.core._type_aliases', 'numpy.core._dtype', 'numpy.core.numeric', 'numpy.core._exceptions', 'numpy.core._asarray', 'numpy.core._ufunc_config', 'numpy.core.fromnumeric', 'numpy.core._methods', 'numpy.core.arrayprint', 'numpy.core.defchararray', 'numpy.core.records', 'numpy.core.memmap', 'numpy.core.function_base', 'numpy.core.machar', 'numpy.core.getlimits', 'numpy.core.shape_base', 'numpy.core.einsumfunc', 'numpy.core._add_newdocs', 'numpy.core._multiarray_tests', 'numpy.core._dtype_ctypes', '_ctypes', 'ctypes', 'ctypes._endian', 'numpy.core._internal', 'numpy._pytesttester', 'numpy.lib', 'numpy.lib.info', 'numpy.lib.type_check', 'numpy.lib.ufunclike', 'numpy.lib.index_tricks', 'numpy.matrixlib', 'numpy.matrixlib.defmatrix', 'numpy.linalg', 'numpy.linalg.info', 'numpy.linalg.linalg', 'numpy.lib.twodim_base', 'numpy.linalg.lapack_lite', 'numpy.linalg._umath_linalg', 'numpy.lib.function_base', 'numpy.lib.histograms', 'numpy.lib.stride_tricks', 'numpy.lib.mixins', 'numpy.lib.nanfunctions', 'numpy.lib.shape_base', 'numpy.lib.scimath', 'numpy.lib.polynomial', 'numpy.lib.utils', 'numpy.lib.arraysetops', 'numpy.lib.npyio', 'numpy.lib.format', 'numpy.lib._datasource', 'numpy.lib._iotools', 'numpy.lib.financial', 'numpy.lib.arrayterator', 'numpy.lib.arraypad', 'numpy.lib._version', 'numpy.fft', 'numpy.fft.info', 'numpy.fft.pocketfft', 'numpy.fft.pocketfft_internal', 'numpy.fft.helper', 'numpy.polynomial', 'numpy.polynomial.polynomial', 'numpy.polynomial.polyutils', 'numpy.polynomial._polybase', 'numpy.polynomial.chebyshev', 'numpy.polynomial.legendre', 'numpy.polynomial.hermite', 'numpy.polynomial.hermite_e', 'numpy.polynomial.laguerre', 'numpy.random', 'numpy.random.mtrand', 'cython_runtime', 'numpy.random.common', 'numpy.random.bounded_integers', 'numpy.random.mt19937', 'numpy.random.bit_generator', '_cython_0_29_13', 'secrets', 'numpy.random.entropy', 'numpy.random.generator', 'numpy.random.pcg64', 'numpy.random.philox', 'numpy.random.sfc64', 'numpy.ctypeslib', 'numpy.ma', 'numpy.ma.core', 'numpy.ma.extras', 'numpy.testing', 'unittest', 'unittest.result', 'unittest.util', 'unittest.case', 'unittest.suite', 'unittest.loader', 'unittest.main', 'argparse', 'gettext', 'unittest.runner', 'unittest.signals', 'numpy.testing._private', 'numpy.testing._private.utils', 'gc', 'numpy.testing._private.decorators', 'numpy.testing._private.nosetester', 'websocket._app', 'websocket._core', 'websocket._handshake', 'websocket._cookiejar', 'websocket._http', 'websocket._logging', 'websocket._socket', 'websocket._ssl_compat', 'websocket._url', 'six.moves.urllib.parse', 'engineio.exceptions', 'engineio.packet', 'engineio.payload', 'engineio.middleware', 'engineio.static_files', 'engineio.server', 'gzip', 'engineio.socket', 'engineio.asyncio_server', 'engineio.asyncio_socket', 'engineio.asyncio_client', 'aiohttp', 'typing', 'typing.io', 'typing.re', 'aiohttp.hdrs', 'multidict', 'multidict._abc', 'multidict._compat', 'multidict._multidict_base', 'multidict._multidict', 'aiohttp.client', 'attr', 'attr.converters', 'attr._make', 'attr._config', 'attr._compat', 'attr.exceptions', 'attr.filters', 'attr.validators', 'attr._funcs', 'attr._version_info', 'yarl', 'ipaddress', 'yarl.quoting', 'yarl._quoting', 'aiohttp.http', 'aiohttp.http_exceptions', 'aiohttp.typedefs', 'aiohttp.http_parser', 'aiohttp.base_protocol', 'aiohttp.tcp_helpers', 'aiohttp.helpers', 'cgi', 'netrc', 'shlex', 'async_timeout', 'aiohttp.log', 'aiohttp._helpers', 'aiohttp.http_writer', 'aiohttp.abc', 'aiohttp._http_writer', 'aiohttp.streams', 'aiohttp._http_parser', 'aiohttp.http_websocket', 'aiohttp._websocket', 'aiohttp.payload', 'aiohttp.client_exceptions', 'aiohttp.client_reqrep', 'aiohttp.multipart', 'aiohttp.formdata', 'aiohttp.client_ws', 'aiohttp.connector', 'aiohttp.client_proto', 'aiohttp.locks', 'aiohttp.resolver', 'aiohttp.cookiejar', 'aiohttp.tracing', 'aiohttp.signals', 'aiohttp.frozenlist', 'aiohttp._frozenlist', 'aiohttp.payload_streamer', 'engineio.async_drivers', 'engineio.async_drivers.asgi', 'socketio.exceptions', 'socketio.namespace', 'socketio.packet', 'socketio.base_manager', 'socketio.pubsub_manager', 'socketio.kombu_manager', 'socketio.redis_manager', 'socketio.kafka_manager', 'socketio.zmq_manager', 'eventlet', 'eventlet.convenience', 'eventlet.greenpool', 'eventlet.queue', 'eventlet.event', 'eventlet.hubs', 'eventlet.patcher', 'imp', 'eventlet.support', 'eventlet.support.greenlets', 'distutils', 'distutils.version', '_thread', '__original_module__thread', '__original_module_threading', 'eventlet.hubs.epolls', 'eventlet.hubs.hub', 'eventlet.hubs.timer', 'monotonic', 'eventlet.hubs.poll', 'select', '__original_module_select', 'time', '__original_module_time', 'eventlet.hubs.kqueue', 'eventlet.hubs.selects', 'eventlet.timeout', 'eventlet.greenthread', 'eventlet.green', 'eventlet.green.socket', 'eventlet.green._socket_nodns', 'eventlet.greenio', 'eventlet.greenio.base', 'socket', '__original_module_socket', 'eventlet.greenio.py3', '_pyio', 'eventlet.support.greendns', 'eventlet.green.os', 'eventlet.green.time', 'eventlet.green.select', '__patched_module_dns', 'dns', 'dns._compat', '__patched_module_dns.dnssec', '__patched_module_dns.e164', 'dns.edns', '__patched_module_dns.edns', 'dns.entropy', '__patched_module_dns.entropy', 'dns.exception', '__patched_module_dns.exception', 'dns.flags', '__patched_module_dns.flags', '__patched_module_dns.hash', 'dns.inet', '__patched_module_dns.inet', 'dns.ipv4', '__patched_module_dns.ipv4', 'dns.ipv6', '__patched_module_dns.ipv6', 'dns.message', '__patched_module_dns.message', 'dns.name', '__patched_module_dns.name', '__patched_module_dns.namedict', 'dns.node', '__patched_module_dns.node', 'dns.opcode', '__patched_module_dns.opcode', 'dns.query', '__patched_module_dns.query', 'dns.rcode', '__patched_module_dns.rcode', 'dns.rdata', '__patched_module_dns.rdata', 'dns.rdataclass', '__patched_module_dns.rdataclass', 'dns.rdataset', '__patched_module_dns.rdataset', 'dns.rdatatype', '__patched_module_dns.rdatatype', 'dns.renderer', '__patched_module_dns.renderer', 'dns.resolver', '__patched_module_dns.resolver', 'dns.reversename', '__patched_module_dns.reversename', 'dns.rrset', '__patched_module_dns.rrset', 'dns.set', '__patched_module_dns.set', 'dns.tokenizer', '__patched_module_dns.tokenizer', 'dns.tsig', '__patched_module_dns.tsig', '__patched_module_dns.tsigkeyring', 'dns.ttl', '__patched_module_dns.ttl', '__patched_module_dns.rdtypes', '__patched_module_dns.update', '__patched_module_dns.version', 'dns.wiredata', '__patched_module_dns.wiredata', 'dns.rdtypes', 'dns.grange', '__patched_module_dns.zone', 'dns.rdtypes.ANY', '__patched_module_dns.rdtypes.ANY', '__patched_module_dns.rdtypes.IN', '__patched_module_dns.rdtypes.CH', '__patched_module_dns.rdtypes.euibase', '__patched_module_dns.rdtypes.mxbase', '__patched_module_dns.rdtypes.nsbase', 'dns.dnssec', '__patched_module_dns.rdtypes.dnskeybase', '__patched_module_dns.rdtypes.dsbase', '__patched_module_dns.rdtypes.txtbase', 'dns.rdtypes.IN', '__patched_module_dns.rdtypes.IN.A', '__patched_module_dns.rdtypes.IN.AAAA', '__patched_module_dns.rdtypes.IN.APL', '__patched_module_dns.rdtypes.IN.DHCID', '__patched_module_dns.rdtypes.IN.IPSECKEY', 'dns.rdtypes.mxbase', '__patched_module_dns.rdtypes.IN.KX', '__patched_module_dns.rdtypes.IN.NAPTR', '__patched_module_dns.rdtypes.IN.NSAP', 'dns.rdtypes.nsbase', '__patched_module_dns.rdtypes.IN.NSAP_PTR', '__patched_module_dns.rdtypes.IN.PX', '__patched_module_dns.rdtypes.IN.SRV', '__patched_module_dns.rdtypes.IN.WKS', '__patched_module_dns.rdtypes.ANY.AFSDB', 'dns.rdtypes.txtbase', '__patched_module_dns.rdtypes.ANY.AVC', '__patched_module_dns.rdtypes.ANY.CAA', 'dns.rdtypes.dnskeybase', '__patched_module_dns.rdtypes.ANY.CDNSKEY', 'dns.rdtypes.dsbase', '__patched_module_dns.rdtypes.ANY.CDS', '__patched_module_dns.rdtypes.ANY.CERT', '__patched_module_dns.rdtypes.ANY.CNAME', '__patched_module_dns.rdtypes.ANY.CSYNC', '__patched_module_dns.rdtypes.ANY.DLV', '__patched_module_dns.rdtypes.ANY.DNAME', '__patched_module_dns.rdtypes.ANY.DNSKEY', '__patched_module_dns.rdtypes.ANY.DS', 'dns.rdtypes.euibase', '__patched_module_dns.rdtypes.ANY.EUI48', '__patched_module_dns.rdtypes.ANY.EUI64', '__patched_module_dns.rdtypes.ANY.GPOS', '__patched_module_dns.rdtypes.ANY.HINFO', '__patched_module_dns.rdtypes.ANY.HIP', '__patched_module_dns.rdtypes.ANY.ISDN', '__patched_module_dns.rdtypes.ANY.LOC', '__patched_module_dns.rdtypes.ANY.MX', '__patched_module_dns.rdtypes.ANY.NS', '__patched_module_dns.rdtypes.ANY.NSEC', '__patched_module_dns.rdtypes.ANY.NSEC3', '__patched_module_dns.rdtypes.ANY.NSEC3PARAM', '__patched_module_dns.rdtypes.ANY.OPENPGPKEY', '__patched_module_dns.rdtypes.ANY.PTR', '__patched_module_dns.rdtypes.ANY.RP', '__patched_module_dns.rdtypes.ANY.RRSIG', '__patched_module_dns.rdtypes.ANY.RT', '__patched_module_dns.rdtypes.ANY.SOA', '__patched_module_dns.rdtypes.ANY.SPF', '__patched_module_dns.rdtypes.ANY.SSHFP', '__patched_module_dns.rdtypes.ANY.TLSA', '__patched_module_dns.rdtypes.ANY.TXT', '__patched_module_dns.rdtypes.ANY.URI', '__patched_module_dns.rdtypes.ANY.X25', 'eventlet.green.ssl', 'eventlet.semaphore', 'socketio.server', 'socketio.middleware', 'socketio.tornado', 'socketio.asyncio_client', 'socketio.asyncio_server', 'socketio.asyncio_manager', 'socketio.asyncio_namespace', 'socketio.asyncio_redis_manager', 'socketio.asyncio_pubsub_manager', 'socketio.asyncio_aiopika_manager', 'socketio.asgi', 'werkzeug.debug', 'getpass', 'termios', 'werkzeug.debug.console', 'code', 'codeop', 'werkzeug.debug.repr', 'werkzeug.debug.tbtools', 'sysconfig', 'werkzeug.serving', 'flask_socketio.namespace', 'flask_socketio.test_client', 'werkzeug.test', 'flask_migrate', 'flask_script', 'flask_script._compat', 'flask_script.commands', 'flask_script.cli', 'alembic', 'alembic.context', 'alembic.runtime', 'alembic.runtime.environment', 'alembic.runtime.migration', 'alembic.ddl', 'alembic.ddl.mssql', 'sqlalchemy.ext.compiler', 'alembic.ddl.base', 'alembic.util', 'alembic.util.exc', 'alembic.util.langhelpers', 'alembic.util.compat', 'alembic.util.messaging', 'fcntl', 'alembic.util.pyfiles', 'mako', 'mako.exceptions', 'mako.compat', 'mako.util', 'timeit', 'mako.ext', 'mako.filters', 'mako.template', 'mako.cache', 'mako.codegen', 'mako.ast', 'mako.pyparser', 'mako._ast_util', 'mako.parsetree', 'mako.pygen', 'mako.runtime', 'mako.lexer', 'alembic.util.sqla_compat', 'alembic.ddl.impl', 'alembic.ddl.mysql', 'alembic.autogenerate', 'alembic.autogenerate.api', 'alembic.autogenerate.compare', 'alembic.autogenerate.render', 'alembic.operations', 'alembic.operations.toimpl', 'alembic.operations.ops', 'alembic.operations.schemaobj', 'alembic.operations.base', 'alembic.operations.batch', 'alembic.autogenerate.rewriter', 'alembic.ddl.oracle', 'alembic.ddl.postgresql', 'sqlalchemy.dialects.postgresql', 'sqlalchemy.dialects.postgresql.base', 'sqlalchemy.dialects.postgresql.pg8000', 'sqlalchemy.dialects.postgresql.json', 'sqlalchemy.dialects.postgresql.psycopg2', 'sqlalchemy.dialects.postgresql.hstore', 'sqlalchemy.dialects.postgresql.array', 'sqlalchemy.dialects.postgresql.psycopg2cffi', 'sqlalchemy.dialects.postgresql.pygresql', 'sqlalchemy.dialects.postgresql.pypostgresql', 'sqlalchemy.dialects.postgresql.zxjdbc', 'sqlalchemy.connectors', 'sqlalchemy.connectors.zxJDBC', 'sqlalchemy.dialects.postgresql.dml', 'sqlalchemy.dialects.postgresql.ext', 'sqlalchemy.dialects.postgresql.ranges', 'alembic.ddl.sqlite', 'alembic.op', 'alembic.migration', 'alembic.environment', 'alembic.config', 'alembic.command', 'alembic.script', 'alembic.script.base', 'dateutil', 'dateutil._version', 'dateutil.tz', 'dateutil.tz.tz', 'dateutil.tz._common', 'dateutil.tz._factories', 'alembic.script.revision', 'alembic.script.write_hooks', 'flask_bootstrap', 'flask_bootstrap.forms', 'dominate', 'dominate._version', 'dominate.document', 'dominate.tags', 'dominate.dom_tag', 'dominate.util', 'dominate.dom1core', 'visitor', 'thermo_monitor', 'resources', 'flask_excel', 'pyexcel_webio', 'pyexcel', 'pyexcel.book', 'pyexcel._compact', 'pyexcel.sheet', 'pyexcel.constants', 'pyexcel.internal', 'pyexcel.internal.plugins', 'lml', 'lml._version', 'lml.plugin', 'lml.utils', 'pyexcel.internal.generators', 'pyexcel.internal.common', 'pyexcel.internal.source_plugin', 'pyexcel.exceptions', 'pyexcel.internal.attributes', 'pyexcel_io', 'pyexcel_io._compact', 'pyexcel_io.io', 'pyexcel_io.plugins', 'lml.loader', 'pyexcel_io.utils', 'pyexcel_io.constants', 'pyexcel_io.manager', 'pyexcel_io.exceptions', 'pyexcel_xlsx', 'pyexcel_io.readers', 'pyexcel_io.writers', 'pyexcel_io.database', 'pyexcel.plugins', 'pyexcel.plugins.parsers', 'pyexcel.plugins.renderers', 'pyexcel.plugins.sources', 'pyexcel.internal.meta', 'pyexcel.docstrings', 'pyexcel.docstrings.core', 'pyexcel.docstrings.keywords', 'pyexcel.docstrings.meta', 'pyexcel.docstrings.garbagecollector', 'pyexcel.internal.core', 'pyexcel.internal.utils', 'pyexcel.internal.sheets', 'pyexcel.internal.sheets.matrix', 'pyexcel.internal.sheets.row', 'pyexcel.internal.sheets._shared', 'pyexcel.internal.sheets.formatters', 'pyexcel.internal.sheets.column', 'pyexcel.internal.sheets.extended_list', 'pyexcel.core', 'pyexcel.cookbook', 'pyexcel.deprecated', 'pyexcel.__version__', 'pyexcel.internal.garbagecollector', 'engineio.async_drivers.eventlet', 'eventlet.green.threading', 'eventlet.green.thread', 'eventlet.corolocal', 'threading', '__patched_module_threading', 'eventlet.websocket', 'eventlet.wsgi', 'eventlet.green.BaseHTTPServer', 'eventlet.green.SocketServer', 'socketserver', '__patched_module_socketserver', 'http.server', '__patched_module_http.server', 'jinja2.ext', 'sqlalchemy.dialects.sqlite', 'sqlalchemy.dialects.sqlite.base', 'sqlalchemy.dialects.sqlite.json', 'sqlalchemy.dialects.sqlite.pysqlcipher', 'sqlalchemy.dialects.sqlite.pysqlite', 'sqlite3', 'sqlite3.dbapi2', '_sqlite3', 'pyexcel.plugins.sources.sqlalchemy', 'pyexcel.plugins.sources.db_sources', 'pyexcel.source', 'pyexcel.plugins.sources.params', 'pyexcel.plugins.parsers.sqlalchemy', 'pyexcel.parser', 'pyexcel_io.database.common', 'pyexcel_io.book', 'mmap', 'pyexcel_io.database.exporters', 'pyexcel_io.database.exporters.sqlalchemy', 'pyexcel_io.database.querysets', 'pyexcel_io.sheet', 'pyexcel.plugins.sources.output_to_memory', 'pyexcel.plugins.renderers.excel', 'pyexcel.renderer', 'pyexcel_xlsx.xlsxw', 'openpyxl', 'openpyxl.compat', 'openpyxl.compat.numbers', 'pandas', 'pytz', 'pytz.exceptions', 'pytz.lazy', 'pytz.tzinfo', 'pytz.tzfile', 'pandas.compat', 'pandas.compat.numpy', 'pandas._libs', 'pandas._libs.tslibs', 'pandas._libs.tslibs.conversion', 'pandas._libs.tslibs.c_timestamp', 'pandas._libs.tslibs.nattype', 'pandas._libs.tslibs.np_datetime', 'pandas._libs.tslibs.timezones', 'pandas._libs.tslibs.tzconversion', 'pandas._libs.tslibs.timedeltas', 'pandas._libs.tslibs.offsets', 'pandas._libs.tslibs.ccalendar', 'pandas._config', 'pandas._config.config', 'pandas._config.dates', 'pandas._config.display', 'pandas._config.localization', 'pandas._libs.tslibs.strptime', 'dateutil.relativedelta', 'dateutil._common', 'pandas._libs.tslibs.fields', 'pandas._libs.tslibs.parsing', 'dateutil.parser', 'dateutil.parser._parser', 'dateutil.parser.isoparser', 'pandas._libs.tslibs.period', 'pandas._libs.tslibs.frequencies', 'pandas._libs.tslibs.timestamps', 'pandas._libs.tslibs.resolution', 'pandas._libs.hashtable', 'pandas._libs.missing', 'pandas._libs.lib', 'fractions', 'pandas._libs.tslib', 'pandas.core', 'pandas.core.config_init', 'pandas.core.api', 'pandas.core.arrays', 'pandas.core.arrays.array_', 'pandas.core.dtypes', 'pandas.core.dtypes.common', 'pandas._libs.algos', 'pandas.core.dtypes.dtypes', 'pandas._libs.interval', 'pandas.core.dtypes.generic', 'pandas.core.dtypes.base', 'pandas.errors', 'pandas.core.dtypes.inference', 'pandas._typing', 'pandas.core.arrays.base', 'pandas.compat.numpy.function', 'pandas.util', 'pandas.util._decorators', 'pandas._libs.properties', 'pandas.core.util', 'pandas.core.util.hashing', 'pandas._libs.hashing', 'pandas.core.dtypes.cast', 'pandas.core.dtypes.missing', 'pandas.util._validators', 'pandas.core.ops', 'pandas._libs.ops', 'pandas.core.common', 'pandas.core.ops.missing', 'pandas.core.ops.roperator', 'pandas.core.ops.docstrings', 'pandas.core.sorting', 'pandas.core.algorithms', 'pandas.core.indexers', 'pandas.core.arrays.categorical', 'pandas.core.accessor', 'pandas.core.base', 'pandas.core.nanops', 'pandas.compat._optional', 'pandas.core.missing', 'pandas.io', 'pandas.io.formats', 'pandas.io.formats.console', 'pandas.core.arrays.datetimes', 'pandas.core.arrays.datetimelike', 'pandas.tseries', 'pandas.tseries.frequencies', 'pandas.tseries.offsets', 'dateutil.easter', 'pandas.core.tools', 'pandas.core.tools.datetimes', 'pandas.core.arrays._ranges', 'pandas.core.arrays.integer', 'pandas.core.tools.numeric', 'pandas.core.arrays.interval', 'pandas.core.indexes', 'pandas.core.indexes.base', 'pandas._libs.index', 'pandas._libs.join', 'pandas.core.dtypes.concat', 'pandas.core.indexes.frozen', 'pandas.io.formats.printing', 'pandas.core.strings', 'pandas.core.arrays.numpy_', 'pandas.core.arrays.period', 'pandas.core.arrays.sparse', 'pandas._libs.sparse', 'pandas.core.arrays.timedeltas', 'pandas.core.groupby', 'pandas.core.groupby.generic', 'pandas.core.frame', 'pandas.core.generic', 'pandas.core.index', 'pandas.core.indexes.api', 'pandas.core.indexes.category', 'pandas.core.indexes.datetimes', 'pandas.core.indexes.datetimelike', 'pandas.core.tools.timedeltas', 'pandas.core.indexes.numeric', 'pandas.core.indexes.interval', 'pandas.util._exceptions', 'pandas.core.indexes.multi', 'pandas.core.indexes.timedeltas', 'pandas.core.indexes.period', 'pandas.core.indexes.range', 'pandas.core.indexing', 'pandas._libs.indexing', 'pandas.core.internals', 'pandas.core.internals.blocks', 'pandas._libs.internals', 'pandas.core.internals.arrays', 'pandas.core.internals.managers', 'pandas.core.internals.concat', 'pandas.io.formats.format', 'pandas.io.common', 'csv', '_csv', 'pandas.core.internals.construction', 'pandas.core.series', 'pandas._libs.reshape', 'pandas.core.indexes.accessors', 'pandas.plotting', 'pandas.plotting._core', 'pandas.plotting._matplotlib', 'pandas.plotting._matplotlib.boxplot', 'matplotlib', 'matplotlib.cbook', 'glob', 'matplotlib.cbook.deprecation', 'matplotlib.rcsetup', 'matplotlib.fontconfig_pattern', 'pyparsing', 'matplotlib.colors', 'matplotlib._color_data', 'cycler', 'matplotlib._version', 'matplotlib.ft2font', 'kiwisolver']
+2020-06-06 23:23:25,025 DEBUG    CACHEDIR=/Users/heydaraliyev/.matplotlib
+2020-06-06 23:23:25,028 DEBUG    Using fontManager instance from /Users/heydaraliyev/.matplotlib/fontlist-v310.json
+2020-06-06 23:23:25,401 DEBUG    load <class 'pyexcel_xlsx.xlsxw.XLSXWriter'> now for 'xlsx'
+2020-06-06 23:27:03,672 INFO     Server initialized for eventlet.
+2020-06-06 23:27:03,677 INFO     MONITOR started
+2020-06-06 23:27:03,677 INFO     MONITOR: Turning Off
+2020-06-06 23:27:03,678 INFO     MAIN: Starting Up
+2020-06-06 23:27:03,678 INFO     LOGGER: Taking measurements.
+2020-06-06 23:27:03,744 INFO     LOGGER Read: Actual Temp 67.43, Adj Temp 67.0, Current Set 70
+2020-06-06 23:27:07,155 DEBUG    load me now:sheet-read
+2020-06-06 23:27:07,156 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:27:07,158 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:27:07,161 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:27:07,162 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:27:07,165 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:27:42,809 INFO     Server initialized for eventlet.
+2020-06-06 23:27:42,815 INFO     MONITOR started
+2020-06-06 23:27:42,816 INFO     MONITOR: Turning Off
+2020-06-06 23:27:42,816 INFO     MAIN: Starting Up
+2020-06-06 23:27:42,816 INFO     LOGGER: Taking measurements.
+2020-06-06 23:27:42,895 INFO     LOGGER Read: Actual Temp 67.47, Adj Temp 67.0, Current Set 70
+2020-06-06 23:27:46,178 DEBUG    load me now:sheet-read
+2020-06-06 23:27:46,179 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:27:46,181 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:27:46,183 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:27:46,184 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:27:46,187 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:27:46,194 DEBUG    load me now:sheet-write
+2020-06-06 23:27:46,194 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:27:46,194 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:27:46,195 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'csv'
+2020-06-06 23:27:46,195 DEBUG    import pyexcel_io.writers.csvw.CSVBookWriter
+2020-06-06 23:27:46,197 DEBUG    load <class 'pyexcel_io.writers.csvw.CSVBookWriter'> now for 'csv'
+2020-06-06 23:28:01,875 INFO     Server initialized for eventlet.
+2020-06-06 23:28:01,881 INFO     MONITOR started
+2020-06-06 23:28:01,882 INFO     MONITOR: Turning Off
+2020-06-06 23:28:01,882 INFO     MAIN: Starting Up
+2020-06-06 23:28:01,882 INFO     LOGGER: Taking measurements.
+2020-06-06 23:28:01,995 INFO     LOGGER Read: Actual Temp 67.45, Adj Temp 67.0, Current Set 70
+2020-06-06 23:31:10,027 INFO     Server initialized for eventlet.
+2020-06-06 23:31:10,032 INFO     MONITOR started
+2020-06-06 23:31:10,033 INFO     MONITOR: Turning Off
+2020-06-06 23:31:10,033 INFO     MAIN: Starting Up
+2020-06-06 23:31:10,033 INFO     LOGGER: Taking measurements.
+2020-06-06 23:31:10,109 INFO     LOGGER Read: Actual Temp 66.9, Adj Temp 67.0, Current Set 70
+2020-06-06 23:31:35,032 INFO     Server initialized for eventlet.
+2020-06-06 23:31:35,037 INFO     MONITOR started
+2020-06-06 23:31:35,037 INFO     MONITOR: Turning Off
+2020-06-06 23:31:35,038 INFO     MAIN: Starting Up
+2020-06-06 23:31:35,038 INFO     LOGGER: Taking measurements.
+2020-06-06 23:31:35,101 INFO     LOGGER Read: Actual Temp 66.94, Adj Temp 67.0, Current Set 70
+2020-06-06 23:31:37,739 DEBUG    load me now:sheet-read
+2020-06-06 23:31:37,739 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:31:37,741 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:31:37,744 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:31:37,745 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:31:37,748 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:31:37,760 DEBUG    load me now:sheet-write
+2020-06-06 23:31:37,761 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:31:37,762 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:31:37,763 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'csv'
+2020-06-06 23:31:37,764 DEBUG    import pyexcel_io.writers.csvw.CSVBookWriter
+2020-06-06 23:31:37,766 DEBUG    load <class 'pyexcel_io.writers.csvw.CSVBookWriter'> now for 'csv'
+2020-06-06 23:34:21,807 INFO     Server initialized for eventlet.
+2020-06-06 23:34:21,813 INFO     MONITOR started
+2020-06-06 23:34:21,813 INFO     MONITOR: Turning Off
+2020-06-06 23:34:21,813 INFO     MAIN: Starting Up
+2020-06-06 23:34:21,813 INFO     LOGGER: Taking measurements.
+2020-06-06 23:34:21,889 INFO     LOGGER Read: Actual Temp 66.38, Adj Temp 66.0, Current Set 70
+2020-06-06 23:34:30,928 DEBUG    load me now:sheet-read
+2020-06-06 23:34:30,929 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:34:30,930 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:34:30,931 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:34:30,932 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:34:30,934 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:34:30,941 DEBUG    load me now:sheet-write
+2020-06-06 23:34:30,941 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:34:30,942 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:34:30,942 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'csv'
+2020-06-06 23:34:30,942 DEBUG    import pyexcel_io.writers.csvw.CSVBookWriter
+2020-06-06 23:34:30,944 DEBUG    load <class 'pyexcel_io.writers.csvw.CSVBookWriter'> now for 'csv'
+2020-06-06 23:36:16,172 INFO     Server initialized for eventlet.
+2020-06-06 23:36:16,188 INFO     MONITOR started
+2020-06-06 23:36:16,188 INFO     MONITOR: Turning Off
+2020-06-06 23:36:16,189 INFO     MAIN: Starting Up
+2020-06-06 23:36:16,189 INFO     LOGGER: Taking measurements.
+2020-06-06 23:36:16,249 INFO     LOGGER Read: Actual Temp 66.1, Adj Temp 66.0, Current Set 70
+2020-06-06 23:36:19,253 DEBUG    load me now:sheet-read
+2020-06-06 23:36:19,253 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:36:19,255 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:36:19,256 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:36:19,257 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:36:19,258 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:36:19,266 DEBUG    load me now:sheet-write
+2020-06-06 23:36:19,266 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:36:19,266 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:36:19,267 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'csv'
+2020-06-06 23:36:19,267 DEBUG    import pyexcel_io.writers.csvw.CSVBookWriter
+2020-06-06 23:36:19,269 DEBUG    load <class 'pyexcel_io.writers.csvw.CSVBookWriter'> now for 'csv'
+2020-06-06 23:37:03,236 INFO     Server initialized for eventlet.
+2020-06-06 23:37:03,251 INFO     MONITOR started
+2020-06-06 23:37:03,251 INFO     MONITOR: Turning Off
+2020-06-06 23:37:03,251 INFO     MAIN: Starting Up
+2020-06-06 23:37:03,251 INFO     LOGGER: Taking measurements.
+2020-06-06 23:37:03,315 INFO     LOGGER Read: Actual Temp 65.92, Adj Temp 66.0, Current Set 70
+2020-06-06 23:37:07,630 DEBUG    load me now:sheet-read
+2020-06-06 23:37:07,630 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:37:07,632 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:37:07,634 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:37:07,635 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:37:07,637 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:37:07,648 DEBUG    load me now:sheet-write
+2020-06-06 23:37:07,648 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:37:07,649 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:37:07,650 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'csv'
+2020-06-06 23:37:07,650 DEBUG    import pyexcel_io.writers.csvw.CSVBookWriter
+2020-06-06 23:37:07,652 DEBUG    load <class 'pyexcel_io.writers.csvw.CSVBookWriter'> now for 'csv'
+2020-06-06 23:45:09,303 INFO     Server initialized for eventlet.
+2020-06-06 23:45:09,318 INFO     MONITOR started
+2020-06-06 23:45:09,318 INFO     MONITOR: Turning Off
+2020-06-06 23:45:09,318 INFO     MAIN: Starting Up
+2020-06-06 23:45:09,318 INFO     LOGGER: Taking measurements.
+2020-06-06 23:45:09,388 INFO     LOGGER Read: Actual Temp 65.39, Adj Temp 65.0, Current Set 70
+2020-06-06 23:46:02,819 INFO     Server initialized for eventlet.
+2020-06-06 23:46:02,833 INFO     MONITOR started
+2020-06-06 23:46:02,834 INFO     MONITOR: Turning Off
+2020-06-06 23:46:02,834 INFO     MAIN: Starting Up
+2020-06-06 23:46:02,834 INFO     LOGGER: Taking measurements.
+2020-06-06 23:46:02,891 INFO     LOGGER Read: Actual Temp 65.48, Adj Temp 65.0, Current Set 70
+2020-06-06 23:46:41,031 INFO     Server initialized for eventlet.
+2020-06-06 23:46:41,046 INFO     MONITOR started
+2020-06-06 23:46:41,046 INFO     MONITOR: Turning Off
+2020-06-06 23:46:41,047 INFO     MAIN: Starting Up
+2020-06-06 23:46:41,047 INFO     LOGGER: Taking measurements.
+2020-06-06 23:46:41,105 INFO     LOGGER Read: Actual Temp 65.41, Adj Temp 65.0, Current Set 70
+2020-06-06 23:46:45,149 DEBUG    load me now:sheet-read
+2020-06-06 23:46:45,149 DEBUG    import pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource
+2020-06-06 23:46:45,153 DEBUG    import pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter
+2020-06-06 23:46:45,155 DEBUG    load <class 'pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter'> now for 'sql'
+2020-06-06 23:46:45,156 DEBUG    import pyexcel_io.database.exporters.sqlalchemy.SQLBookReader
+2020-06-06 23:46:45,158 DEBUG    load <class 'pyexcel_io.database.exporters.sqlalchemy.SQLBookReader'> now for 'sql'
+2020-06-06 23:46:45,172 DEBUG    load me now:sheet-write
+2020-06-06 23:46:45,173 DEBUG    import pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory
+2020-06-06 23:46:45,174 DEBUG    import pyexcel.plugins.renderers.excel.ExcelRenderer
+2020-06-06 23:46:45,174 DEBUG    load <class 'pyexcel.plugins.renderers.excel.ExcelRenderer'> now for 'xlsx'
+2020-06-06 23:46:45,175 DEBUG    import pyexcel_xlsx.xlsxw.XLSXWriter
+2020-06-06 23:46:45,418 DEBUG    $HOME=/Users/heydaraliyev
+2020-06-06 23:46:45,418 DEBUG    CONFIGDIR=/Users/heydaraliyev/.matplotlib
+2020-06-06 23:46:45,419 DEBUG    matplotlib data path: /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/mpl-data
+2020-06-06 23:46:45,422 DEBUG    loaded rc file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2020-06-06 23:46:45,424 DEBUG    matplotlib version 3.1.2
+2020-06-06 23:46:45,424 DEBUG    interactive is False
+2020-06-06 23:46:45,424 DEBUG    platform is darwin
+2020-06-06 23:46:45,424 DEBUG    loaded modules: ['sys', 'builtins', '_frozen_importlib', '_imp', '_warnings', '_weakref', 'zipimport', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_abc', 'site', 'os', 'stat', '_stat', 'posixpath', 'genericpath', 'os.path', '_collections_abc', '_sitebuiltins', '_bootlocale', '_locale', 'types', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'functools', '_functools', 'mpl_toolkits', 'google', 'PyObjCTools', 'zc', 'zope', 'logging', 'traceback', 'linecache', 'tokenize', 're', 'enum', 'sre_compile', '_sre', 'sre_parse', 'sre_constants', 'copyreg', 'token', 'weakref', '_weakrefset', 'collections.abc', 'string', '_string', 'atexit', 'logging.handlers', '_socket', 'selectors', 'math', 'errno', 'pickle', 'struct', '_struct', '_compat_pickle', '_pickle', 'queue', '_queue', 'flask', 'jinja2', 'jinja2.environment', 'jinja2.nodes', 'jinja2.utils', 'json', 'json.decoder', 'json.scanner', '_json', 'json.encoder', 'jinja2._compat', 'urllib', 'urllib.parse', 'markupsafe', 'markupsafe._compat', 'markupsafe._speedups', 'jinja2.defaults', 'jinja2.filters', 'random', 'hashlib', '_hashlib', '_blake2', '_sha3', 'bisect', '_bisect', '_random', 'jinja2.runtime', 'jinja2.exceptions', 'jinja2.tests', 'decimal', 'numbers', '_decimal', 'jinja2.lexer', 'unicodedata', 'jinja2.parser', 'jinja2.compiler', 'copy', 'jinja2.visitor', 'jinja2.optimizer', 'jinja2.idtracking', '__future__', 'jinja2.loaders', 'jinja2.bccache', 'tempfile', 'shutil', 'fnmatch', 'zlib', 'bz2', '_compression', '_bz2', 'lzma', '_lzma', 'pwd', 'grp', 'jinja2.asyncsupport', 'asyncio', 'asyncio.base_events', 'concurrent', 'concurrent.futures', 'concurrent.futures._base', 'subprocess', 'signal', '_posixsubprocess', 'ssl', '_ssl', 'base64', 'binascii', 'asyncio.constants', 'asyncio.coroutines', 'inspect', 'dis', 'opcode', '_opcode', 'asyncio.base_futures', 'asyncio.format_helpers', 'asyncio.log', 'asyncio.events', 'contextvars', '_contextvars', 'asyncio.base_tasks', '_asyncio', 'asyncio.futures', 'asyncio.protocols', 'asyncio.sslproto', 'asyncio.transports', 'asyncio.tasks', 'asyncio.locks', 'asyncio.runners', 'asyncio.queues', 'asyncio.streams', 'asyncio.subprocess', 'asyncio.unix_events', 'asyncio.base_subprocess', 'asyncio.selector_events', 'jinja2.asyncfilters', 'werkzeug', 'werkzeug.exceptions', 'werkzeug._compat', 'werkzeug._internal', 'datetime', '_datetime', 'werkzeug.wrappers', 'werkzeug.wrappers.accept', 'werkzeug.datastructures', 'mimetypes', 'werkzeug.filesystem', 'werkzeug.http', 'email', 'email.utils', 'email._parseaddr', 'calendar', 'locale', 'email.charset', 'email.base64mime', 'email.quoprimime', 'email.errors', 'email.encoders', 'quopri', 'urllib.request', 'http', 'http.client', 'email.parser', 'email.feedparser', 'email._policybase', 'email.header', 'email.message', 'uu', 'email._encoded_words', 'email.iterators', 'urllib.error', 'urllib.response', '_scproxy', 'werkzeug.urls', 'werkzeug.utils', 'pkgutil', 'html', 'html.entities', 'werkzeug.wrappers.auth', 'werkzeug.wrappers.base_request', 'werkzeug.formparser', 'werkzeug.wsgi', 'werkzeug.middleware', 'werkzeug.middleware.dispatcher', 'werkzeug.middleware.http_proxy', 'werkzeug.middleware.shared_data', 'werkzeug.security', 'hmac', 'werkzeug.wrappers.base_response', 'werkzeug.wrappers.common_descriptors', 'werkzeug.wrappers.etag', 'werkzeug.wrappers.request', 'werkzeug.wrappers.user_agent', 'werkzeug.wrappers.response', 'flask.json', 'uuid', '_uuid', 'itsdangerous', 'itsdangerous._json', 'itsdangerous.encoding', 'itsdangerous._compat', 'itsdangerous.exc', 'itsdangerous.jws', 'itsdangerous.serializer', 'itsdangerous.signer', 'itsdangerous.timed', 'itsdangerous.url_safe', 'flask._compat', 'flask.globals', 'werkzeug.local', 'greenlet', 'dataclasses', 'flask.app', 'werkzeug.routing', 'ast', '_ast', 'difflib', 'pprint', 'flask.cli', 'platform', 'click', 'click.core', 'click.types', 'click._compat', 'click.exceptions', 'click.utils', 'click.globals', 'click.termui', 'click.formatting', 'click.parser', 'click._unicodefun', 'click.decorators', 'flask.helpers', 'flask.signals', 'flask.config', 'flask.ctx', 'flask.logging', 'flask.sessions', 'flask.json.tag', 'flask.templating', 'flask.wrappers', 'werkzeug.wrappers.json', 'flask.blueprints', 'flask_sqlalchemy', 'sqlalchemy', 'sqlalchemy.util', 'sqlalchemy.util._collections', 'sqlalchemy.util.compat', 'configparser', 'sqlalchemy.util.deprecations', 'sqlalchemy.util.langhelpers', 'textwrap', 'sqlalchemy.exc', 'sqlalchemy.inspection', 'sqlalchemy.schema', 'sqlalchemy.sql', 'sqlalchemy.sql.expression', 'sqlalchemy.sql.base', 'sqlalchemy.sql.visitors', 'sqlalchemy.sql.dml', 'sqlalchemy.sql.elements', 'sqlalchemy.sql.operators', 'sqlalchemy.sql.type_api', 'sqlalchemy.sql.annotation', 'sqlalchemy.sql.selectable', 'sqlalchemy.sql.functions', 'sqlalchemy.sql.schema', 'sqlalchemy.sql.ddl', 'sqlalchemy.event', 'sqlalchemy.event.api', 'sqlalchemy.event.base', 'sqlalchemy.event.attr', 'sqlalchemy.event.legacy', 'sqlalchemy.event.registry', 'sqlalchemy.util.topological', 'sqlalchemy.sql.sqltypes', 'sqlalchemy.processors', 'sqlalchemy.cprocessors', 'sqlalchemy.sql.util', 'sqlalchemy.sql.default_comparator', 'sqlalchemy.sql.naming', 'sqlalchemy.events', 'sqlalchemy.engine', 'sqlalchemy.engine.strategies', 'sqlalchemy.engine.base', 'sqlalchemy.engine.interfaces', 'sqlalchemy.sql.compiler', 'sqlalchemy.sql.crud', 'sqlalchemy.engine.util', 'sqlalchemy.cutils', 'sqlalchemy.interfaces', 'sqlalchemy.log', 'sqlalchemy.engine.threadlocal', 'sqlalchemy.engine.url', 'sqlalchemy.dialects', 'sqlalchemy.pool', 'sqlalchemy.pool.base', 'sqlalchemy.pool.dbapi_proxy', 'sqlalchemy.pool.impl', 'sqlalchemy.util.queue', 'sqlalchemy.engine.result', 'sqlalchemy.cresultproxy', 'sqlalchemy.types', 'sqlalchemy.engine.default', 'sqlalchemy.engine.reflection', 'sqlalchemy.orm', 'sqlalchemy.orm.exc', 'sqlalchemy.orm.mapper', 'sqlalchemy.orm.attributes', 'sqlalchemy.orm.collections', 'sqlalchemy.orm.base', 'sqlalchemy.orm.interfaces', 'sqlalchemy.orm.path_registry', 'sqlalchemy.orm.instrumentation', 'sqlalchemy.orm.state', 'sqlalchemy.orm.loading', 'sqlalchemy.orm.strategy_options', 'sqlalchemy.orm.util', 'sqlalchemy.orm.properties', 'sqlalchemy.orm.deprecated_interfaces', 'sqlalchemy.orm.descriptor_props', 'sqlalchemy.orm.query', 'sqlalchemy.orm.persistence', 'sqlalchemy.orm.evaluator', 'sqlalchemy.orm.sync', 'sqlalchemy.orm.relationships', 'sqlalchemy.orm.dependency', 'sqlalchemy.orm.unitofwork', 'sqlalchemy.orm.scoping', 'sqlalchemy.orm.session', 'sqlalchemy.orm.identity', 'sqlalchemy.orm.dynamic', 'sqlalchemy.orm.strategies', 'sqlalchemy.orm.events', 'sqlalchemy.ext', 'sqlalchemy.ext.baked', 'sqlalchemy.ext.declarative', 'sqlalchemy.ext.declarative.api', 'sqlalchemy.ext.declarative.base', 'sqlalchemy.ext.declarative.clsregistry', 'flask_sqlalchemy.model', 'flask_sqlalchemy._compat', 'flask_sqlalchemy.utils', 'flask_socketio', 'socketio', 'socketio.client', 'engineio', 'engineio.client', 'six', 'six.moves', 'six.moves.urllib', 'requests', 'urllib3', 'urllib3.connectionpool', 'urllib3.exceptions', 'urllib3.packages', 'urllib3.packages.ssl_match_hostname', 'urllib3.packages.six', 'urllib3.packages.six.moves', 'urllib3.packages.six.moves.http_client', 'urllib3.packages.rfc3986', 'urllib3.packages.rfc3986.api', 'urllib3.packages.rfc3986.iri', 'urllib3.packages.rfc3986.compat', 'urllib3.packages.rfc3986.exceptions', 'urllib3.packages.rfc3986.misc', 'urllib3.packages.rfc3986.abnf_regexp', 'urllib3.packages.rfc3986.normalizers', 'urllib3.packages.rfc3986.uri', 'urllib3.packages.rfc3986._mixin', 'urllib3.packages.rfc3986.validators', 'idna', 'idna.package_data', 'idna.core', 'idna.idnadata', 'idna.intranges', 'urllib3.packages.rfc3986.parseresult', 'urllib3.connection', 'urllib3.util', 'urllib3.util.connection', 'urllib3.util.wait', 'urllib3.contrib', 'urllib3.contrib._appengine_environ', 'urllib3.util.request', 'urllib3.util.response', 'urllib3.util.ssl_', 'urllib3.util.timeout', 'urllib3.util.retry', 'urllib3.util.url', 'urllib3._collections', 'urllib3.request', 'urllib3.filepost', 'urllib3.fields', 'urllib3.packages.six.moves.urllib', 'urllib3.packages.six.moves.urllib.parse', 'urllib3.response', 'urllib3.util.queue', 'urllib3.poolmanager', 'chardet', 'chardet.compat', 'chardet.universaldetector', 'chardet.charsetgroupprober', 'chardet.enums', 'chardet.charsetprober', 'chardet.escprober', 'chardet.codingstatemachine', 'chardet.escsm', 'chardet.latin1prober', 'chardet.mbcsgroupprober', 'chardet.utf8prober', 'chardet.mbcssm', 'chardet.sjisprober', 'chardet.mbcharsetprober', 'chardet.chardistribution', 'chardet.euctwfreq', 'chardet.euckrfreq', 'chardet.gb2312freq', 'chardet.big5freq', 'chardet.jisfreq', 'chardet.jpcntx', 'chardet.eucjpprober', 'chardet.gb2312prober', 'chardet.euckrprober', 'chardet.cp949prober', 'chardet.big5prober', 'chardet.euctwprober', 'chardet.sbcsgroupprober', 'chardet.sbcharsetprober', 'chardet.langcyrillicmodel', 'chardet.langgreekmodel', 'chardet.langbulgarianmodel', 'chardet.langthaimodel', 'chardet.langhebrewmodel', 'chardet.hebrewprober', 'chardet.langturkishmodel', 'chardet.version', 'requests.exceptions', 'requests.__version__', 'requests.utils', 'zipfile', 'requests.certs', 'certifi', 'certifi.core', 'requests._internal_utils', 'requests.compat', 'http.cookiejar', 'http.cookies', 'requests.cookies', 'requests.structures', 'requests.packages', 'requests.packages.urllib3', 'requests.packages.urllib3.connectionpool', 'requests.packages.urllib3.exceptions', 'requests.packages.urllib3.packages', 'requests.packages.urllib3.packages.ssl_match_hostname', 'requests.packages.urllib3.packages.six', 'requests.packages.urllib3.packages.six.moves', 'requests.packages.urllib3.packages.six.moves.http_client', 'requests.packages.urllib3.packages.rfc3986', 'requests.packages.urllib3.packages.rfc3986.api', 'requests.packages.urllib3.packages.rfc3986.iri', 'requests.packages.urllib3.packages.rfc3986.compat', 'requests.packages.urllib3.packages.rfc3986.exceptions', 'requests.packages.urllib3.packages.rfc3986.misc', 'requests.packages.urllib3.packages.rfc3986.abnf_regexp', 'requests.packages.urllib3.packages.rfc3986.normalizers', 'requests.packages.urllib3.packages.rfc3986.uri', 'requests.packages.urllib3.packages.rfc3986._mixin', 'requests.packages.urllib3.packages.rfc3986.validators', 'requests.packages.urllib3.packages.rfc3986.parseresult', 'requests.packages.urllib3.connection', 'requests.packages.urllib3.util', 'requests.packages.urllib3.util.connection', 'requests.packages.urllib3.util.wait', 'requests.packages.urllib3.contrib', 'requests.packages.urllib3.contrib._appengine_environ', 'requests.packages.urllib3.util.request', 'requests.packages.urllib3.util.response', 'requests.packages.urllib3.util.ssl_', 'requests.packages.urllib3.util.timeout', 'requests.packages.urllib3.util.retry', 'requests.packages.urllib3.util.url', 'requests.packages.urllib3._collections', 'requests.packages.urllib3.request', 'requests.packages.urllib3.filepost', 'requests.packages.urllib3.fields', 'requests.packages.urllib3.packages.six.moves.urllib', 'requests.packages.urllib3.packages.six.moves.urllib.parse', 'requests.packages.urllib3.response', 'requests.packages.urllib3.util.queue', 'requests.packages.urllib3.poolmanager', 'requests.packages.idna', 'requests.packages.idna.package_data', 'requests.packages.idna.core', 'requests.packages.idna.idnadata', 'requests.packages.idna.intranges', 'requests.packages.chardet', 'requests.packages.chardet.compat', 'requests.packages.chardet.universaldetector', 'requests.packages.chardet.charsetgroupprober', 'requests.packages.chardet.enums', 'requests.packages.chardet.charsetprober', 'requests.packages.chardet.escprober', 'requests.packages.chardet.codingstatemachine', 'requests.packages.chardet.escsm', 'requests.packages.chardet.latin1prober', 'requests.packages.chardet.mbcsgroupprober', 'requests.packages.chardet.utf8prober', 'requests.packages.chardet.mbcssm', 'requests.packages.chardet.sjisprober', 'requests.packages.chardet.mbcharsetprober', 'requests.packages.chardet.chardistribution', 'requests.packages.chardet.euctwfreq', 'requests.packages.chardet.euckrfreq', 'requests.packages.chardet.gb2312freq', 'requests.packages.chardet.big5freq', 'requests.packages.chardet.jisfreq', 'requests.packages.chardet.jpcntx', 'requests.packages.chardet.eucjpprober', 'requests.packages.chardet.gb2312prober', 'requests.packages.chardet.euckrprober', 'requests.packages.chardet.cp949prober', 'requests.packages.chardet.big5prober', 'requests.packages.chardet.euctwprober', 'requests.packages.chardet.sbcsgroupprober', 'requests.packages.chardet.sbcharsetprober', 'requests.packages.chardet.langcyrillicmodel', 'requests.packages.chardet.langgreekmodel', 'requests.packages.chardet.langbulgarianmodel', 'requests.packages.chardet.langthaimodel', 'requests.packages.chardet.langhebrewmodel', 'requests.packages.chardet.hebrewprober', 'requests.packages.chardet.langturkishmodel', 'requests.packages.chardet.version', 'requests.models', 'encodings.idna', 'stringprep', 'requests.hooks', 'requests.auth', 'requests.status_codes', 'requests.api', 'requests.sessions', 'requests.adapters', 'websocket', 'websocket._abnf', 'array', 'websocket._exceptions', 'websocket._utils', 'numpy', 'numpy._globals', 'numpy.__config__', 'numpy.version', 'numpy._distributor_init', 'numpy.core', 'numpy.core.info', 'numpy.core.multiarray', 'numpy.core.overrides', 'numpy.core._multiarray_umath', 'numpy.compat', 'numpy.compat._inspect', 'numpy.compat.py3k', 'pathlib', 'ntpath', 'numpy.core.umath', 'numpy.core.numerictypes', 'numpy.core._string_helpers', 'numpy.core._type_aliases', 'numpy.core._dtype', 'numpy.core.numeric', 'numpy.core._exceptions', 'numpy.core._asarray', 'numpy.core._ufunc_config', 'numpy.core.fromnumeric', 'numpy.core._methods', 'numpy.core.arrayprint', 'numpy.core.defchararray', 'numpy.core.records', 'numpy.core.memmap', 'numpy.core.function_base', 'numpy.core.machar', 'numpy.core.getlimits', 'numpy.core.shape_base', 'numpy.core.einsumfunc', 'numpy.core._add_newdocs', 'numpy.core._multiarray_tests', 'numpy.core._dtype_ctypes', '_ctypes', 'ctypes', 'ctypes._endian', 'numpy.core._internal', 'numpy._pytesttester', 'numpy.lib', 'numpy.lib.info', 'numpy.lib.type_check', 'numpy.lib.ufunclike', 'numpy.lib.index_tricks', 'numpy.matrixlib', 'numpy.matrixlib.defmatrix', 'numpy.linalg', 'numpy.linalg.info', 'numpy.linalg.linalg', 'numpy.lib.twodim_base', 'numpy.linalg.lapack_lite', 'numpy.linalg._umath_linalg', 'numpy.lib.function_base', 'numpy.lib.histograms', 'numpy.lib.stride_tricks', 'numpy.lib.mixins', 'numpy.lib.nanfunctions', 'numpy.lib.shape_base', 'numpy.lib.scimath', 'numpy.lib.polynomial', 'numpy.lib.utils', 'numpy.lib.arraysetops', 'numpy.lib.npyio', 'numpy.lib.format', 'numpy.lib._datasource', 'numpy.lib._iotools', 'numpy.lib.financial', 'numpy.lib.arrayterator', 'numpy.lib.arraypad', 'numpy.lib._version', 'numpy.fft', 'numpy.fft.info', 'numpy.fft.pocketfft', 'numpy.fft.pocketfft_internal', 'numpy.fft.helper', 'numpy.polynomial', 'numpy.polynomial.polynomial', 'numpy.polynomial.polyutils', 'numpy.polynomial._polybase', 'numpy.polynomial.chebyshev', 'numpy.polynomial.legendre', 'numpy.polynomial.hermite', 'numpy.polynomial.hermite_e', 'numpy.polynomial.laguerre', 'numpy.random', 'numpy.random.mtrand', 'cython_runtime', 'numpy.random.common', 'numpy.random.bounded_integers', 'numpy.random.mt19937', 'numpy.random.bit_generator', '_cython_0_29_13', 'secrets', 'numpy.random.entropy', 'numpy.random.generator', 'numpy.random.pcg64', 'numpy.random.philox', 'numpy.random.sfc64', 'numpy.ctypeslib', 'numpy.ma', 'numpy.ma.core', 'numpy.ma.extras', 'numpy.testing', 'unittest', 'unittest.result', 'unittest.util', 'unittest.case', 'unittest.suite', 'unittest.loader', 'unittest.main', 'argparse', 'gettext', 'unittest.runner', 'unittest.signals', 'numpy.testing._private', 'numpy.testing._private.utils', 'gc', 'numpy.testing._private.decorators', 'numpy.testing._private.nosetester', 'websocket._app', 'websocket._core', 'websocket._handshake', 'websocket._cookiejar', 'websocket._http', 'websocket._logging', 'websocket._socket', 'websocket._ssl_compat', 'websocket._url', 'six.moves.urllib.parse', 'engineio.exceptions', 'engineio.packet', 'engineio.payload', 'engineio.middleware', 'engineio.static_files', 'engineio.server', 'gzip', 'engineio.socket', 'engineio.asyncio_server', 'engineio.asyncio_socket', 'engineio.asyncio_client', 'aiohttp', 'typing', 'typing.io', 'typing.re', 'aiohttp.hdrs', 'multidict', 'multidict._abc', 'multidict._compat', 'multidict._multidict_base', 'multidict._multidict', 'aiohttp.client', 'attr', 'attr.converters', 'attr._make', 'attr._config', 'attr._compat', 'attr.exceptions', 'attr.filters', 'attr.validators', 'attr._funcs', 'attr._version_info', 'yarl', 'ipaddress', 'yarl.quoting', 'yarl._quoting', 'aiohttp.http', 'aiohttp.http_exceptions', 'aiohttp.typedefs', 'aiohttp.http_parser', 'aiohttp.base_protocol', 'aiohttp.tcp_helpers', 'aiohttp.helpers', 'cgi', 'netrc', 'shlex', 'async_timeout', 'aiohttp.log', 'aiohttp._helpers', 'aiohttp.http_writer', 'aiohttp.abc', 'aiohttp._http_writer', 'aiohttp.streams', 'aiohttp._http_parser', 'aiohttp.http_websocket', 'aiohttp._websocket', 'aiohttp.payload', 'aiohttp.client_exceptions', 'aiohttp.client_reqrep', 'aiohttp.multipart', 'aiohttp.formdata', 'aiohttp.client_ws', 'aiohttp.connector', 'aiohttp.client_proto', 'aiohttp.locks', 'aiohttp.resolver', 'aiohttp.cookiejar', 'aiohttp.tracing', 'aiohttp.signals', 'aiohttp.frozenlist', 'aiohttp._frozenlist', 'aiohttp.payload_streamer', 'engineio.async_drivers', 'engineio.async_drivers.asgi', 'socketio.exceptions', 'socketio.namespace', 'socketio.packet', 'socketio.base_manager', 'socketio.pubsub_manager', 'socketio.kombu_manager', 'socketio.redis_manager', 'socketio.kafka_manager', 'socketio.zmq_manager', 'eventlet', 'eventlet.convenience', 'eventlet.greenpool', 'eventlet.queue', 'eventlet.event', 'eventlet.hubs', 'eventlet.patcher', 'imp', 'eventlet.support', 'eventlet.support.greenlets', 'distutils', 'distutils.version', '_thread', '__original_module__thread', '__original_module_threading', 'eventlet.hubs.epolls', 'eventlet.hubs.hub', 'eventlet.hubs.timer', 'monotonic', 'eventlet.hubs.poll', 'select', '__original_module_select', 'time', '__original_module_time', 'eventlet.hubs.kqueue', 'eventlet.hubs.selects', 'eventlet.timeout', 'eventlet.greenthread', 'eventlet.green', 'eventlet.green.socket', 'eventlet.green._socket_nodns', 'eventlet.greenio', 'eventlet.greenio.base', 'socket', '__original_module_socket', 'eventlet.greenio.py3', '_pyio', 'eventlet.support.greendns', 'eventlet.green.os', 'eventlet.green.time', 'eventlet.green.select', '__patched_module_dns', 'dns', 'dns._compat', '__patched_module_dns.dnssec', '__patched_module_dns.e164', 'dns.edns', '__patched_module_dns.edns', 'dns.entropy', '__patched_module_dns.entropy', 'dns.exception', '__patched_module_dns.exception', 'dns.flags', '__patched_module_dns.flags', '__patched_module_dns.hash', 'dns.inet', '__patched_module_dns.inet', 'dns.ipv4', '__patched_module_dns.ipv4', 'dns.ipv6', '__patched_module_dns.ipv6', 'dns.message', '__patched_module_dns.message', 'dns.name', '__patched_module_dns.name', '__patched_module_dns.namedict', 'dns.node', '__patched_module_dns.node', 'dns.opcode', '__patched_module_dns.opcode', 'dns.query', '__patched_module_dns.query', 'dns.rcode', '__patched_module_dns.rcode', 'dns.rdata', '__patched_module_dns.rdata', 'dns.rdataclass', '__patched_module_dns.rdataclass', 'dns.rdataset', '__patched_module_dns.rdataset', 'dns.rdatatype', '__patched_module_dns.rdatatype', 'dns.renderer', '__patched_module_dns.renderer', 'dns.resolver', '__patched_module_dns.resolver', 'dns.reversename', '__patched_module_dns.reversename', 'dns.rrset', '__patched_module_dns.rrset', 'dns.set', '__patched_module_dns.set', 'dns.tokenizer', '__patched_module_dns.tokenizer', 'dns.tsig', '__patched_module_dns.tsig', '__patched_module_dns.tsigkeyring', 'dns.ttl', '__patched_module_dns.ttl', '__patched_module_dns.rdtypes', '__patched_module_dns.update', '__patched_module_dns.version', 'dns.wiredata', '__patched_module_dns.wiredata', 'dns.rdtypes', 'dns.grange', '__patched_module_dns.zone', 'dns.rdtypes.ANY', '__patched_module_dns.rdtypes.ANY', '__patched_module_dns.rdtypes.IN', '__patched_module_dns.rdtypes.CH', '__patched_module_dns.rdtypes.euibase', '__patched_module_dns.rdtypes.mxbase', '__patched_module_dns.rdtypes.nsbase', 'dns.dnssec', '__patched_module_dns.rdtypes.dnskeybase', '__patched_module_dns.rdtypes.dsbase', '__patched_module_dns.rdtypes.txtbase', 'dns.rdtypes.IN', '__patched_module_dns.rdtypes.IN.A', '__patched_module_dns.rdtypes.IN.AAAA', '__patched_module_dns.rdtypes.IN.APL', '__patched_module_dns.rdtypes.IN.DHCID', '__patched_module_dns.rdtypes.IN.IPSECKEY', 'dns.rdtypes.mxbase', '__patched_module_dns.rdtypes.IN.KX', '__patched_module_dns.rdtypes.IN.NAPTR', '__patched_module_dns.rdtypes.IN.NSAP', 'dns.rdtypes.nsbase', '__patched_module_dns.rdtypes.IN.NSAP_PTR', '__patched_module_dns.rdtypes.IN.PX', '__patched_module_dns.rdtypes.IN.SRV', '__patched_module_dns.rdtypes.IN.WKS', '__patched_module_dns.rdtypes.ANY.AFSDB', 'dns.rdtypes.txtbase', '__patched_module_dns.rdtypes.ANY.AVC', '__patched_module_dns.rdtypes.ANY.CAA', 'dns.rdtypes.dnskeybase', '__patched_module_dns.rdtypes.ANY.CDNSKEY', 'dns.rdtypes.dsbase', '__patched_module_dns.rdtypes.ANY.CDS', '__patched_module_dns.rdtypes.ANY.CERT', '__patched_module_dns.rdtypes.ANY.CNAME', '__patched_module_dns.rdtypes.ANY.CSYNC', '__patched_module_dns.rdtypes.ANY.DLV', '__patched_module_dns.rdtypes.ANY.DNAME', '__patched_module_dns.rdtypes.ANY.DNSKEY', '__patched_module_dns.rdtypes.ANY.DS', 'dns.rdtypes.euibase', '__patched_module_dns.rdtypes.ANY.EUI48', '__patched_module_dns.rdtypes.ANY.EUI64', '__patched_module_dns.rdtypes.ANY.GPOS', '__patched_module_dns.rdtypes.ANY.HINFO', '__patched_module_dns.rdtypes.ANY.HIP', '__patched_module_dns.rdtypes.ANY.ISDN', '__patched_module_dns.rdtypes.ANY.LOC', '__patched_module_dns.rdtypes.ANY.MX', '__patched_module_dns.rdtypes.ANY.NS', '__patched_module_dns.rdtypes.ANY.NSEC', '__patched_module_dns.rdtypes.ANY.NSEC3', '__patched_module_dns.rdtypes.ANY.NSEC3PARAM', '__patched_module_dns.rdtypes.ANY.OPENPGPKEY', '__patched_module_dns.rdtypes.ANY.PTR', '__patched_module_dns.rdtypes.ANY.RP', '__patched_module_dns.rdtypes.ANY.RRSIG', '__patched_module_dns.rdtypes.ANY.RT', '__patched_module_dns.rdtypes.ANY.SOA', '__patched_module_dns.rdtypes.ANY.SPF', '__patched_module_dns.rdtypes.ANY.SSHFP', '__patched_module_dns.rdtypes.ANY.TLSA', '__patched_module_dns.rdtypes.ANY.TXT', '__patched_module_dns.rdtypes.ANY.URI', '__patched_module_dns.rdtypes.ANY.X25', 'eventlet.green.ssl', 'eventlet.semaphore', 'socketio.server', 'socketio.middleware', 'socketio.tornado', 'socketio.asyncio_client', 'socketio.asyncio_server', 'socketio.asyncio_manager', 'socketio.asyncio_namespace', 'socketio.asyncio_redis_manager', 'socketio.asyncio_pubsub_manager', 'socketio.asyncio_aiopika_manager', 'socketio.asgi', 'werkzeug.debug', 'getpass', 'termios', 'werkzeug.debug.console', 'code', 'codeop', 'werkzeug.debug.repr', 'werkzeug.debug.tbtools', 'sysconfig', 'werkzeug.serving', 'flask_socketio.namespace', 'flask_socketio.test_client', 'werkzeug.test', 'flask_migrate', 'flask_script', 'flask_script._compat', 'flask_script.commands', 'flask_script.cli', 'alembic', 'alembic.context', 'alembic.runtime', 'alembic.runtime.environment', 'alembic.runtime.migration', 'alembic.ddl', 'alembic.ddl.mssql', 'sqlalchemy.ext.compiler', 'alembic.ddl.base', 'alembic.util', 'alembic.util.exc', 'alembic.util.langhelpers', 'alembic.util.compat', 'alembic.util.messaging', 'fcntl', 'alembic.util.pyfiles', 'mako', 'mako.exceptions', 'mako.compat', 'mako.util', 'timeit', 'mako.ext', 'mako.filters', 'mako.template', 'mako.cache', 'mako.codegen', 'mako.ast', 'mako.pyparser', 'mako._ast_util', 'mako.parsetree', 'mako.pygen', 'mako.runtime', 'mako.lexer', 'alembic.util.sqla_compat', 'alembic.ddl.impl', 'alembic.ddl.mysql', 'alembic.autogenerate', 'alembic.autogenerate.api', 'alembic.autogenerate.compare', 'alembic.autogenerate.render', 'alembic.operations', 'alembic.operations.toimpl', 'alembic.operations.ops', 'alembic.operations.schemaobj', 'alembic.operations.base', 'alembic.operations.batch', 'alembic.autogenerate.rewriter', 'alembic.ddl.oracle', 'alembic.ddl.postgresql', 'sqlalchemy.dialects.postgresql', 'sqlalchemy.dialects.postgresql.base', 'sqlalchemy.dialects.postgresql.pg8000', 'sqlalchemy.dialects.postgresql.json', 'sqlalchemy.dialects.postgresql.psycopg2', 'sqlalchemy.dialects.postgresql.hstore', 'sqlalchemy.dialects.postgresql.array', 'sqlalchemy.dialects.postgresql.psycopg2cffi', 'sqlalchemy.dialects.postgresql.pygresql', 'sqlalchemy.dialects.postgresql.pypostgresql', 'sqlalchemy.dialects.postgresql.zxjdbc', 'sqlalchemy.connectors', 'sqlalchemy.connectors.zxJDBC', 'sqlalchemy.dialects.postgresql.dml', 'sqlalchemy.dialects.postgresql.ext', 'sqlalchemy.dialects.postgresql.ranges', 'alembic.ddl.sqlite', 'alembic.op', 'alembic.migration', 'alembic.environment', 'alembic.config', 'alembic.command', 'alembic.script', 'alembic.script.base', 'dateutil', 'dateutil._version', 'dateutil.tz', 'dateutil.tz.tz', 'dateutil.tz._common', 'dateutil.tz._factories', 'alembic.script.revision', 'alembic.script.write_hooks', 'flask_bootstrap', 'flask_bootstrap.forms', 'dominate', 'dominate._version', 'dominate.document', 'dominate.tags', 'dominate.dom_tag', 'dominate.util', 'dominate.dom1core', 'visitor', 'thermo_monitor', 'resources', 'flask_excel', 'pyexcel_webio', 'pyexcel', 'pyexcel.book', 'pyexcel._compact', 'pyexcel.sheet', 'pyexcel.constants', 'pyexcel.internal', 'pyexcel.internal.plugins', 'lml', 'lml._version', 'lml.plugin', 'lml.utils', 'pyexcel.internal.generators', 'pyexcel.internal.common', 'pyexcel.internal.source_plugin', 'pyexcel.exceptions', 'pyexcel.internal.attributes', 'pyexcel_io', 'pyexcel_io._compact', 'pyexcel_io.io', 'pyexcel_io.plugins', 'lml.loader', 'pyexcel_io.utils', 'pyexcel_io.constants', 'pyexcel_io.manager', 'pyexcel_io.exceptions', 'pyexcel_xlsx', 'pyexcel_io.readers', 'pyexcel_io.writers', 'pyexcel_io.database', 'pyexcel.plugins', 'pyexcel.plugins.parsers', 'pyexcel.plugins.renderers', 'pyexcel.plugins.sources', 'pyexcel.internal.meta', 'pyexcel.docstrings', 'pyexcel.docstrings.core', 'pyexcel.docstrings.keywords', 'pyexcel.docstrings.meta', 'pyexcel.docstrings.garbagecollector', 'pyexcel.internal.core', 'pyexcel.internal.utils', 'pyexcel.internal.sheets', 'pyexcel.internal.sheets.matrix', 'pyexcel.internal.sheets.row', 'pyexcel.internal.sheets._shared', 'pyexcel.internal.sheets.formatters', 'pyexcel.internal.sheets.column', 'pyexcel.internal.sheets.extended_list', 'pyexcel.core', 'pyexcel.cookbook', 'pyexcel.deprecated', 'pyexcel.__version__', 'pyexcel.internal.garbagecollector', 'engineio.async_drivers.eventlet', 'eventlet.green.threading', 'eventlet.green.thread', 'eventlet.corolocal', 'threading', '__patched_module_threading', 'eventlet.websocket', 'eventlet.wsgi', 'eventlet.green.BaseHTTPServer', 'eventlet.green.SocketServer', 'socketserver', '__patched_module_socketserver', 'http.server', '__patched_module_http.server', 'sqlalchemy.dialects.sqlite', 'sqlalchemy.dialects.sqlite.base', 'sqlalchemy.dialects.sqlite.json', 'sqlalchemy.dialects.sqlite.pysqlcipher', 'sqlalchemy.dialects.sqlite.pysqlite', 'sqlite3', 'sqlite3.dbapi2', '_sqlite3', 'jinja2.ext', 'pyexcel.plugins.sources.sqlalchemy', 'pyexcel.plugins.sources.db_sources', 'pyexcel.source', 'pyexcel.plugins.sources.params', 'pyexcel.plugins.parsers.sqlalchemy', 'pyexcel.parser', 'pyexcel_io.database.common', 'pyexcel_io.book', 'mmap', 'pyexcel_io.database.exporters', 'pyexcel_io.database.exporters.sqlalchemy', 'pyexcel_io.database.querysets', 'pyexcel_io.sheet', 'pyexcel.plugins.sources.output_to_memory', 'pyexcel.plugins.renderers.excel', 'pyexcel.renderer', 'pyexcel_xlsx.xlsxw', 'openpyxl', 'openpyxl.compat', 'openpyxl.compat.numbers', 'pandas', 'pytz', 'pytz.exceptions', 'pytz.lazy', 'pytz.tzinfo', 'pytz.tzfile', 'pandas.compat', 'pandas.compat.numpy', 'pandas._libs', 'pandas._libs.tslibs', 'pandas._libs.tslibs.conversion', 'pandas._libs.tslibs.c_timestamp', 'pandas._libs.tslibs.nattype', 'pandas._libs.tslibs.np_datetime', 'pandas._libs.tslibs.timezones', 'pandas._libs.tslibs.tzconversion', 'pandas._libs.tslibs.timedeltas', 'pandas._libs.tslibs.offsets', 'pandas._libs.tslibs.ccalendar', 'pandas._config', 'pandas._config.config', 'pandas._config.dates', 'pandas._config.display', 'pandas._config.localization', 'pandas._libs.tslibs.strptime', 'dateutil.relativedelta', 'dateutil._common', 'pandas._libs.tslibs.fields', 'pandas._libs.tslibs.parsing', 'dateutil.parser', 'dateutil.parser._parser', 'dateutil.parser.isoparser', 'pandas._libs.tslibs.period', 'pandas._libs.tslibs.frequencies', 'pandas._libs.tslibs.timestamps', 'pandas._libs.tslibs.resolution', 'pandas._libs.hashtable', 'pandas._libs.missing', 'pandas._libs.lib', 'fractions', 'pandas._libs.tslib', 'pandas.core', 'pandas.core.config_init', 'pandas.core.api', 'pandas.core.arrays', 'pandas.core.arrays.array_', 'pandas.core.dtypes', 'pandas.core.dtypes.common', 'pandas._libs.algos', 'pandas.core.dtypes.dtypes', 'pandas._libs.interval', 'pandas.core.dtypes.generic', 'pandas.core.dtypes.base', 'pandas.errors', 'pandas.core.dtypes.inference', 'pandas._typing', 'pandas.core.arrays.base', 'pandas.compat.numpy.function', 'pandas.util', 'pandas.util._decorators', 'pandas._libs.properties', 'pandas.core.util', 'pandas.core.util.hashing', 'pandas._libs.hashing', 'pandas.core.dtypes.cast', 'pandas.core.dtypes.missing', 'pandas.util._validators', 'pandas.core.ops', 'pandas._libs.ops', 'pandas.core.common', 'pandas.core.ops.missing', 'pandas.core.ops.roperator', 'pandas.core.ops.docstrings', 'pandas.core.sorting', 'pandas.core.algorithms', 'pandas.core.indexers', 'pandas.core.arrays.categorical', 'pandas.core.accessor', 'pandas.core.base', 'pandas.core.nanops', 'pandas.compat._optional', 'pandas.core.missing', 'pandas.io', 'pandas.io.formats', 'pandas.io.formats.console', 'pandas.core.arrays.datetimes', 'pandas.core.arrays.datetimelike', 'pandas.tseries', 'pandas.tseries.frequencies', 'pandas.tseries.offsets', 'dateutil.easter', 'pandas.core.tools', 'pandas.core.tools.datetimes', 'pandas.core.arrays._ranges', 'pandas.core.arrays.integer', 'pandas.core.tools.numeric', 'pandas.core.arrays.interval', 'pandas.core.indexes', 'pandas.core.indexes.base', 'pandas._libs.index', 'pandas._libs.join', 'pandas.core.dtypes.concat', 'pandas.core.indexes.frozen', 'pandas.io.formats.printing', 'pandas.core.strings', 'pandas.core.arrays.numpy_', 'pandas.core.arrays.period', 'pandas.core.arrays.sparse', 'pandas._libs.sparse', 'pandas.core.arrays.timedeltas', 'pandas.core.groupby', 'pandas.core.groupby.generic', 'pandas.core.frame', 'pandas.core.generic', 'pandas.core.index', 'pandas.core.indexes.api', 'pandas.core.indexes.category', 'pandas.core.indexes.datetimes', 'pandas.core.indexes.datetimelike', 'pandas.core.tools.timedeltas', 'pandas.core.indexes.numeric', 'pandas.core.indexes.interval', 'pandas.util._exceptions', 'pandas.core.indexes.multi', 'pandas.core.indexes.timedeltas', 'pandas.core.indexes.period', 'pandas.core.indexes.range', 'pandas.core.indexing', 'pandas._libs.indexing', 'pandas.core.internals', 'pandas.core.internals.blocks', 'pandas._libs.internals', 'pandas.core.internals.arrays', 'pandas.core.internals.managers', 'pandas.core.internals.concat', 'pandas.io.formats.format', 'pandas.io.common', 'csv', '_csv', 'pandas.core.internals.construction', 'pandas.core.series', 'pandas._libs.reshape', 'pandas.core.indexes.accessors', 'pandas.plotting', 'pandas.plotting._core', 'pandas.plotting._matplotlib', 'pandas.plotting._matplotlib.boxplot', 'matplotlib', 'matplotlib.cbook', 'glob', 'matplotlib.cbook.deprecation', 'matplotlib.rcsetup', 'matplotlib.fontconfig_pattern', 'pyparsing', 'matplotlib.colors', 'matplotlib._color_data', 'cycler', 'matplotlib._version', 'matplotlib.ft2font', 'kiwisolver']
+2020-06-06 23:46:45,472 DEBUG    CACHEDIR=/Users/heydaraliyev/.matplotlib
+2020-06-06 23:46:45,475 DEBUG    Using fontManager instance from /Users/heydaraliyev/.matplotlib/fontlist-v310.json
+2020-06-06 23:46:45,764 DEBUG    load <class 'pyexcel_xlsx.xlsxw.XLSXWriter'> now for 'xlsx'

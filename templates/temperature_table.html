@@ -33,7 +33,7 @@
       <th>Adj. Hum</th>
       <th>TC Temp</th>
       <th>Avg. Temp</th>
-
+      <th>STATE</th>
     </tr>
   </thead>
   <!--Table head-->
@@ -48,6 +48,7 @@
                   <td>{{measure.adj_hum}}</td>
                   <td>{{measure.TC_temp}}</td>
                   <td>{{measure.avg_temp}}</td>
+                  <td>{{measure.HVAC_state}}</td>
 
     </tr>
          {% endfor %} 
@@ -67,11 +68,7 @@
 <script src="{{url_for('.static', filename='js/popper.js')}}"></script>
 <script src="{{url_for('.static', filename='js/bootstrap.min.js')}}"></script>
 
-<!--===============================================================================================-->
-<script src="{{url_for('.static', filename='js/select2.min.js')}}"></script>
 
-<!--===============================================================================================-->
-<script src="{{url_for('.static', filename='js/perfect-scrollbar.min.js')}}"></script>
 
 
 
