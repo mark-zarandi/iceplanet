@@ -24,6 +24,7 @@ class ThermoMonitor():
         self.turn_off()
         self.curr_setpoint = init_setpoint
         self.curr_temp = None
+        self.TC_temp = None
         self.curr_hum = None
         self.sleeve = []
         self.state = "OFF"
@@ -34,12 +35,13 @@ class ThermoMonitor():
         def Average(lst): 
             return sum(lst) / len(lst) 
 
-        self.sleeve.append(temp_info.curr_temp)
+        self.sleeve.append(temp_info.TC_temp)
         
         #print(temp_info.adj_temp)
         if len(self.sleeve) == 3:
             avg_3 = Average(self.sleeve)
             self.curr_temp = avg_3
+            self.TC_temp = avg_3
             self.curr_hum = temp_info.adj_hum/100
             self.sleeve = []
             self.evaluate_temp(avg_3,self.curr_hum,temp_info.TC_temp)
@@ -50,11 +52,12 @@ class ThermoMonitor():
         return self.state
 
     def start_cooling(self):
-        logging.info("MONITOR: " + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
+        logging.info("MONITOR: " + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
         GPIO.output(self.cool_chan_list,GPIO.HIGH)
+
     def turn_off(self):
         #shut off as SOON as you hit the lower offset
-        logging.info('MONITOR: Turning Off')
+        logging.info('MONITOR: Turning Off' + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
         GPIO.output(self.cool_chan_list,GPIO.HIGH)
 
     def column(self, matrix):
@@ -82,10 +85,10 @@ class ThermoMonitor():
                     self.start_cooling()
 
         if left(self.state,7) == "COOLING":
-            current_task = right(self.state,len(current_task)-8)
+            current_task = right(self.state,len(self.state)-8)
 
                 #why are you cooling, has cooling margin been exceeded that you can stop?
-            if current_task == "MAINT_TEMP":
+            if current_task == "MAINT-TEMP":
                 if TC_temp<=(self.curr_setpoint-low_margin):
                     self.state = "OFF"
                     self.reason = "Temp within cool margin."
@@ -93,7 +96,7 @@ class ThermoMonitor():
                     curr_task = "MAINT_HUM"
 
             #why are you cooling, has ideal humidity been reached?        
-            if current_task == "MAINT_HUM":
+            if current_task == "MAINT-HUM":
                 if curr_hum<=(ideal_hum):
                     self.state = "OFF"
                     self.reason = "Ideal humidity reached, temp OK."
