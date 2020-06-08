@@ -20,6 +20,8 @@ import flask_excel as excel
 #import matplotlib.pyplot as plt
 #import numpy as np
 import sys
+import smbus2
+import bme280
 
 level    = logging.NOTSET
 format   = '%(asctime)-8s %(levelname)-8s %(message)s'
@@ -29,8 +31,12 @@ writer.setFormatter(formatter)
 handlers = [writer,logging.handlers.TimedRotatingFileHandler('thermo',when="D",interval=1,backupCount=5,encoding=None,delay=False,utc=False,atTime=None)]
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
+port = 1
+address = 0x77
+bus = smbus2.SMBus(port)
 
 logging.basicConfig(level = level, format = format, handlers = handlers)
+calibration_params = bme280.load_calibration_params(bus, address)
 
 class MyFlaskApp(SocketIO):
   def run(self, app, host=None, port=None, debug=None, load_dotenv=True, **options):
@@ -109,8 +115,9 @@ def reading_logger():
 
 
     while True:
-        r = requests.get('http://raspberrypi:2121/get_temp').json()
-        measure_new = measure(datetime.now(),70,r['hum'],r['temp'])
+        data = bme280.sample(bus, address, calibration_params)
+        temperature = ((data.temperature*1.8)+32)
+        measure_new = measure(datetime.now(),70,data.humidity,temperature)
         add_this = therm.set_current_temp(measure_new)
         measure_new.set_state(add_this)
         db.session.add(measure_new)
