@@ -16,12 +16,12 @@ class ThermoMonitor():
     def __init__(self,init_setpoint):
         logging.info('MONITOR started')
         self.chan_list = [12,16,32,36]
-        self.cool_chan_list = [36,16]
+        self.cool_chan_list = [12,16]
         GPIO.setmode(GPIO.BOARD)
         GPIO.setwarnings = False
         GPIO.setup(self.chan_list,GPIO.OUT)
         GPIO.output(self.chan_list,GPIO.LOW)
-        self.turn_off()
+        
         self.curr_setpoint = init_setpoint
         self.curr_temp = None
         self.TC_temp = None
@@ -29,6 +29,7 @@ class ThermoMonitor():
         self.sleeve = []
         self.state = "OFF"
         self.reason = ""
+        self.turn_off()
 
     def set_current_temp(self,temp_info):
 
@@ -58,7 +59,7 @@ class ThermoMonitor():
     def turn_off(self):
         #shut off as SOON as you hit the lower offset
         logging.info('MONITOR: Turning Off' + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
-        GPIO.output(self.cool_chan_list,GPIO.HIGH)
+        GPIO.output(self.cool_chan_list,GPIO.LOW)
 
     def column(self, matrix):
         return [measure.curr_temp for measure in matrix]
