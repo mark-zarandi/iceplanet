@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Thermostat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  {% block styles %}
+  <link rel="stylesheet" href="{{url_for('.static', filename='css/bootstrap.min.css')}}"> 
+<!--===============================================================================================-->
+<link rel="stylesheet" href="{{url_for('.static', filename='css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='css/jquery-ui.css')}}">
+<style>
+.table-nonfluid {
+   width: auto !important;
+}
+</style>
+
+<!--===============================================================================================-->
+{% endblock %}
+{% block scripts %}
+<!--===============================================================================================-->  
+<script src="{{url_for('.static', filename='js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{url_for('.static', filename='js/jquery-ui.js')}}"></script>
+<!--===============================================================================================-->
+<script src="{{url_for('.static', filename='js/popper.js')}}"></script>
+<script src="{{url_for('.static', filename='js/bootstrap.min.js')}}"></script>
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker").datepicker("setDate", new Date());
+     $('#datepicker').datepicker('show')
+  } );
+  </script>
+
+
+
+{% endblock %}
+</head>
+<body>
+
+<form action='filter_test' method='post'>
+<p>Date: <input type="text" id="datepicker" name="date_pick"></input><input type="submit" value="OK"></input></p>
+
+ </form>
+ 
+</body>
+</html>
+

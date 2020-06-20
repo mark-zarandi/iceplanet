@@ -1,8 +1,8 @@
 import logging
 from logging import handlers
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request, g
 from flask import Flask, request, flash, url_for, redirect, \
-     render_template, jsonify
+     render_template, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_socketio import SocketIO, send, emit
@@ -15,13 +15,21 @@ from resources import settings
 import math
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 import flask_excel as excel
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
 #import numpy as np
 import sys
-import smbus2
-import bme280
+import random
+import io
+import numpy as np
+import matplotlib.dates as mdates
+import matplotlib.cbook as cbook
+import dateutil.parser
+#import smbus2
+#import bme280
 
 level    = logging.NOTSET
 format   = '%(asctime)-8s %(levelname)-8s %(message)s'
@@ -31,28 +39,57 @@ writer.setFormatter(formatter)
 handlers = [writer,logging.handlers.TimedRotatingFileHandler('thermo',when="D",interval=1,backupCount=5,encoding=None,delay=False,utc=False,atTime=None)]
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
-port = 1
-address = 0x77
-bus = smbus2.SMBus(port)
+
+#bus = smbus2.SMBus(port)
 
 logging.basicConfig(level = level, format = format, handlers = handlers)
-calibration_params = bme280.load_calibration_params(bus, address)
+
+
+
+def reading_logger():
+    logging.info('LOGGER: Taking measurements.')
+    port = 1
+    address = 0x76
+    bus = smbus2.SMBus(port)
+    calibration_params = bme280.load_calibration_params(bus, address)
+
+    while True:
+        data = bme280.sample(bus, address, calibration_params)
+        temperature = ((data.temperature*1.8)+32)
+        measure_new = measure(datetime.now(),self.set_point,data.humidity,temperature,self.temp_offset)
+        add_this = therm.set_current_temp(measure_new)
+        measure_new.set_state(add_this)
+        db.session.add(measure_new)
+        db.session.commit()
+        logging.info("LOGGER Read: " + str(measure_new))
+        thermo_handle.set_current_temp(measure_new)
+        time.sleep(60)
+
+def main():
+
+    #needs boolean, don't start until reading logger has completed first value.
+
+    logging.info('MAIN: Starting Up')
+    start_temp_up = threading.Thread(name="recording temp values",target=reading_logger,daemon=True)
+    start_temp_up.start()
 
 class MyFlaskApp(SocketIO):
+
   def run(self, app, host=None, port=None, debug=None, load_dotenv=True, **options):
-    #if self.debug or os.getenv('WERKZEUG_RUN_MAIN') == 'true':
-     # with self.app_context():
+    #start_HVAC = threading.Thread(name="HVAC_unit",target=reading_logger, daemon=True)
+    #start_HVAC.start()
 
-    start_HVAC = threading.Thread(name="HVAC_unit",target=main, daemon=True)
-    start_HVAC.start()
 
-    super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=False,**options)
+    super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=True,**options)
 
 
 
 app = Flask(__name__)
 app.config.from_pyfile(os.path.abspath('pod_db.cfg'))
 global db
+global thermo_handle
+thermo_handle = ThermoMonitor(70)
+
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 excel.init_excel(app)
@@ -79,13 +116,12 @@ class measure(db.Model):
     __tablename__ = "measurements"
     id = db.Column('measure_id', db.Integer, primary_key=True)
     read_date = db.Column(db.DateTime)
+    #read_time = db.Column(db.DateTime)
     curr_setpoint = db.Column(db.Integer)
     curr_hum = db.Column(db.Float)
     curr_temp = db.Column(db.Float)
     adj_temp = db.Column(db.Float)
     adj_hum = db.Column(db.Float)
-    TC_temp = db.Column(db.Float)
-    avg_temp = db.Column(db.Float)
     HVAC_state = db.Column(db.String)
 
     def set_state(self, the_state):
@@ -95,41 +131,128 @@ class measure(db.Model):
     def __str__(self):
         return "Actual Temp %s, Adj Temp %s, Current Set %s" % ((self.curr_temp), self.adj_temp, self.curr_setpoint)
 
-    def __init__(self, read_date, setpoint, curr_hum,curr_temp):
+    def __init__(self, read_date, setpoint, curr_hum,curr_temp,offset):
 
         self.read_date = read_date
         self.curr_setpoint = setpoint
         self.curr_hum = round(curr_hum,2)
         self.curr_temp = round(curr_temp,2)
-        self.adj_temp = temp_cond(self.curr_temp)
+        self.adj_temp = temp_cond(self.curr_temp+offset)
         #make sure this gets fix on
         #self.adj_hum = round(self.curr_hum-((.43785694*self.curr_hum)-22.253659085944268),2)
         self.adj_hum = self.curr_hum
-        self.TC_temp = round(-8.96584011843079 + (self.curr_temp * 1.09058722) + ((self.adj_hum/100)*9.73214286),2)
-        self.avg_temp = (self.adj_temp + self.TC_temp)/2
+        #self.TC_temp = round(-8.96584011843079 + (self.curr_temp * 1.09058722) + ((self.adj_hum/100)*9.73214286),2)
+        #self.avg_temp = (self.adj_temp + self.TC_temp)/2
+
+@app.route('/force_on')
+def force_on:
+    thermo_handle.start_cooling('FORCE')
+    succ_response = {"status":"OK",'task':'forced on'}
+    return jsonify(succ_response)
+
+@app.route('/force_off')
+def force_off():
+    thermo_handle.turn_off('FORCE')
+    succ_response = {"status":"OK",'task':'forced off'}
+    return jsonify(succ_response)
+
+@app.route('/plot.png')
+def plot_png():
+    fig = create_figure()
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
+
+def create_figure():
+    hours_tick = mdates.HourLocator()
+    minute_tick = mdates.MinuteLocator(byminute=30)
+    the_look = mdates.DateFormatter("%H:%M")
+    fig = Figure(figsize=(8,6))
+    axis = fig.add_subplot(1, 1, 1)
+    xs =[]
+    ys = []
+    xs_query = measure.query.with_entities(measure.curr_temp).order_by(measure.read_date.desc()).all()
+    for x in xs_query:
+        xs.append(x)
+
+    xs = np.asarray(xs)
+
+    ys_query = measure.query.with_entities(measure.read_date).order_by(measure.read_date.desc()).all()
+    for y in ys_query:
+        ys.append(y)
+    ys = np.asarray(ys)
+
+    axis.plot(ys, xs)
+    axis.xaxis.set_major_locator(hours_tick)
+    axis.xaxis.set_major_formatter(the_look)
+    axis.xaxis.set_minor_locator(minute_tick)
+    fig.autofmt_xdate()
+    
+    return fig
 
 
+@app.route('/date_pick')
+def render_date_chooser():
+    return render_template('date_pick.html')
 
-def reading_logger():
-    logging.info('LOGGER: Taking measurements.')
+
+@app.route('/filter_test', methods=['POST'])
+def filter_date():
+    #user_submit and user end will BOTH need to have times.
+
+    user_submit = datetime.strptime(request.form['date_pick'],'%m/%d/%Y')
+    print(user_submit)
+    user_end = user_submit + timedelta(hours=23,minutes=59)
+    print(user_end)
+    temp_table_x = measure.query.with_entities(measure.curr_temp).filter(measure.read_date.between(user_submit,user_end)).order_by(measure.read_date.desc()).all()
+    temp_table_y = measure.query.with_entities(measure.read_date).filter(measure.read_date.between(user_submit,user_end)).order_by(measure.read_date.desc()).all()
+    fig = create_figure(temp_table_x,temp_table_y)
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
+
+    #return render_template('temperature_table.html',measure_list=temperature_table)
+
+def create_figure(the_x,the_y):
+    hours_tick = mdates.HourLocator()
+    minute_tick = mdates.MinuteLocator(byminute=30)
+    the_look = mdates.DateFormatter("%H:%M")
+    fig = Figure(figsize=(8,6))
+    axis = fig.add_subplot(1, 1, 1)
+    xs =[]
+    ys = []
+    xs_query = the_x
+    for x in xs_query:
+        xs.append(x)
+
+    xs = np.asarray(xs)
+
+    ys_query = the_y
+    for y in ys_query:
+        ys.append(y)
+    ys = np.asarray(ys)
+
+    axis.plot(ys, xs)
+    axis.xaxis.set_major_locator(hours_tick)
+    axis.xaxis.set_major_formatter(the_look)
+    axis.xaxis.set_minor_locator(minute_tick)
+    fig.autofmt_xdate()
+    
+    return fig
 
 
-    while True:
-        data = bme280.sample(bus, address, calibration_params)
-        temperature = ((data.temperature*1.8)+32)
-        measure_new = measure(datetime.now(),70,data.humidity,temperature)
-        add_this = therm.set_current_temp(measure_new)
-        measure_new.set_state(add_this)
-        db.session.add(measure_new)
-        db.session.commit()
-        logging.info("LOGGER Read: " + str(measure_new))
-        therm.set_current_temp(measure_new)
-        time.sleep(60)
 
 @app.route('/')
 def index():
     temperature_table = measure.query.order_by(measure.read_date.desc()).limit(60)
     return render_template('temperature_table.html',measure_list=temperature_table)
+
+@app.route('/change_set/<new_set>')
+def change_set_at_monitor(new_set):
+    thermo_handle.change_set(int(new_set))
+    succ_response = {"status":"OK",'new set':new_set}
+    return jsonify(succ_response)
+
 @app.route('/export', methods=['GET'])
 def xls_out():
     now = datetime.now()
@@ -141,14 +264,7 @@ def start_over():
     db.reflect()
     db.drop_all()
 
-def main():
 
-    #needs boolean, don't start until reading logger has completed first value.
-    global therm
-    therm = ThermoMonitor(70)
-    logging.info('MAIN: Starting Up')
-    start_temp_up = threading.Thread(name="recording temp values",target=reading_logger,daemon=True)
-    start_temp_up.start()
 
 
 if __name__ == "__main__":
