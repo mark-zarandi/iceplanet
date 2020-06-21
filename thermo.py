@@ -28,8 +28,8 @@ import numpy as np
 import matplotlib.dates as mdates
 import matplotlib.cbook as cbook
 import dateutil.parser
-#import smbus2
-#import bme280
+import smbus2
+import bme280
 
 level    = logging.NOTSET
 format   = '%(asctime)-8s %(levelname)-8s %(message)s'
@@ -55,9 +55,9 @@ def reading_logger():
 
     while True:
         data = bme280.sample(bus, address, calibration_params)
-        temperature = ((data.temperature*1.8)+32)
-        measure_new = measure(datetime.now(),self.set_point,data.humidity,temperature,self.temp_offset)
-        add_this = therm.set_current_temp(measure_new)
+        temperature = ((data.temperature*1.8)+32) + settings['temp_offset']
+        measure_new = measure(datetime.now(),global_set_point,data.humidity,temperature,0)
+        add_this = thermo_handle.set_current_temp(measure_new)
         measure_new.set_state(add_this)
         db.session.add(measure_new)
         db.session.commit()
@@ -76,8 +76,8 @@ def main():
 class MyFlaskApp(SocketIO):
 
   def run(self, app, host=None, port=None, debug=None, load_dotenv=True, **options):
-    #start_HVAC = threading.Thread(name="HVAC_unit",target=reading_logger, daemon=True)
-    #start_HVAC.start()
+    start_HVAC = threading.Thread(name="HVAC_unit",target=reading_logger, daemon=True)
+    start_HVAC.start()
 
 
     super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=True,**options)
@@ -88,6 +88,8 @@ app = Flask(__name__)
 app.config.from_pyfile(os.path.abspath('pod_db.cfg'))
 global db
 global thermo_handle
+global global_set_point
+global_set_point = 70
 thermo_handle = ThermoMonitor(70)
 
 db = SQLAlchemy(app)
@@ -135,7 +137,7 @@ class measure(db.Model):
 
         self.read_date = read_date
         self.curr_setpoint = setpoint
-        self.curr_hum = round(curr_hum,2)
+        self.curr_hum = round(curr_hum/100,2)
         self.curr_temp = round(curr_temp,2)
         self.adj_temp = temp_cond(self.curr_temp+offset)
         #make sure this gets fix on
@@ -145,14 +147,14 @@ class measure(db.Model):
         #self.avg_temp = (self.adj_temp + self.TC_temp)/2
 
 @app.route('/force_on')
-def force_on:
+def force_on():
     thermo_handle.start_cooling('FORCE')
     succ_response = {"status":"OK",'task':'forced on'}
     return jsonify(succ_response)
 
 @app.route('/force_off')
 def force_off():
-    thermo_handle.turn_off('FORCE')
+    thermo_handle.turn_off()
     succ_response = {"status":"OK",'task':'forced off'}
     return jsonify(succ_response)
 

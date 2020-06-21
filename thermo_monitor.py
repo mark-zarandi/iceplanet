@@ -1,6 +1,6 @@
 import logging
 from resources import settings
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 def left(s, amount):
     return s[:amount]
@@ -19,10 +19,10 @@ class ThermoMonitor():
         self.cool_chan_list = [12,16]
         self.reason = ""
         self.state = "OFF"
-        #GPIO.setmode(GPIO.BOARD)
-        #GPIO.setwarnings = False
-        #GPIO.setup(self.chan_list,GPIO.OUT)
-        #GPIO.output(self.chan_list,GPIO.LOW)
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setwarnings = False
+        GPIO.setup(self.chan_list,GPIO.OUT)
+        GPIO.output(self.chan_list,GPIO.LOW)
 
         self.curr_setpoint = init_setpoint
         self.curr_temp = None
@@ -40,7 +40,7 @@ class ThermoMonitor():
         def Average(lst): 
             return sum(lst) / len(lst) 
 
-        self.sleeve.append(temp_info.TC_temp)
+        self.sleeve.append(temp_info.curr_temp)
         
         #print(temp_info.adj_temp)
         if len(self.sleeve) == 2:
@@ -65,7 +65,7 @@ class ThermoMonitor():
         #shut off as SOON as you hit the lower offset
         self.state = "OFF"
         logging.info('MONITOR: Turning ' + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
-        GPIO.output(self.cool_chan_list,GPIO.HIGH)
+        GPIO.output(self.cool_chan_list,GPIO.LOW)
 
     def column(self, matrix):
         return [measure.curr_temp for measure in matrix]
@@ -98,7 +98,8 @@ class ThermoMonitor():
             if current_task == "MAINT-TEMP":
                 #TC temp needs rounding
                 if curr_temp<=(self.curr_setpoint-low_margin):
-                    self.state = "OFF"
+                    #maybe redundant for now
+                    self.turn_off()
                     self.reason = "Temp within cool margin."
                     #check humidity before you turn off
                     curr_task = "MAINT-HUM"
@@ -108,7 +109,7 @@ class ThermoMonitor():
                 if curr_hum<=(ideal_hum):
 
                     self.reason = "Ideal humidity reached, temp OK."
-                    self.turn_off("OFF")
+                    self.turn_off()
                 else:
                     self.reason = "Temp ok, humidity not right."
                     self.state = "COOLING-MAINT-HUM"

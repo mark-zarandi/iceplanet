@@ -1,7 +1,7 @@
 settings = {
 	 
 
-"temp_offset":0,
+"temp_offset":.5,
 "hum_offset":4,
 "cool_low_margin":2.5,
 #between 1 and 1.4 
