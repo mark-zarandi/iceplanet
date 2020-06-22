@@ -89,8 +89,8 @@ app.config.from_pyfile(os.path.abspath('pod_db.cfg'))
 global db
 global thermo_handle
 global global_set_point
-global_set_point = 70
-thermo_handle = ThermoMonitor(70)
+global_set_point = 68
+thermo_handle = ThermoMonitor(68)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
