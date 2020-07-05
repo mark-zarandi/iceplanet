@@ -1,3 +1,4 @@
+import time
 import logging
 from resources import settings
 import RPi.GPIO as GPIO
@@ -24,7 +25,7 @@ class ThermoMonitor():
         GPIO.setup(self.chan_list,GPIO.OUT)
         GPIO.output(self.chan_list,GPIO.LOW)
 
-        self.curr_setpoint = init_setpoint
+        self.curr_setpoint = 70
         self.curr_temp = None
         self.TC_temp = None
         self.curr_hum = None
@@ -34,6 +35,9 @@ class ThermoMonitor():
 
     def change_set(self,new_set):
         self.curr_setpoint = new_set
+    
+    def get_set(self):
+        return self.curr_setpoint
 
     def set_current_temp(self,temp_info):
 
@@ -49,7 +53,7 @@ class ThermoMonitor():
             self.curr_hum = temp_info.adj_hum/100
             self.sleeve = []
             self.evaluate_temp(avg_3,self.curr_hum)
-
+            time.sleep(3)
             #evaluate conditions
 
 
@@ -73,8 +77,8 @@ class ThermoMonitor():
     def evaluate_temp(self,curr_temp,curr_hum):
 
         #margins
-        low_margin = settings["cool_low_margin"]
-        high_margin = settings['cool_high_margin']
+        low_margin = settings['setpoints'][self.curr_setpoint]["cool_low_margin"]
+        high_margin = settings['setpoints'][self.curr_setpoint]['cool_high_margin']
         max_hum = settings['max_humidity']
         ideal_hum = settings['ideal_humidity']
 
@@ -84,12 +88,10 @@ class ThermoMonitor():
 
                 self.reason = "Set point exceeded"
                 self.start_cooling("TEMP")
-            else:
-            #it's too humid
-                if (curr_hum>=max_hum):
+            elif (curr_hum>=max_hum):
 
-                    self.reason = "Hum Max Exceeded"
-                    self.start_cooling("HUM")
+                self.reason = "Hum Max Exceeded"
+                self.start_cooling("HUM")
 
         if left(self.state,7) == "COOLING":
             current_task = right(self.state,len(self.state)-8)

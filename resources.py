@@ -1,11 +1,23 @@
 settings = {
 	 
-
-"temp_offset":-.5,
-"hum_offset":4,
-"cool_low_margin":2,
+'setpoints':{72:{
+        "temp_offset":-.2,
+        "hum_offset":4,
+        "cool_low_margin":1.5,
+#between 1 and 1.4
+        "cool_high_margin":1},
+        70:{
+	"temp_offset":-.5,
+	"hum_offset":4,
+	"cool_low_margin":1.5,
 #between 1 and 1.4 
-"cool_high_margin":.5,
+	"cool_high_margin":.7},
+68:{
+        "temp_offset":-.2,
+        "hum_offset":4,
+        "cool_low_margin":1.5,
+#between 1 and 1.4
+        "cool_high_margin":.5}},
 
 #careful, i think margin scales.
 #"margins":{68:{},70:{}}

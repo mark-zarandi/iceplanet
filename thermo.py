@@ -45,6 +45,8 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.basicConfig(level = level, format = format, handlers = handlers)
 
 
+thermo_handle = ThermoMonitor(70)
+
 
 def reading_logger():
     logging.info('LOGGER: Taking measurements.')
@@ -52,17 +54,17 @@ def reading_logger():
     address = 0x76
     bus = smbus2.SMBus(port)
     calibration_params = bme280.load_calibration_params(bus, address)
-
     while True:
+        current_set = thermo_handle.get_set()
         data = bme280.sample(bus, address, calibration_params)
-        temperature = ((data.temperature*1.8)+32) + settings['temp_offset']
-        measure_new = measure(datetime.now(),global_set_point,data.humidity,temperature,0)
+        temperature = ((data.temperature*1.8)+32) + settings['setpoints'][int(current_set)]['temp_offset']
+        measure_new = measure(datetime.now(),int(current_set),data.humidity,temperature,0)
         add_this = thermo_handle.set_current_temp(measure_new)
+        logging.info("STATE: " + add_this)
         measure_new.set_state(add_this)
         db.session.add(measure_new)
         db.session.commit()
         logging.info("LOGGER Read: " + str(measure_new))
-        thermo_handle.set_current_temp(measure_new)
         time.sleep(60)
 
 def main():
@@ -70,8 +72,8 @@ def main():
     #needs boolean, don't start until reading logger has completed first value.
 
     logging.info('MAIN: Starting Up')
-    start_temp_up = threading.Thread(name="recording temp values",target=reading_logger,daemon=True)
-    start_temp_up.start()
+    #start_temp_up = threading.Thread(name="recording temp values",target=reading_logger,daemon=True)
+    #start_temp_up.start()
 
 class MyFlaskApp(SocketIO):
 
@@ -80,18 +82,13 @@ class MyFlaskApp(SocketIO):
     start_HVAC.start()
 
 
-    super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=True,**options)
+    super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=False,**options)
 
 
 
 app = Flask(__name__)
 app.config.from_pyfile(os.path.abspath('pod_db.cfg'))
 global db
-global thermo_handle
-global global_set_point
-global_set_point = 68
-thermo_handle = ThermoMonitor(68)
-
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 excel.init_excel(app)
@@ -140,7 +137,8 @@ class measure(db.Model):
         self.curr_hum = round(curr_hum/100,2)
         self.curr_temp = round(curr_temp,2)
         self.adj_temp = temp_cond(self.curr_temp+offset)
-        #make sure this gets fix on
+        self.HVAC_state = ""
+	#make sure this gets fix on
         #self.adj_hum = round(self.curr_hum-((.43785694*self.curr_hum)-22.253659085944268),2)
         self.adj_hum = self.curr_hum
         #self.TC_temp = round(-8.96584011843079 + (self.curr_temp * 1.09058722) + ((self.adj_hum/100)*9.73214286),2)
@@ -150,6 +148,12 @@ class measure(db.Model):
 def force_on():
     thermo_handle.start_cooling('FORCE')
     succ_response = {"status":"OK",'task':'forced on'}
+    return jsonify(succ_response)
+
+@app.route('/setpoint/<change_point>')
+def change_set(change_point):
+    thermo_handle.change_set(int(change_point))
+    succ_response = {"status":"OK","new set":change_point}
     return jsonify(succ_response)
 
 @app.route('/force_off')
