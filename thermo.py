@@ -219,35 +219,6 @@ def filter_date():
 
     #return render_template('temperature_table.html',measure_list=temperature_table)
 
-def create_figure(the_x,the_y):
-    hours_tick = mdates.HourLocator()
-    minute_tick = mdates.MinuteLocator(byminute=30)
-    the_look = mdates.DateFormatter("%H:%M")
-    fig = Figure(figsize=(8,6))
-    axis = fig.add_subplot(1, 1, 1)
-    xs =[]
-    ys = []
-    xs_query = the_x
-    for x in xs_query:
-        xs.append(x)
-
-    xs = np.asarray(xs)
-
-    ys_query = the_y
-    for y in ys_query:
-        ys.append(y)
-    ys = np.asarray(ys)
-
-    axis.plot(ys, xs)
-    axis.xaxis.set_major_locator(hours_tick)
-    axis.xaxis.set_major_formatter(the_look)
-    axis.xaxis.set_minor_locator(minute_tick)
-    fig.autofmt_xdate()
-    
-    return fig
-
-
-
 @app.route('/')
 def index():
     temperature_table = measure.query.order_by(measure.read_date.desc()).limit(60)
