@@ -9,7 +9,8 @@ from flask_socketio import SocketIO, send, emit
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 import threading
-from thermo_monitor import ThermoMonitor
+from flask import Flask, render_template
+from flask_socketio import SocketIO
 import requests
 from resources import settings
 import math
@@ -21,16 +22,18 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 #import numpy as np
+from random import random
 import sys
-import random
+
 import io
 import numpy as np
 import matplotlib.dates as mdates
 import matplotlib.cbook as cbook
 import dateutil.parser
-import smbus2
-import bme280
 
+#random number Generator Thread
+thread = threading.Thread()
+thread_stop_event = threading.Event()
 level    = logging.NOTSET
 format   = '%(asctime)-8s %(levelname)-8s %(message)s'
 formatter = logging.Formatter(format,"%Y-%m-%d %H:%M:%S")
@@ -44,8 +47,10 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 logging.basicConfig(level = level, format = format, handlers = handlers)
 
-
-thermo_handle = ThermoMonitor(70)
+try:
+    thermo_handle = ThermoMonitor(70)
+except:
+    thermo_handle = None
 
 
 def reading_logger():
@@ -77,9 +82,13 @@ def main():
 
 class MyFlaskApp(SocketIO):
 
-  def run(self, app, host=None, port=None, debug=None, load_dotenv=True, **options):
-    start_HVAC = threading.Thread(name="HVAC_unit",target=reading_logger, daemon=True)
-    start_HVAC.start()
+  def run(self, app, host=None, port=None, debug=None, load_dotenv=True,dev_mode=False, **options):
+    if not dev_mode:    
+        import smbus2
+        import bme280
+        from thermo_monitor import ThermoMonitor
+        start_HVAC = threading.Thread(name="HVAC_unit",target=reading_logger, daemon=True)
+        start_HVAC.start()
 
 
     super(MyFlaskApp, self).run(app=app,host=host, port=port, debug=True,use_reloader=False,**options)
@@ -246,10 +255,12 @@ def create_figure(the_x,the_y):
     
     return fig
 
-
-
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/temp_table_24')
+def temp_table_24():
     temperature_table = measure.query.order_by(measure.read_date.desc()).limit(60)
     return render_template('temperature_table.html',measure_list=temperature_table)
 
@@ -271,12 +282,47 @@ def start_over():
     db.drop_all()
 
 
+def randomNumberGenerator():
+    """
+    Generate a random number every 1 second and emit to a socketio instance (broadcast)
+    Ideally to be run in a separate thread?
+    """
+    #infinite loop of magical random numbers
+    logging.info("Writing to webpage")
+    while not thread_stop_event.isSet():
+        number = round(random()*10, 3)
+        print(number)
+        socketio.emit('newnumber', {'number': number}, namespace='/thermostat')
+        socketio.sleep(5)
 
+@socketio.on('connect', namespace='/thermostat')
+def temperature_connect():
+    # need visibility of the global thread object
+    global thread
+    print('Client connected')
+    thread_stop_event.clear()
+    #Start the random number generator thread only if the thread has not been started before.
+    if not thread.isAlive():
+        print("Starting Thread")
+        thread = socketio.start_background_task(randomNumberGenerator)
+
+@socketio.on('disconnect', namespace='/thermostat')
+def temperature_disconnect():
+
+    print('Client disconnected')
+    if thread.isAlive():
+        global thread_stop_event
+        thread_stop_event.set()
+        print('Disconected & thread stopped')
 
 if __name__ == "__main__":
 
     #start_over()
     db.create_all()
-    
+    if sys.argv[1] == 'dev':
+        what_to_do = True
+    else:
+        what_to_do = False
     bootstrap = Bootstrap(app)
-    socketio.run(app,host='0.0.0.0',port=1949)
+    
+    socketio.run(app,host='0.0.0.0',port=1949,dev_mode=what_to_do)
