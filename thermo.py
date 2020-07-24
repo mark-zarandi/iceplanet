@@ -47,6 +47,38 @@ logging.basicConfig(level = level, format = format, handlers = handlers)
 
 thermo_handle = ThermoMonitor(70)
 
+def temp_sender_thread():
+    """
+    Generate a random number every 1 second and emit to a socketio instance (broadcast)
+    Ideally to be run in a separate thread?
+    """
+    #infinite loop of magical random numbers
+    print("Sending Temp Updates")
+    while not thread_stop_event.isSet():
+        number = measure.query.first()
+        print(number)
+        socketio.emit('newtemp', {'number': number}, namespace='/thermostat')
+        socketio.sleep(60)
+
+@socketio.on('connect', namespace='/thermostat')
+def temperature_connect():
+    # need visibility of the global thread object
+    global thread
+    print('Client connected')
+    thread_stop_event.clear()
+    #Start the random number generator thread only if the thread has not been started before.
+    if not thread.isAlive():
+        print("Starting Thread")
+        thread = socketio.start_background_task(temp_sender_thread)
+
+@socketio.on('disconnect', namespace='/thermostat')
+def temperature_disconnect():
+
+    print('Client disconnected')
+    if thread.isAlive():
+        global thread_stop_event
+        thread_stop_event.set()
+        print('Disconected & thread stopped')
 
 def reading_logger():
     logging.info('LOGGER: Taking measurements.')
