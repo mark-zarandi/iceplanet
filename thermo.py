@@ -40,6 +40,8 @@ handlers = [writer,logging.handlers.TimedRotatingFileHandler('thermo',when="D",i
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
+thread_stop_event = threading.Event()
+socket_thread = threading.Thread()
 #bus = smbus2.SMBus(port)
 
 logging.basicConfig(level = level, format = format, handlers = handlers)
@@ -240,35 +242,42 @@ def start_over():
     db.reflect()
     db.drop_all()
 
+@app.route("/test")
+def does_it_work():
+    figure_look = measure.query.first()
+    print(figure_look)
+    succ_response = {"status":"OK"}
+    return jsonify(succ_response)
+
 def temp_sender_thread():
     """
     Generate a random number every 1 second and emit to a socketio instance (broadcast)
     Ideally to be run in a separate thread?
     """
-    #infinite loop of magical random numbers
-    print("Sending Temp Updates")
+    
+    logging.info("Sending Temp Updates")
     while not thread_stop_event.isSet():
-        number = measure.query.first()
-        print(number)
-        socketio.emit('newtemp', {'number': number}, namespace='/thermostat')
-        socketio.sleep(60)
+        number = measure.query.order_by(measure.id.desc()).first()
+        logging.info(number)
+        socketio.emit('newtemp', {'temp': number.curr_temp,"hum":number.curr_hum,"set":number.curr_setpoint}, namespace='/thermostat')
+        socketio.sleep(30)
 
 @socketio.on('connect', namespace='/thermostat')
 def temperature_connect():
     # need visibility of the global thread object
-    global thread
+    global socket_thread
     print('Client connected')
     thread_stop_event.clear()
     #Start the random number generator thread only if the thread has not been started before.
-    if not thread.isAlive():
+    if not socket_thread.isAlive():
         print("Starting Thread")
-        thread = socketio.start_background_task(temp_sender_thread)
+        socket_thread = socketio.start_background_task(temp_sender_thread)
 
 @socketio.on('disconnect', namespace='/thermostat')
 def temperature_disconnect():
 
     print('Client disconnected')
-    if thread.isAlive():
+    if socket_thread.isAlive():
         global thread_stop_event
         thread_stop_event.set()
         print('Disconected & thread stopped')
