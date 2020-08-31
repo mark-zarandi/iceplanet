@@ -1,6 +1,12 @@
 settings = {
 	 
-'setpoints':{72:{
+'setpoints':{
+73:{"temp_offset":-.2,
+        "hum_offset":4,
+        "cool_low_margin":1.2,
+#between 1 and 1.4
+        "cool_high_margin":2},
+72:{
         "temp_offset":-.2,
         "hum_offset":4,
         "cool_low_margin":1.2,

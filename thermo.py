@@ -259,7 +259,7 @@ def temp_sender_thread():
     while not thread_stop_event.isSet():
         number = measure.query.order_by(measure.id.desc()).first()
         logging.info(number)
-        socketio.emit('newtemp', {'temp': number.curr_temp,"hum":number.curr_hum,"set":number.curr_setpoint}, namespace='/thermostat')
+        socketio.emit('newtemp', {'temp': number.curr_temp,"hum":number.curr_hum,"set":number.curr_setpoint,"state":number.HVAC_state}, namespace='/thermostat')
         socketio.sleep(30)
 
 @socketio.on('connect', namespace='/thermostat')
