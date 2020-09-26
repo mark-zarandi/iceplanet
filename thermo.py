@@ -53,21 +53,25 @@ def reading_logger():
     logging.info('LOGGER: Taking measurements.')
     port = 1
     address = 0x76
-    bus = smbus2.SMBus(port)
-    calibration_params = bme280.load_calibration_params(bus, address)
-    while True:
-        current_set = thermo_handle.get_set()
-        data = bme280.sample(bus, address, calibration_params)
-        temperature = ((data.temperature*1.8)+32) + settings['setpoints'][int(current_set)]['temp_offset']
-        measure_new = measure(datetime.now(),int(current_set),data.humidity,temperature,0)
-        add_this = thermo_handle.set_current_temp(measure_new)
-        logging.info("STATE: " + add_this)
-        measure_new.set_state(add_this)
-        db.session.add(measure_new)
-        db.session.commit()
-        logging.info("LOGGER Read: " + str(measure_new))
-        time.sleep(60)
-
+    try:
+        bus = smbus2.SMBus(port)
+        calibration_params = bme280.load_calibration_params(bus, address)
+        while True:
+            current_set = thermo_handle.get_set()
+            data = bme280.sample(bus, address, calibration_params)
+            temperature = ((data.temperature*1.8)+32) + settings['setpoints'][int(current_set)]['temp_offset']
+            measure_new = measure(datetime.now(),int(current_set),data.humidity,temperature,0)
+            add_this = thermo_handle.set_current_temp(measure_new)
+            logging.info("STATE: " + add_this)
+            measure_new.set_state(add_this)
+            db.session.add(measure_new)
+            db.session.commit()
+            logging.info("LOGGER Read: " + str(measure_new))
+            time.sleep(60)
+    except OSError:
+        note = requests.get('https://maker.ifttt.com/trigger/change/with/key/bwuymkNBi9Ga5iBN0-NXDD')
+        time.sleep(120)
+        os.system('reboot')
 def main():
 
     #needs boolean, don't start until reading logger has completed first value.
