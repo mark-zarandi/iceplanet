@@ -61,7 +61,7 @@ def reading_logger():
             data = bme280.sample(bus, address, calibration_params)
             temperature = ((data.temperature*1.8)+32) + settings['setpoints'][int(current_set)]['temp_offset']
             measure_new = measure(datetime.now(),int(current_set),data.humidity,temperature,0)
-            add_this = thermo_handle.set_current_temp(measure_new)
+            add_this = thermo_handle.set_current_temp(measure_new, mode)
             logging.info("STATE: " + add_this)
             measure_new.set_state(add_this)
             db.session.add(measure_new)
@@ -97,7 +97,7 @@ global db
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 excel.init_excel(app)
-
+mode = "cool"
 socketio = MyFlaskApp(app)
 
 def temp_cond(fix_this):
@@ -157,8 +157,15 @@ def force_on():
 
 @app.route('/setpoint/<change_point>')
 def change_set(change_point):
+    #this needs if in for missing setpoints
     thermo_handle.change_set(int(change_point))
     succ_response = {"status":"OK","new set":change_point}
+    return jsonify(succ_response)
+
+@app.route('/mode/<new_mode>')
+def change_mode(new_mode):
+    mode = str(new_mode)
+    succ_response = {"status":"OK","new_mode":new_mode}
     return jsonify(succ_response)
 
 @app.route('/force_off')
@@ -217,7 +224,7 @@ def filter_date():
     print(user_end)
     temp_table_x = measure.query.with_entities(measure.curr_temp).filter(measure.read_date.between(user_submit,user_end)).order_by(measure.read_date.desc()).all()
     temp_table_y = measure.query.with_entities(measure.read_date).filter(measure.read_date.between(user_submit,user_end)).order_by(measure.read_date.desc()).all()
-    fig = create_figure(temp_table_x,temp_table_y)
+    fig = create_figure()
     output = io.BytesIO()
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')

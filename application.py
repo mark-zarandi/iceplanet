@@ -21,7 +21,7 @@ Updated 13th April 2018
 # Start with a basic flask app webpage.
 from flask_socketio import SocketIO, emit
 from flask import Flask, render_template, url_for, copy_current_request_context
-from random import random
+from random import random, randint
 from time import sleep
 from threading import Thread, Event
 
@@ -46,9 +46,10 @@ def randomNumberGenerator():
     #infinite loop of magical random numbers
     print("Making random numbers")
     while not thread_stop_event.isSet():
-        number = round(random()*10, 3)
+        number = randint(65,88)
+        curr_hum = randint(50,65)/100
         print(number)
-        socketio.emit('newnumber', {'number': number}, namespace='/thermostat')
+        socketio.emit('newtemp', {'temp': number,'hum':curr_hum,'set':70}, namespace='/thermostat')
         socketio.sleep(5)
 
 
