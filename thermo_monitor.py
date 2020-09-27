@@ -58,6 +58,7 @@ class ThermoMonitor():
             else:
                 self.evaluate_temp_heat(avg_3,self.curr_hum)
             time.sleep(3)
+            print(mode)
             #evaluate conditions
 
 
@@ -89,10 +90,11 @@ class ThermoMonitor():
         #shut off as SOON as you hit the lower offset
         self.state = "OFF"
         logging.info('MONITOR: Turning ' + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
-        GPIO.output(self.cool_chan_list,GPIO.LOW)
+        GPIO.output(self.heat_chan_list,GPIO.LOW)
 
     def column(self, matrix):
         return [measure.curr_temp for measure in matrix]
+
     def evaluate_temp_cool(self,curr_temp,curr_hum):
 
         #margins
@@ -153,7 +155,7 @@ class ThermoMonitor():
             elif (curr_hum>=max_hum):
 
                 self.reason = "Hum Max Exceeded"
-                self.start_cooling("HUM")
+                self.start_heating("HUM")
 
         if left(self.state,7) == "HEATING":
             current_task = right(self.state,len(self.state)-8)
