@@ -53,7 +53,7 @@ class ThermoMonitor():
             self.curr_temp = avg_3
             self.curr_hum = temp_info.adj_hum/100
             self.sleeve = []
-            if mode = 'cool'
+            if mode == 'cool':
                 self.evaluate_temp_cool(avg_3,self.curr_hum)
             else:
                 self evaluate_temp_heat(avg_3,self.curr_hum)
