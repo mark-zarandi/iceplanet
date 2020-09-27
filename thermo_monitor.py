@@ -56,7 +56,7 @@ class ThermoMonitor():
             if mode == 'cool':
                 self.evaluate_temp_cool(avg_3,self.curr_hum)
             else:
-                self evaluate_temp_heat(avg_3,self.curr_hum)
+                self.evaluate_temp_heat(avg_3,self.curr_hum)
             time.sleep(3)
             #evaluate conditions
 
