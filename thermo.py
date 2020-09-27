@@ -97,7 +97,7 @@ global db
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 excel.init_excel(app)
-mode = "cool"
+mode = "heat"
 socketio = MyFlaskApp(app)
 
 def temp_cond(fix_this):
