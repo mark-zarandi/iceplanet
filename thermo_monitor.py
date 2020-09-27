@@ -73,6 +73,11 @@ class ThermoMonitor():
         logging.info("MONITOR: " + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
         GPIO.output(self.heat_chan_list,GPIO.HIGH)
 
+    def turn_off(self):
+        #default turn off, shut all down.
+        self.state = "OFF"
+        logging.info('MONITOR: Turning ' + self.state + ": " + self.reason + "( Temp - " + str(self.curr_temp) +"/"+ str(self.TC_temp) + ", Set - " + str(self.curr_setpoint) + ", Hum:" + str(self.curr_hum) + ")")
+        GPIO.output(self.heat_chan_list,GPIO.LOW)
 
     def turn_off_cool(self):
         #shut off as SOON as you hit the lower offset
