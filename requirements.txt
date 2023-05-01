@@ -2,7 +2,7 @@
 
 # async_flask/application.py: 23
 # async_flask/thermo.py: 4
-Flask == 1.1.1
+Flask == 2.3.2
 
 # async_flask/thermo.py: 10
 Flask_Bootstrap == 3.3.7.1
