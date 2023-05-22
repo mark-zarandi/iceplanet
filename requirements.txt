@@ -30,7 +30,7 @@ Flask_SocketIO == 4.2.1
 #pandas == 0.25.3
 
 # async_flask/thermo.py: 13
-requests == 2.22.0
+requests == 2.31.0
 
 # async_flask/regress_plot.py: 3,7
 #sklearn == 0.0
