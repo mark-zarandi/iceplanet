@@ -2,10 +2,10 @@
     {
         "location": "China",
         "title": "Mountains",
-        "url_1080p": "http://podcast-dl.local/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
-        "url_1080p_hdr": "http://podcast-dl.local/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
-        "url_4k": "http://podcast-dl.local/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
-        "url_4k_hdr": "http://podcast-dl.local/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov"
+        "url_1080p": "http://192.168.1.87/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
+        "url_1080p_hdr": "http://192.168.1.87/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
+        "url_4k": "http://192.168.1.87/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov",
+        "url_4k_hdr": "http://192.168.1.87/aerials/AK_A004_C012_HDR_20191217_HDR_4K_HEVC.mov"
     },
     
 ]
